@@ -129,7 +129,7 @@
   {
    "fieldname": "temperature",
    "fieldtype": "Float",
-   "label": "Temperature (°C)",
+   "label": "Temperature (Â°C)",
    "precision": 1
   },
   {

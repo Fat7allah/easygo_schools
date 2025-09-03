@@ -50,7 +50,7 @@
    "fieldname": "level",
    "fieldtype": "Select",
    "label": "Level",
-   "options": "Primaire\nCollège\nLycée\nSupérieur"
+   "options": "Primaire\nCollÃ¨ge\nLycÃ©e\nSupÃ©rieur"
   },
   {
    "fieldname": "is_active",

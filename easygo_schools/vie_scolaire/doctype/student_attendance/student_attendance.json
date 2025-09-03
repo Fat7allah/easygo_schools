@@ -80,7 +80,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Present\nAbsent\nLate\nAbsent Justifié",
+   "options": "Present\nAbsent\nLate\nAbsent JustifiÃ©",
    "reqd": 1,
    "default": "Present"
   },

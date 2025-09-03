@@ -42,7 +42,7 @@
    "fieldname": "module",
    "fieldtype": "Select",
    "label": "Module",
-   "options": "Scolarité\nVie Scolaire\nFinances RH\nAdministration Comms\nGestion Établissement\nRéférentiels"
+   "options": "ScolaritÃ©\nVie Scolaire\nFinances RH\nAdministration Comms\nGestion Ã‰tablissement\nRÃ©fÃ©rentiels"
   },
   {
    "fieldname": "column_break_4",
@@ -97,7 +97,7 @@
  "links": [],
  "modified": "2024-01-01 00:00:00.000000",
  "modified_by": "Administrator",
- "module": "Vie Scolaire",
+ "module": "Referentiels",
  "name": "Reference Table",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
