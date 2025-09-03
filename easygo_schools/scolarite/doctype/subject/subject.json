@@ -1,4 +1,4 @@
-{
+﻿{
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:subject_name",
@@ -95,7 +95,7 @@
  "links": [],
  "modified": "2024-01-01 00:00:00.000000",
  "modified_by": "Administrator",
- "module": "Scolarité",
+ "module": "Scolarite",
  "name": "Subject",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
@@ -136,3 +136,10 @@
  "title_field": "subject_name",
  "track_changes": 1
 }
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-{
+﻿{
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:term_name",
@@ -210,3 +210,10 @@
  "states": [],
  "track_changes": 1
 }
+
+
+
+
+
+
+

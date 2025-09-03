@@ -1,4 +1,4 @@
-{
+﻿{
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:class_name",
@@ -137,7 +137,7 @@
  "links": [],
  "modified": "2024-01-01 00:00:00.000000",
  "modified_by": "Administrator",
- "module": "Scolarité",
+ "module": "Scolarite",
  "name": "School Class",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
@@ -183,3 +183,10 @@
  "title_field": "class_name",
  "track_changes": 1
 }
+
+
+
+
+
+
+

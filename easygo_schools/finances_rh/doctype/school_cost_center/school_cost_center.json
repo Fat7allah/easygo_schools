@@ -1,4 +1,4 @@
-{
+﻿{
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:cost_center_name",
@@ -127,7 +127,7 @@
  "links": [],
  "modified": "2024-01-01 00:00:00.000000",
  "modified_by": "Administrator",
- "module": "EasyGo Education",
+ "module": "Vie Scolaire",
  "name": "School Cost Center",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
@@ -165,3 +165,10 @@
  "states": [],
  "track_changes": 1
 }
+
+
+
+
+
+
+

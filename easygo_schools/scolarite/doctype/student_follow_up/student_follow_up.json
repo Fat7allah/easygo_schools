@@ -1,4 +1,4 @@
-{
+﻿{
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:FOLLOW-{YYYY}-{#####}",
@@ -179,7 +179,7 @@
  "links": [],
  "modified": "2024-01-01 00:00:00.000000",
  "modified_by": "Administrator",
- "module": "EasyGo Education",
+ "module": "Vie Scolaire",
  "name": "Student Follow-up",
  "naming_rule": "Expression",
  "owner": "Administrator",
@@ -217,3 +217,10 @@
  "states": [],
  "track_changes": 1
 }
+
+
+
+
+
+
+

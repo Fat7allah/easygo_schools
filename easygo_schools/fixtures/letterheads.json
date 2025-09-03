@@ -1,4 +1,4 @@
-[
+﻿[
  {
   "align": "Center",
   "creation": "2024-01-01 00:00:00.000000",
@@ -48,3 +48,9 @@
   "content": "<div style=\"text-align: left; border-left: 4px solid #6f42c1; padding-left: 20px; margin-bottom: 30px;\">\n<h2 style=\"color: #6f42c1; margin: 0; font-size: 20px;\">{{ school_name or \"EasyGo Education\" }}</h2>\n<p style=\"margin: 5px 0; color: #666; font-size: 12px;\">Rapport Interne</p>\n<p style=\"margin: 5px 0; color: #666; font-size: 10px;\">Généré le {{ frappe.utils.format_date(frappe.utils.nowdate(), \"dd/mm/yyyy\") }}</p>\n</div>"
  }
 ]
+
+
+
+
+
+

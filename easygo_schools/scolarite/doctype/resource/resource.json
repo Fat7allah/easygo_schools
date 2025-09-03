@@ -1,4 +1,4 @@
-{
+﻿{
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:resource_title",
@@ -246,7 +246,7 @@
  "links": [],
  "modified": "2024-01-01 00:00:00.000000",
  "modified_by": "Administrator",
- "module": "Scolarité",
+ "module": "Scolarite",
  "name": "Resource",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
@@ -284,3 +284,10 @@
  "states": [],
  "track_changes": 1
 }
+
+
+
+
+
+
+

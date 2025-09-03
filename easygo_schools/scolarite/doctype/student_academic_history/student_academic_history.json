@@ -1,4 +1,4 @@
-{
+﻿{
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
@@ -256,7 +256,7 @@
  "links": [],
  "modified": "2024-01-01 00:00:00.000000",
  "modified_by": "Administrator",
- "module": "Scolarité",
+ "module": "Scolarite",
  "name": "Student Academic History",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
@@ -292,3 +292,10 @@
  "states": [],
  "track_changes": 1
 }
+
+
+
+
+
+
+

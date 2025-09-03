@@ -1,4 +1,4 @@
-{
+﻿{
  "actions": [],
  "allow_rename": 1,
  "creation": "2024-01-01 00:00:00.000000",
@@ -109,7 +109,7 @@
  "links": [],
  "modified": "2024-01-01 00:00:00.000000",
  "modified_by": "Administrator",
- "module": "EasyGo Education",
+ "module": "Vie Scolaire",
  "name": "Fee Installment",
  "owner": "Administrator",
  "permissions": [],
@@ -118,3 +118,10 @@
  "states": [],
  "track_changes": 1
 }
+
+
+
+
+
+
+

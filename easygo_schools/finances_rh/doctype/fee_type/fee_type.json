@@ -1,4 +1,4 @@
-{
+﻿{
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:fee_type_name",
@@ -194,3 +194,10 @@
  "states": [],
  "track_changes": 1
 }
+
+
+
+
+
+
+

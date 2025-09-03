@@ -1,10 +1,10 @@
-[
+﻿[
  {
   "doctype": "Web Form",
   "title": "Student Admission Application",
   "route": "admission-application",
   "is_standard": 1,
-  "module": "EasyGo Education",
+  "module": "Vie Scolaire",
   "doc_type": "Student",
   "allow_edit": 1,
   "allow_multiple": 1,
@@ -84,7 +84,7 @@
   "title": "Attendance Justification",
   "route": "attendance-justification",
   "is_standard": 1,
-  "module": "EasyGo Education",
+  "module": "Vie Scolaire",
   "doc_type": "Attendance Justification",
   "allow_edit": 1,
   "allow_multiple": 1,
@@ -144,7 +144,7 @@
   "title": "Parent Consent Form",
   "route": "parent-consent",
   "is_standard": 1,
-  "module": "EasyGo Education",
+  "module": "Vie Scolaire",
   "doc_type": "Parent Consent",
   "allow_edit": 1,
   "allow_multiple": 1,
@@ -220,7 +220,7 @@
   "title": "Meeting Request",
   "route": "meeting-request",
   "is_standard": 1,
-  "module": "EasyGo Education",
+  "module": "Vie Scolaire",
   "doc_type": "Meeting Request",
   "allow_edit": 1,
   "allow_multiple": 1,
@@ -299,7 +299,7 @@
   "title": "Transport Registration",
   "route": "transport-registration",
   "is_standard": 1,
-  "module": "EasyGo Education",
+  "module": "Vie Scolaire",
   "doc_type": "Transport Registration",
   "allow_edit": 1,
   "allow_multiple": 1,
@@ -366,3 +366,9 @@
   ]
  }
 ]
+
+
+
+
+
+
