@@ -1,0 +1,317 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MV-{YYYY}-{#####}",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "student_name",
+  "visit_date",
+  "column_break_4",
+  "visit_time",
+  "visit_type",
+  "status",
+  "section_break_8",
+  "chief_complaint",
+  "symptoms",
+  "section_break_11",
+  "vital_signs",
+  "temperature",
+  "blood_pressure",
+  "pulse_rate",
+  "column_break_15",
+  "weight",
+  "height",
+  "respiratory_rate",
+  "section_break_19",
+  "examination_findings",
+  "diagnosis",
+  "section_break_22",
+  "treatment_given",
+  "medications_prescribed",
+  "section_break_25",
+  "recommendations",
+  "follow_up_required",
+  "follow_up_date",
+  "column_break_29",
+  "referred_to",
+  "referral_reason",
+  "section_break_32",
+  "healthcare_provider",
+  "visit_notes",
+  "section_break_35",
+  "parent_notified",
+  "notification_method",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Visit Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "visit_time",
+   "fieldtype": "Time",
+   "label": "Visit Time"
+  },
+  {
+   "fieldname": "visit_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Visit Type",
+   "options": "Routine Check-up\nIllness\nInjury\nEmergency\nFollow-up\nScreening\nVaccination\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "In Progress",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Chief Complaint"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Small Text",
+   "label": "Chief Complaint",
+   "reqd": 1
+  },
+  {
+   "fieldname": "symptoms",
+   "fieldtype": "Table",
+   "label": "Symptoms",
+   "options": "Medical Symptom"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Vital Signs"
+  },
+  {
+   "fieldname": "vital_signs",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "label": "Temperature (°C)",
+   "precision": 1
+  },
+  {
+   "fieldname": "blood_pressure",
+   "fieldtype": "Data",
+   "label": "Blood Pressure (mmHg)"
+  },
+  {
+   "fieldname": "pulse_rate",
+   "fieldtype": "Int",
+   "label": "Pulse Rate (bpm)"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight (kg)",
+   "precision": 1
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height (cm)",
+   "precision": 1
+  },
+  {
+   "fieldname": "respiratory_rate",
+   "fieldtype": "Int",
+   "label": "Respiratory Rate (per min)"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Examination & Diagnosis"
+  },
+  {
+   "fieldname": "examination_findings",
+   "fieldtype": "Text Editor",
+   "label": "Examination Findings"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Small Text",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "Treatment"
+  },
+  {
+   "fieldname": "treatment_given",
+   "fieldtype": "Text Editor",
+   "label": "Treatment Given"
+  },
+  {
+   "fieldname": "medications_prescribed",
+   "fieldtype": "Table",
+   "label": "Medications Prescribed",
+   "options": "Medical Prescription"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break",
+   "label": "Follow-up & Referral"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Small Text",
+   "label": "Recommendations"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "depends_on": "follow_up_required",
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "referred_to",
+   "fieldtype": "Data",
+   "label": "Referred To"
+  },
+  {
+   "depends_on": "referred_to",
+   "fieldname": "referral_reason",
+   "fieldtype": "Small Text",
+   "label": "Referral Reason"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Healthcare Provider"
+  },
+  {
+   "fieldname": "healthcare_provider",
+   "fieldtype": "Link",
+   "label": "Healthcare Provider",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_notes",
+   "fieldtype": "Text Editor",
+   "label": "Visit Notes"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break",
+   "label": "Parent Notification"
+  },
+  {
+   "default": "0",
+   "fieldname": "parent_notified",
+   "fieldtype": "Check",
+   "label": "Parent Notified"
+  },
+  {
+   "depends_on": "parent_notified",
+   "fieldname": "notification_method",
+   "fieldtype": "Select",
+   "label": "Notification Method",
+   "options": "Phone Call\nSMS\nEmail\nIn Person"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Medical Visit Attachment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Medical Visit",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Practitioner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

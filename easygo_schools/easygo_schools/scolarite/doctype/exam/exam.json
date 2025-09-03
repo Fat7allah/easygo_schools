@@ -1,0 +1,327 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "exam_name",
+  "academic_year",
+  "column_break_4",
+  "exam_type",
+  "term",
+  "status",
+  "exam_details",
+  "subject",
+  "school_class",
+  "instructor",
+  "column_break_11",
+  "exam_date",
+  "start_time",
+  "end_time",
+  "duration",
+  "scheduling_section",
+  "room_number",
+  "max_marks",
+  "passing_marks",
+  "column_break_19",
+  "instructions",
+  "materials_allowed",
+  "is_practical",
+  "results_section",
+  "total_students",
+  "students_appeared",
+  "column_break_25",
+  "average_score",
+  "highest_score",
+  "lowest_score",
+  "additional_info",
+  "description",
+  "notes",
+  "column_break_31",
+  "created_by",
+  "approved_by",
+  "published_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "EX-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exam_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Exam Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exam_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Exam Type",
+   "options": "Mid Term\nFinal Term\nQuarterly\nMonthly\nWeekly\nUnit Test\nPractical\nOral\nProject\nAssignment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "term",
+   "fieldtype": "Select",
+   "label": "Term",
+   "options": "First Term\nSecond Term\nThird Term\nFull Year"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nScheduled\nOngoing\nCompleted\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "exam_details",
+   "fieldtype": "Section Break",
+   "label": "Exam Details"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "school_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Class",
+   "options": "School Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "instructor",
+   "fieldtype": "Link",
+   "label": "Instructor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exam_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Exam Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration (minutes)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scheduling_section",
+   "fieldtype": "Section Break",
+   "label": "Scheduling & Instructions"
+  },
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Data",
+   "label": "Room Number"
+  },
+  {
+   "fieldname": "max_marks",
+   "fieldtype": "Float",
+   "label": "Maximum Marks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "passing_marks",
+   "fieldtype": "Float",
+   "label": "Passing Marks"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instructions",
+   "fieldtype": "Text",
+   "label": "Instructions"
+  },
+  {
+   "fieldname": "materials_allowed",
+   "fieldtype": "Text",
+   "label": "Materials Allowed"
+  },
+  {
+   "fieldname": "is_practical",
+   "fieldtype": "Check",
+   "label": "Practical Exam"
+  },
+  {
+   "fieldname": "results_section",
+   "fieldtype": "Section Break",
+   "label": "Results Summary"
+  },
+  {
+   "fieldname": "total_students",
+   "fieldtype": "Int",
+   "label": "Total Students",
+   "read_only": 1
+  },
+  {
+   "fieldname": "students_appeared",
+   "fieldtype": "Int",
+   "label": "Students Appeared",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "average_score",
+   "fieldtype": "Float",
+   "label": "Average Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "highest_score",
+   "fieldtype": "Float",
+   "label": "Highest Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lowest_score",
+   "fieldtype": "Float",
+   "label": "Lowest Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "published_date",
+   "fieldtype": "Datetime",
+   "label": "Published Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarite",
+ "name": "Exam",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Student"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Parent"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

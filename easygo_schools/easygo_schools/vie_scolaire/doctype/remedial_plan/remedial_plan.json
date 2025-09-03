@@ -1,0 +1,378 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "plan_type",
+  "priority",
+  "status",
+  "section_break_8",
+  "trigger_rule",
+  "trigger_reason",
+  "column_break_11",
+  "identified_by",
+  "identification_date",
+  "section_break_14",
+  "description",
+  "objectives",
+  "column_break_17",
+  "success_criteria",
+  "assessment_method",
+  "section_break_20",
+  "assigned_counselor",
+  "class_teacher",
+  "column_break_23",
+  "parent_guardian",
+  "external_support",
+  "section_break_26",
+  "start_date",
+  "target_completion_date",
+  "column_break_29",
+  "actual_completion_date",
+  "duration_weeks",
+  "section_break_32",
+  "interventions",
+  "resources_needed",
+  "column_break_35",
+  "progress_notes",
+  "challenges_faced",
+  "section_break_38",
+  "review_frequency",
+  "next_review_date",
+  "column_break_41",
+  "completion_percentage",
+  "effectiveness_rating",
+  "section_break_44",
+  "guardian_consent",
+  "guardian_signature",
+  "column_break_47",
+  "plan_approved_by",
+  "approval_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "REM-PLAN-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plan_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Plan Type",
+   "options": "Academic\nAttendance\nBehavioral\nSocial\nEmotional\nCombined",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nOn Hold\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Identification"
+  },
+  {
+   "fieldname": "trigger_rule",
+   "fieldtype": "Link",
+   "label": "Trigger Rule",
+   "options": "Support Trigger Rule"
+  },
+  {
+   "fieldname": "trigger_reason",
+   "fieldtype": "Small Text",
+   "label": "Trigger Reason"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "identified_by",
+   "fieldtype": "Link",
+   "label": "Identified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "identification_date",
+   "fieldtype": "Date",
+   "label": "Identification Date"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "objectives",
+   "fieldtype": "Text Editor",
+   "label": "Objectives"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "success_criteria",
+   "fieldtype": "Text Editor",
+   "label": "Success Criteria"
+  },
+  {
+   "fieldname": "assessment_method",
+   "fieldtype": "Select",
+   "label": "Assessment Method",
+   "options": "Weekly Review\nBi-weekly Review\nMonthly Review\nContinuous Monitoring\nMilestone Based"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Team Assignment"
+  },
+  {
+   "fieldname": "assigned_counselor",
+   "fieldtype": "Link",
+   "label": "Assigned Counselor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "class_teacher",
+   "fieldtype": "Link",
+   "label": "Class Teacher",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_guardian",
+   "fieldtype": "Link",
+   "label": "Parent/Guardian",
+   "options": "Guardian"
+  },
+  {
+   "fieldname": "external_support",
+   "fieldtype": "Data",
+   "label": "External Support"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_completion_date",
+   "fieldtype": "Date",
+   "label": "Target Completion Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_completion_date",
+   "fieldtype": "Date",
+   "label": "Actual Completion Date"
+  },
+  {
+   "fieldname": "duration_weeks",
+   "fieldtype": "Int",
+   "label": "Duration (Weeks)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Implementation"
+  },
+  {
+   "fieldname": "interventions",
+   "fieldtype": "Table",
+   "label": "Interventions",
+   "options": "Remedial Plan Intervention"
+  },
+  {
+   "fieldname": "resources_needed",
+   "fieldtype": "Small Text",
+   "label": "Resources Needed"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "progress_notes",
+   "fieldtype": "Text Editor",
+   "label": "Progress Notes"
+  },
+  {
+   "fieldname": "challenges_faced",
+   "fieldtype": "Small Text",
+   "label": "Challenges Faced"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break",
+   "label": "Monitoring"
+  },
+  {
+   "default": "Weekly",
+   "fieldname": "review_frequency",
+   "fieldtype": "Select",
+   "label": "Review Frequency",
+   "options": "Daily\nWeekly\nBi-weekly\nMonthly"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "completion_percentage",
+   "fieldtype": "Percent",
+   "label": "Completion Percentage"
+  },
+  {
+   "fieldname": "effectiveness_rating",
+   "fieldtype": "Rating",
+   "label": "Effectiveness Rating"
+  },
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Approval & Consent"
+  },
+  {
+   "default": "0",
+   "fieldname": "guardian_consent",
+   "fieldtype": "Check",
+   "label": "Guardian Consent Given"
+  },
+  {
+   "fieldname": "guardian_signature",
+   "fieldtype": "Signature",
+   "label": "Guardian Signature"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plan_approved_by",
+   "fieldtype": "Link",
+   "label": "Plan Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Remedial Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academic Counselor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,311 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:template_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "template_name",
+  "template_type",
+  "column_break_3",
+  "category",
+  "is_active",
+  "content_section",
+  "subject_template",
+  "message_template",
+  "column_break_8",
+  "sms_template",
+  "push_notification_template",
+  "recipients_section",
+  "default_recipients",
+  "recipient_roles",
+  "column_break_13",
+  "recipient_conditions",
+  "send_to_parents",
+  "send_to_students",
+  "triggers_section",
+  "trigger_event",
+  "trigger_conditions",
+  "column_break_19",
+  "auto_send",
+  "send_delay_minutes",
+  "settings_section",
+  "priority",
+  "delivery_method",
+  "column_break_24",
+  "require_approval",
+  "approval_role",
+  "variables_section",
+  "available_variables",
+  "sample_data",
+  "column_break_29",
+  "usage_instructions",
+  "template_preview",
+  "additional_info",
+  "description",
+  "tags",
+  "column_break_34",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "template_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Template Type",
+   "options": "Email\nSMS\nPush Notification\nMulti-Channel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Academic\nAttendance\nFees\nDisciplinary\nEvents\nGeneral\nEmergency\nReminders\nWelcome\nCongratulations"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Template Content"
+  },
+  {
+   "fieldname": "subject_template",
+   "fieldtype": "Data",
+   "label": "Subject Template"
+  },
+  {
+   "fieldname": "message_template",
+   "fieldtype": "Text Editor",
+   "label": "Message Template"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sms_template",
+   "fieldtype": "Text",
+   "label": "SMS Template"
+  },
+  {
+   "fieldname": "push_notification_template",
+   "fieldtype": "Text",
+   "label": "Push Notification Template"
+  },
+  {
+   "fieldname": "recipients_section",
+   "fieldtype": "Section Break",
+   "label": "Recipients Configuration"
+  },
+  {
+   "fieldname": "default_recipients",
+   "fieldtype": "Text",
+   "label": "Default Recipients (Email addresses)"
+  },
+  {
+   "fieldname": "recipient_roles",
+   "fieldtype": "Table MultiSelect",
+   "label": "Recipient Roles",
+   "options": "Role"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recipient_conditions",
+   "fieldtype": "Text",
+   "label": "Recipient Conditions"
+  },
+  {
+   "fieldname": "send_to_parents",
+   "fieldtype": "Check",
+   "label": "Send to Parents"
+  },
+  {
+   "fieldname": "send_to_students",
+   "fieldtype": "Check",
+   "label": "Send to Students"
+  },
+  {
+   "fieldname": "triggers_section",
+   "fieldtype": "Section Break",
+   "label": "Trigger Configuration"
+  },
+  {
+   "fieldname": "trigger_event",
+   "fieldtype": "Select",
+   "label": "Trigger Event",
+   "options": "Manual\nStudent Enrollment\nAttendance Marked\nGrade Published\nFee Due\nPayment Received\nDisciplinary Action\nEvent Created\nExam Scheduled\nCustom"
+  },
+  {
+   "fieldname": "trigger_conditions",
+   "fieldtype": "Text",
+   "label": "Trigger Conditions"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auto_send",
+   "fieldtype": "Check",
+   "label": "Auto Send"
+  },
+  {
+   "fieldname": "send_delay_minutes",
+   "fieldtype": "Int",
+   "label": "Send Delay (Minutes)",
+   "default": 0
+  },
+  {
+   "fieldname": "settings_section",
+   "fieldtype": "Section Break",
+   "label": "Notification Settings"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "delivery_method",
+   "fieldtype": "Select",
+   "label": "Delivery Method",
+   "options": "Immediate\nScheduled\nBatch",
+   "default": "Immediate"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "require_approval",
+   "fieldtype": "Check",
+   "label": "Require Approval"
+  },
+  {
+   "fieldname": "approval_role",
+   "fieldtype": "Link",
+   "label": "Approval Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "variables_section",
+   "fieldtype": "Section Break",
+   "label": "Template Variables"
+  },
+  {
+   "fieldname": "available_variables",
+   "fieldtype": "Text",
+   "label": "Available Variables"
+  },
+  {
+   "fieldname": "sample_data",
+   "fieldtype": "Text",
+   "label": "Sample Data (JSON)"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "usage_instructions",
+   "fieldtype": "Text",
+   "label": "Usage Instructions"
+  },
+  {
+   "fieldname": "template_preview",
+   "fieldtype": "Text",
+   "label": "Template Preview",
+   "read_only": 1
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Administration & Communications",
+ "name": "Notification Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

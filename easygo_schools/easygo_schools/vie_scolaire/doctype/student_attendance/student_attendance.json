@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "allow_copy": 0,
+ "allow_events_in_timeline": 0,
+ "allow_guest_to_view": 0,
+ "allow_import": 1,
+ "allow_rename": 0,
+ "autoname": "format:{student}-{attendance_date}",
+ "beta": 0,
+ "creation": "2025-08-19 14:52:00.000000",
+ "custom": 0,
+ "docstatus": 0,
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_info_section",
+  "student",
+  "student_name",
+  "column_break_4",
+  "school_class",
+  "attendance_date",
+  "attendance_info_section",
+  "status",
+  "column_break_8",
+  "time_in",
+  "time_out",
+  "justification_section",
+  "is_justified",
+  "column_break_12",
+  "justification_reason",
+  "justification_document",
+  "additional_info_section",
+  "notes",
+  "column_break_16",
+  "marked_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_info_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "school_class",
+   "fieldtype": "Data",
+   "label": "Class",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "label": "Attendance Date",
+   "reqd": 1,
+   "default": "Today"
+  },
+  {
+   "fieldname": "attendance_info_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance Information"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Present\nAbsent\nLate\nAbsent Justifié",
+   "reqd": 1,
+   "default": "Present"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_in",
+   "fieldtype": "Time",
+   "label": "Time In"
+  },
+  {
+   "fieldname": "time_out",
+   "fieldtype": "Time",
+   "label": "Time Out"
+  },
+  {
+   "fieldname": "justification_section",
+   "fieldtype": "Section Break",
+   "label": "Justification"
+  },
+  {
+   "fieldname": "is_justified",
+   "fieldtype": "Check",
+   "label": "Is Justified"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "justification_reason",
+   "fieldtype": "Text",
+   "label": "Justification Reason"
+  },
+  {
+   "fieldname": "justification_document",
+   "fieldtype": "Attach",
+   "label": "Justification Document"
+  },
+  {
+   "fieldname": "additional_info_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marked_by",
+   "fieldtype": "Link",
+   "label": "Marked By",
+   "options": "User",
+   "default": "user"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_heading": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "image_view": 0,
+ "in_create": 0,
+ "is_submittable": 0,
+ "issingle": 0,
+ "istable": 0,
+ "max_attachments": 0,
+ "modified": "2025-08-19 14:52:00.000000",
+ "modified_by": "Administrator",
+ "module": "Vie Scolaire",
+ "name": "Student Attendance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principal",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Parent"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "quick_entry": 1,
+ "read_only": 0,
+ "read_only_onload": 0,
+ "search_fields": "student_name,student,attendance_date,status",
+ "show_name_in_global_search": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "student_name",
+ "track_changes": 1,
+ "track_seen": 0,
+ "track_views": 0
+}

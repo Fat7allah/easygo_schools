@@ -1,0 +1,271 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:item_code",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "item_group",
+  "column_break_4",
+  "unit_of_measure",
+  "is_stock_item",
+  "is_active",
+  "section_break_8",
+  "description",
+  "specifications",
+  "section_break_11",
+  "current_stock",
+  "minimum_stock_level",
+  "maximum_stock_level",
+  "column_break_15",
+  "reorder_level",
+  "reorder_quantity",
+  "lead_time_days",
+  "section_break_19",
+  "standard_rate",
+  "last_purchase_rate",
+  "average_rate",
+  "column_break_23",
+  "preferred_supplier",
+  "supplier_part_number",
+  "section_break_26",
+  "storage_location",
+  "shelf_life_days",
+  "expiry_date",
+  "section_break_30",
+  "item_image",
+  "barcode",
+  "qr_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Item Group",
+   "options": "Office Supplies\nCleaning Supplies\nMaintenance\nFood & Beverages\nEducational Materials\nIT Equipment\nFurniture\nSafety Equipment\nMedical Supplies\nOther"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_of_measure",
+   "fieldtype": "Select",
+   "label": "Unit of Measure",
+   "options": "Nos\nKg\nLiter\nMeter\nBox\nPack\nSet\nPair\nRoll\nSheet",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_stock_item",
+   "fieldtype": "Check",
+   "label": "Is Stock Item"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Item Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "specifications",
+   "fieldtype": "Small Text",
+   "label": "Specifications"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Stock Information"
+  },
+  {
+   "fieldname": "current_stock",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Current Stock",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "minimum_stock_level",
+   "fieldtype": "Float",
+   "label": "Minimum Stock Level",
+   "precision": 2
+  },
+  {
+   "fieldname": "maximum_stock_level",
+   "fieldtype": "Float",
+   "label": "Maximum Stock Level",
+   "precision": 2
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reorder_level",
+   "fieldtype": "Float",
+   "label": "Reorder Level",
+   "precision": 2
+  },
+  {
+   "fieldname": "reorder_quantity",
+   "fieldtype": "Float",
+   "label": "Reorder Quantity",
+   "precision": 2
+  },
+  {
+   "fieldname": "lead_time_days",
+   "fieldtype": "Int",
+   "label": "Lead Time (Days)"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "standard_rate",
+   "fieldtype": "Currency",
+   "label": "Standard Rate"
+  },
+  {
+   "fieldname": "last_purchase_rate",
+   "fieldtype": "Currency",
+   "label": "Last Purchase Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "average_rate",
+   "fieldtype": "Currency",
+   "label": "Average Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preferred_supplier",
+   "fieldtype": "Data",
+   "label": "Preferred Supplier"
+  },
+  {
+   "fieldname": "supplier_part_number",
+   "fieldtype": "Data",
+   "label": "Supplier Part Number"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Storage & Expiry"
+  },
+  {
+   "fieldname": "storage_location",
+   "fieldtype": "Data",
+   "label": "Storage Location"
+  },
+  {
+   "fieldname": "shelf_life_days",
+   "fieldtype": "Int",
+   "label": "Shelf Life (Days)"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "item_image",
+   "fieldtype": "Attach Image",
+   "label": "Item Image"
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "label": "Barcode"
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Data",
+   "label": "QR Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Stock Item",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

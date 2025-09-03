@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "test_date",
+  "test_type",
+  "academic_year",
+  "section_break_8",
+  "subjects_tested",
+  "total_marks",
+  "column_break_11",
+  "obtained_marks",
+  "percentage",
+  "grade",
+  "section_break_15",
+  "recommended_program",
+  "recommended_level",
+  "column_break_18",
+  "placement_status",
+  "placement_date",
+  "section_break_21",
+  "test_results",
+  "section_break_23",
+  "examiner_notes",
+  "recommendations",
+  "column_break_26",
+  "conducted_by",
+  "approved_by",
+  "section_break_29",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PLACE-TEST-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Test Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Select",
+   "label": "Test Type",
+   "options": "Admission Placement\nLevel Assessment\nSubject Placement\nSkill Assessment\nLanguage Proficiency\nMath Placement\nScience Placement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Test Results"
+  },
+  {
+   "fieldname": "subjects_tested",
+   "fieldtype": "Small Text",
+   "label": "Subjects Tested",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Int",
+   "label": "Total Marks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "obtained_marks",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Obtained Marks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Percentage",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "label": "Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Placement Recommendation"
+  },
+  {
+   "fieldname": "recommended_program",
+   "fieldtype": "Link",
+   "label": "Recommended Program",
+   "options": "Program"
+  },
+  {
+   "fieldname": "recommended_level",
+   "fieldtype": "Select",
+   "label": "Recommended Level",
+   "options": "Beginner\nIntermediate\nAdvanced\nHonors\nRemedial"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "placement_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Placement Status",
+   "options": "Pending\nApproved\nRejected\nUnder Review"
+  },
+  {
+   "fieldname": "placement_date",
+   "fieldtype": "Date",
+   "label": "Placement Date"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break",
+   "label": "Detailed Results"
+  },
+  {
+   "fieldname": "test_results",
+   "fieldtype": "Table",
+   "label": "Subject-wise Results",
+   "options": "Placement Test Result"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break",
+   "label": "Examiner Assessment"
+  },
+  {
+   "fieldname": "examiner_notes",
+   "fieldtype": "Text Editor",
+   "label": "Examiner Notes"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text Editor",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conducted_by",
+   "fieldtype": "Link",
+   "label": "Conducted By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Test Papers & Documents",
+   "options": "Placement Test Attachment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Placement Test",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

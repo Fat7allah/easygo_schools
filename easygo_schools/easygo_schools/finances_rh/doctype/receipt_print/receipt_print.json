@@ -1,0 +1,422 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "receipt_type",
+  "status",
+  "column_break_4",
+  "date",
+  "due_date",
+  "print_date",
+  "section_break_8",
+  "student",
+  "student_name",
+  "class_section",
+  "column_break_12",
+  "parent_guardian",
+  "contact_number",
+  "email",
+  "section_break_16",
+  "fee_structure",
+  "academic_year",
+  "term",
+  "column_break_20",
+  "total_amount",
+  "paid_amount",
+  "balance_amount",
+  "section_break_24",
+  "fee_components",
+  "section_break_26",
+  "payment_method",
+  "payment_reference",
+  "bank_details",
+  "column_break_30",
+  "transaction_id",
+  "payment_date",
+  "section_break_33",
+  "discount_applied",
+  "discount_amount",
+  "discount_reason",
+  "column_break_37",
+  "late_fee",
+  "penalty_amount",
+  "section_break_40",
+  "receipt_template",
+  "custom_message",
+  "column_break_43",
+  "print_format",
+  "letterhead",
+  "section_break_46",
+  "generated_by",
+  "approved_by",
+  "column_break_49",
+  "receipt_number",
+  "original_receipt",
+  "section_break_52",
+  "remarks",
+  "internal_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "RCP-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "receipt_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Receipt Type",
+   "options": "Fee Payment\nAdvance Payment\nRefund\nAdjustment\nPenalty\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nGenerated\nPrinted\nSent\nCancelled"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "print_date",
+   "fieldtype": "Datetime",
+   "label": "Print Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Student Information"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student.class_section",
+   "fieldname": "class_section",
+   "fieldtype": "Data",
+   "label": "Class/Section",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "student.guardian",
+   "fieldname": "parent_guardian",
+   "fieldtype": "Data",
+   "label": "Parent/Guardian",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student.guardian_mobile",
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student.guardian_email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Fee Details"
+  },
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "label": "Fee Structure",
+   "options": "Fee Structure"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "term",
+   "fieldtype": "Link",
+   "label": "Term",
+   "options": "Academic Term"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount"
+  },
+  {
+   "fieldname": "balance_amount",
+   "fieldtype": "Currency",
+   "label": "Balance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Fee Components"
+  },
+  {
+   "fieldname": "fee_components",
+   "fieldtype": "Table",
+   "label": "Fee Components",
+   "options": "Receipt Print Component"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Payment Information"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nCheque\nBank Transfer\nOnline Payment\nCard Payment\nMobile Payment"
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "bank_details",
+   "fieldtype": "Small Text",
+   "label": "Bank Details"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_id",
+   "fieldtype": "Data",
+   "label": "Transaction ID"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break",
+   "label": "Discounts & Adjustments"
+  },
+  {
+   "default": "0",
+   "fieldname": "discount_applied",
+   "fieldtype": "Check",
+   "label": "Discount Applied"
+  },
+  {
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount"
+  },
+  {
+   "fieldname": "discount_reason",
+   "fieldtype": "Data",
+   "label": "Discount Reason"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "late_fee",
+   "fieldtype": "Check",
+   "label": "Late Fee Applied"
+  },
+  {
+   "fieldname": "penalty_amount",
+   "fieldtype": "Currency",
+   "label": "Penalty Amount"
+  },
+  {
+   "fieldname": "section_break_40",
+   "fieldtype": "Section Break",
+   "label": "Print Settings"
+  },
+  {
+   "fieldname": "receipt_template",
+   "fieldtype": "Link",
+   "label": "Receipt Template",
+   "options": "Print Format"
+  },
+  {
+   "fieldname": "custom_message",
+   "fieldtype": "Small Text",
+   "label": "Custom Message"
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "print_format",
+   "fieldtype": "Link",
+   "label": "Print Format",
+   "options": "Print Format"
+  },
+  {
+   "fieldname": "letterhead",
+   "fieldtype": "Link",
+   "label": "Letterhead",
+   "options": "Letter Head"
+  },
+  {
+   "fieldname": "section_break_46",
+   "fieldtype": "Section Break",
+   "label": "Authorization"
+  },
+  {
+   "fieldname": "generated_by",
+   "fieldtype": "Link",
+   "label": "Generated By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "receipt_number",
+   "fieldtype": "Data",
+   "label": "Receipt Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "original_receipt",
+   "fieldtype": "Link",
+   "label": "Original Receipt",
+   "options": "Receipt Print"
+  },
+  {
+   "fieldname": "section_break_52",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Small Text",
+   "label": "Internal Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Finances RH",
+ "name": "Receipt Print",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

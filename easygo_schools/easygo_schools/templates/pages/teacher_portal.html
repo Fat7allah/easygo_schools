@@ -1,0 +1,700 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("Teacher Portal") }}{% endblock %}
+
+{% block head_include %}
+<link rel="stylesheet" href="/assets/easygo_education/css/app.css">
+<style>
+.class-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #28a745;
+}
+
+.grading-item {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.message-item {
+    background: #f8f9fa;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-left: 3px solid #007bff;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.attendance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.attendance-cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.attendance-cell.present { background: #d4edda; }
+.attendance-cell.absent { background: #f8d7da; }
+.attendance-cell.late { background: #fff3cd; }
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="language-toggle">
+    <button class="btn btn-sm btn-outline-primary" onclick="toggleLanguage()">
+        <span id="lang-text">عربي</span>
+    </button>
+</div>
+
+<div class="container-fluid mt-4" id="teacher-portal">
+    <!-- Loading State -->
+    <div id="loading" class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">{{ _("Loading...") }}</span>
+        </div>
+    </div>
+
+    <!-- Portal Content -->
+    <div id="portal-content" style="display: none;">
+        <!-- Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 id="teacher-name">{{ _("Teacher Portal") }}</h2>
+                <p class="text-muted">{{ _("Manage your classes, grades, and student interactions") }}</p>
+            </div>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div id="today-classes-count" class="stat-number">0</div>
+                <small>{{ _("Today's Classes") }}</small>
+            </div>
+            <div class="stat-card">
+                <div id="pending-grading-count" class="stat-number">0</div>
+                <small>{{ _("Pending Grading") }}</small>
+            </div>
+            <div class="stat-card">
+                <div id="assigned-classes-count" class="stat-number">0</div>
+                <small>{{ _("Assigned Classes") }}</small>
+            </div>
+            <div class="stat-card">
+                <div id="recent-messages-count" class="stat-number">0</div>
+                <small>{{ _("Recent Messages") }}</small>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Today's Schedule -->
+            <div class="col-lg-6 col-md-12">
+                <div class="dashboard-card">
+                    <h5>{{ _("Today's Schedule") }}</h5>
+                    <div id="today-schedule">
+                        <!-- Schedule items will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Grading -->
+            <div class="col-lg-6 col-md-12">
+                <div class="dashboard-card">
+                    <h5>{{ _("Pending Grading") }}</h5>
+                    <div id="pending-grading">
+                        <!-- Grading items will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Assigned Classes -->
+            <div class="col-lg-6 col-md-12">
+                <div class="dashboard-card">
+                    <h5>{{ _("My Classes") }}</h5>
+                    <div id="assigned-classes">
+                        <!-- Classes will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Messages -->
+            <div class="col-lg-6 col-md-12">
+                <div class="dashboard-card">
+                    <h5>{{ _("Recent Messages") }}</h5>
+                    <div id="recent-messages">
+                        <!-- Messages will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="row">
+            <div class="col-12">
+                <div class="dashboard-card">
+                    <h5>{{ _("Quick Actions") }}</h5>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary" onclick="markAttendance()">
+                            {{ _("Mark Attendance") }}
+                        </button>
+                        <button type="button" class="btn btn-outline-primary" onclick="createAssignment()">
+                            {{ _("Create Assignment") }}
+                        </button>
+                        <button type="button" class="btn btn-outline-primary" onclick="viewGradebook()">
+                            {{ _("View Gradebook") }}
+                        </button>
+                        <button type="button" class="btn btn-outline-primary" onclick="sendMessage()">
+                            {{ _("Send Message") }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Attendance Marking Modal -->
+<div class="modal fade" id="attendanceModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ _("Mark Attendance") }}</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="attendance-form">
+                    <div class="form-group">
+                        <label for="attendance-class">{{ _("Class") }}</label>
+                        <select class="form-control" id="attendance-class" name="class" required>
+                            <!-- Options will be populated -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attendance-date">{{ _("Date") }}</label>
+                        <input type="date" class="form-control" id="attendance-date" name="date" required>
+                    </div>
+                    
+                    <div id="students-attendance">
+                        <!-- Student attendance grid will be populated here -->
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _("Cancel") }}</button>
+                <button type="button" class="btn btn-primary" onclick="saveAttendance()">{{ _("Save Attendance") }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Assignment Creation Modal -->
+<div class="modal fade" id="assignmentModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ _("Create Assignment") }}</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="assignment-form">
+                    <div class="form-group">
+                        <label for="assignment-title">{{ _("Title") }}</label>
+                        <input type="text" class="form-control" id="assignment-title" name="title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assignment-subject">{{ _("Subject") }}</label>
+                        <input type="text" class="form-control" id="assignment-subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assignment-class">{{ _("Class") }}</label>
+                        <select class="form-control" id="assignment-class" name="class" required>
+                            <!-- Options will be populated -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assignment-description">{{ _("Description") }}</label>
+                        <textarea class="form-control" id="assignment-description" name="description" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assignment-due-date">{{ _("Due Date") }}</label>
+                        <input type="date" class="form-control" id="assignment-due-date" name="due_date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assignment-attachment">{{ _("Attachment") }}</label>
+                        <input type="file" class="form-control-file" id="assignment-attachment" name="attachment">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _("Cancel") }}</button>
+                <button type="button" class="btn btn-primary" onclick="saveAssignment()">{{ _("Create Assignment") }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Message Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ _("Send Message") }}</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="message-form">
+                    <div class="form-group">
+                        <label for="message-recipient-type">{{ _("Send To") }}</label>
+                        <select class="form-control" id="message-recipient-type" name="recipient_type" required>
+                            <option value="">{{ _("Select recipient type") }}</option>
+                            <option value="student">{{ _("Student") }}</option>
+                            <option value="parent">{{ _("Parent") }}</option>
+                            <option value="class">{{ _("Entire Class") }}</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="recipient-selection" style="display: none;">
+                        <label for="message-recipient">{{ _("Recipient") }}</label>
+                        <select class="form-control" id="message-recipient" name="recipient">
+                            <!-- Options will be populated based on type -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message-subject">{{ _("Subject") }}</label>
+                        <input type="text" class="form-control" id="message-subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message-content">{{ _("Message") }}</label>
+                        <textarea class="form-control" id="message-content" name="content" rows="5" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _("Cancel") }}</button>
+                <button type="button" class="btn btn-primary" onclick="sendMessageToRecipient()">{{ _("Send Message") }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+let dashboardData = null;
+
+$(document).ready(function() {
+    loadDashboard();
+    
+    // Set today's date in forms
+    const today = new Date().toISOString().split('T')[0];
+    $('#attendance-date').val(today);
+    $('#assignment-due-date').attr('min', today);
+    
+    // Event handlers
+    $('#message-recipient-type').change(function() {
+        loadRecipients($(this).val());
+    });
+});
+
+function loadDashboard() {
+    frappe.call({
+        method: 'easygo_education.api.portal.get_portal_home',
+        args: {
+            role: 'Teacher'
+        },
+        callback: function(r) {
+            if (r.message) {
+                dashboardData = r.message;
+                populateDashboard();
+                $('#loading').hide();
+                $('#portal-content').show();
+            }
+        }
+    });
+}
+
+function populateDashboard() {
+    const data = dashboardData;
+    
+    // Teacher info
+    $('#teacher-name').text(`{{ _("Welcome") }}, ${data.teacher_info.name}`);
+    
+    // Stats
+    $('#today-classes-count').text(data.today_classes.length);
+    $('#pending-grading-count').text(data.pending_grading.length);
+    $('#assigned-classes-count').text(data.assigned_classes.length);
+    $('#recent-messages-count').text(data.recent_messages.length);
+    
+    // Today's schedule
+    const scheduleHtml = data.today_classes.map(cls => `
+        <div class="class-card">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>${cls.subject}</h6>
+                    <p class="mb-1">${cls.school_class} • ${cls.room}</p>
+                    <small class="text-muted">${cls.student_count} students</small>
+                </div>
+                <div class="text-right">
+                    <strong>${cls.start_time} - ${cls.end_time}</strong><br>
+                    <button class="btn btn-sm btn-outline-primary mt-1" onclick="markClassAttendance('${cls.school_class}')">
+                        {{ _("Mark Attendance") }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    $('#today-schedule').html(scheduleHtml || '<p class="text-muted">{{ _("No classes today") }}</p>');
+    
+    // Pending grading
+    const gradingHtml = data.pending_grading.map(item => `
+        <div class="grading-item">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <h6>${item.assessment_name}</h6>
+                    <p class="mb-1">${item.subject} • ${item.school_class}</p>
+                    <small class="text-muted">{{ _("Assessment Date") }}: ${frappe.datetime.str_to_user(item.assessment_date)}</small>
+                </div>
+                <div class="text-right">
+                    <span class="badge badge-warning">${item.graded_count}/${item.total_students}</span><br>
+                    <button class="btn btn-sm btn-primary mt-1" onclick="openGradebook('${item.name}')">
+                        {{ _("Grade") }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    $('#pending-grading').html(gradingHtml || '<p class="text-muted">{{ _("No pending grading") }}</p>');
+    
+    // Assigned classes
+    const classesHtml = data.assigned_classes.map(cls => `
+        <div class="class-card">
+            <h6>${cls.class_name}</h6>
+            <p class="mb-1">{{ _("Level") }}: ${cls.level}</p>
+            <div class="btn-group btn-group-sm">
+                <button class="btn btn-outline-primary" onclick="viewClassDetails('${cls.name}')">
+                    {{ _("View Details") }}
+                </button>
+                <button class="btn btn-outline-secondary" onclick="viewClassAttendance('${cls.name}')">
+                    {{ _("Attendance") }}
+                </button>
+            </div>
+        </div>
+    `).join('');
+    $('#assigned-classes').html(classesHtml || '<p class="text-muted">{{ _("No assigned classes") }}</p>');
+    
+    // Recent messages
+    const messagesHtml = data.recent_messages.map(msg => `
+        <div class="message-item">
+            <h6>${msg.subject}</h6>
+            <p class="mb-1">${msg.content.substring(0, 100)}${msg.content.length > 100 ? '...' : ''}</p>
+            <small class="text-muted">${frappe.datetime.comment_when(msg.creation)}</small>
+        </div>
+    `).join('');
+    $('#recent-messages').html(messagesHtml || '<p class="text-muted">{{ _("No recent messages") }}</p>');
+    
+    // Populate form options
+    populateClassOptions();
+}
+
+function populateClassOptions() {
+    if (!dashboardData) return;
+    
+    const classOptions = dashboardData.assigned_classes.map(cls => 
+        `<option value="${cls.name}">${cls.class_name}</option>`
+    ).join('');
+    
+    $('#attendance-class').html('<option value="">{{ _("Select class") }}</option>' + classOptions);
+    $('#assignment-class').html('<option value="">{{ _("Select class") }}</option>' + classOptions);
+}
+
+function markAttendance() {
+    $('#attendanceModal').modal('show');
+}
+
+function markClassAttendance(className) {
+    $('#attendance-class').val(className);
+    loadStudentsForAttendance(className);
+    $('#attendanceModal').modal('show');
+}
+
+function loadStudentsForAttendance(className) {
+    frappe.call({
+        method: 'frappe.client.get_list',
+        args: {
+            doctype: 'Student',
+            filters: {
+                school_class: className,
+                status: 'Active'
+            },
+            fields: ['name', 'student_name'],
+            order_by: 'student_name'
+        },
+        callback: function(r) {
+            if (r.message) {
+                displayStudentsAttendance(r.message);
+            }
+        }
+    });
+}
+
+function displayStudentsAttendance(students) {
+    const html = `
+        <div class="table-responsive">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>{{ _("Student") }}</th>
+                        <th>{{ _("Present") }}</th>
+                        <th>{{ _("Absent") }}</th>
+                        <th>{{ _("Late") }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${students.map(student => `
+                        <tr>
+                            <td>${student.student_name}</td>
+                            <td>
+                                <input type="radio" name="attendance_${student.name}" value="Present" checked>
+                            </td>
+                            <td>
+                                <input type="radio" name="attendance_${student.name}" value="Absent">
+                            </td>
+                            <td>
+                                <input type="radio" name="attendance_${student.name}" value="Late">
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+    `;
+    
+    $('#students-attendance').html(html);
+}
+
+function saveAttendance() {
+    const className = $('#attendance-class').val();
+    const date = $('#attendance-date').val();
+    
+    if (!className || !date) {
+        frappe.show_alert({
+            message: '{{ _("Please select class and date") }}',
+            indicator: 'red'
+        });
+        return;
+    }
+    
+    const attendanceData = [];
+    $('input[name^="attendance_"]:checked').each(function() {
+        const studentId = $(this).attr('name').replace('attendance_', '');
+        const status = $(this).val();
+        
+        attendanceData.push({
+            student: studentId,
+            attendance_date: date,
+            status: status
+        });
+    });
+    
+    // Save attendance records
+    frappe.call({
+        method: 'easygo_education.api.portal.save_bulk_attendance',
+        args: {
+            attendance_data: attendanceData
+        },
+        callback: function(r) {
+            if (r.message) {
+                frappe.show_alert({
+                    message: '{{ _("Attendance saved successfully") }}',
+                    indicator: 'green'
+                });
+                $('#attendanceModal').modal('hide');
+            }
+        }
+    });
+}
+
+function createAssignment() {
+    $('#assignmentModal').modal('show');
+}
+
+function saveAssignment() {
+    const formData = {
+        doctype: 'Homework',
+        title: $('#assignment-title').val(),
+        subject: $('#assignment-subject').val(),
+        school_class: $('#assignment-class').val(),
+        description: $('#assignment-description').val(),
+        due_date: $('#assignment-due-date').val(),
+        instructor: dashboardData.teacher_info.name
+    };
+    
+    frappe.call({
+        method: 'frappe.client.insert',
+        args: {
+            doc: formData
+        },
+        callback: function(r) {
+            if (r.message) {
+                frappe.show_alert({
+                    message: '{{ _("Assignment created successfully") }}',
+                    indicator: 'green'
+                });
+                $('#assignmentModal').modal('hide');
+                $('#assignment-form')[0].reset();
+            }
+        }
+    });
+}
+
+function viewGradebook() {
+    window.location.href = '/teacher-gradebook';
+}
+
+function sendMessage() {
+    $('#messageModal').modal('show');
+}
+
+function loadRecipients(type) {
+    if (!type) {
+        $('#recipient-selection').hide();
+        return;
+    }
+    
+    $('#recipient-selection').show();
+    
+    if (type === 'class') {
+        const classOptions = dashboardData.assigned_classes.map(cls => 
+            `<option value="${cls.name}">${cls.class_name}</option>`
+        ).join('');
+        $('#message-recipient').html('<option value="">{{ _("Select class") }}</option>' + classOptions);
+    } else {
+        // Load students or parents based on type
+        frappe.call({
+            method: 'easygo_education.api.portal.get_message_recipients',
+            args: {
+                type: type,
+                teacher: dashboardData.teacher_info.name
+            },
+            callback: function(r) {
+                if (r.message) {
+                    const options = r.message.map(item => 
+                        `<option value="${item.value}">${item.label}</option>`
+                    ).join('');
+                    $('#message-recipient').html('<option value="">{{ _("Select recipient") }}</option>' + options);
+                }
+            }
+        });
+    }
+}
+
+function sendMessageToRecipient() {
+    const formData = {
+        doctype: 'Message Thread',
+        subject: $('#message-subject').val(),
+        recipient_type: $('#message-recipient-type').val(),
+        recipient: $('#message-recipient').val(),
+        content: $('#message-content').val(),
+        sender: frappe.session.user
+    };
+    
+    frappe.call({
+        method: 'easygo_education.api.portal.send_message',
+        args: {
+            message_data: formData
+        },
+        callback: function(r) {
+            if (r.message) {
+                frappe.show_alert({
+                    message: '{{ _("Message sent successfully") }}',
+                    indicator: 'green'
+                });
+                $('#messageModal').modal('hide');
+                $('#message-form')[0].reset();
+                $('#recipient-selection').hide();
+            }
+        }
+    });
+}
+
+function openGradebook(assessmentId) {
+    window.location.href = `/teacher-gradebook?assessment=${assessmentId}`;
+}
+
+function viewClassDetails(classId) {
+    window.location.href = `/class-details?class=${classId}`;
+}
+
+function viewClassAttendance(classId) {
+    window.location.href = `/class-attendance?class=${classId}`;
+}
+
+function toggleLanguage() {
+    const currentLang = $('html').attr('lang') || 'en';
+    const newLang = currentLang === 'en' ? 'ar' : 'en';
+    
+    $('html').attr('lang', newLang);
+    $('body').toggleClass('rtl', newLang === 'ar');
+    $('#lang-text').text(newLang === 'en' ? 'عربي' : 'English');
+    
+    // Save preference
+    frappe.call({
+        method: 'frappe.core.doctype.user.user.set_user_preference',
+        args: {
+            key: 'language',
+            value: newLang
+        }
+    });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,198 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:leave_type_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "leave_type_name",
+  "leave_type_code",
+  "column_break_3",
+  "is_active",
+  "is_carry_forward",
+  "is_encash_leave",
+  "allocation_section",
+  "max_leaves_allowed",
+  "applicable_after",
+  "column_break_9",
+  "max_continuous_days_allowed",
+  "fraction_of_daily_salary_per_leave",
+  "eligibility_section",
+  "applicable_gender",
+  "min_days_between_application",
+  "column_break_14",
+  "allow_negative",
+  "include_holiday",
+  "is_optional_leave",
+  "rules_section",
+  "description",
+  "leave_policy"
+ ],
+ "fields": [
+  {
+   "fieldname": "leave_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Leave Type Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "leave_type_code",
+   "fieldtype": "Data",
+   "label": "Leave Type Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_carry_forward",
+   "fieldtype": "Check",
+   "label": "Is Carry Forward"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_encash_leave",
+   "fieldtype": "Check",
+   "label": "Is Encash Leave"
+  },
+  {
+   "fieldname": "allocation_section",
+   "fieldtype": "Section Break",
+   "label": "Allocation"
+  },
+  {
+   "fieldname": "max_leaves_allowed",
+   "fieldtype": "Float",
+   "label": "Maximum Leaves Allowed",
+   "precision": 1
+  },
+  {
+   "fieldname": "applicable_after",
+   "fieldtype": "Int",
+   "label": "Applicable After (Working Days)"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_continuous_days_allowed",
+   "fieldtype": "Int",
+   "label": "Maximum Continuous Days Allowed"
+  },
+  {
+   "fieldname": "fraction_of_daily_salary_per_leave",
+   "fieldtype": "Float",
+   "label": "Fraction of Daily Salary per Leave",
+   "precision": 2
+  },
+  {
+   "fieldname": "eligibility_section",
+   "fieldtype": "Section Break",
+   "label": "Eligibility"
+  },
+  {
+   "fieldname": "applicable_gender",
+   "fieldtype": "Select",
+   "label": "Applicable Gender",
+   "options": "\nMale\nFemale\nOther"
+  },
+  {
+   "fieldname": "min_days_between_application",
+   "fieldtype": "Int",
+   "label": "Minimum Days Between Application"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_negative",
+   "fieldtype": "Check",
+   "label": "Allow Negative Balance"
+  },
+  {
+   "default": "0",
+   "fieldname": "include_holiday",
+   "fieldtype": "Check",
+   "label": "Include Holiday Within Leave Period"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_optional_leave",
+   "fieldtype": "Check",
+   "label": "Is Optional Leave"
+  },
+  {
+   "fieldname": "rules_section",
+   "fieldtype": "Section Break",
+   "label": "Rules & Policy"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "leave_policy",
+   "fieldtype": "Small Text",
+   "label": "Leave Policy"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Finances RH",
+ "name": "Leave Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

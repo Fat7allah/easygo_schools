@@ -1,0 +1,262 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "transfer_type",
+  "status",
+  "current_details",
+  "current_academic_year",
+  "current_class",
+  "current_program",
+  "column_break_9",
+  "current_enrollment_date",
+  "current_guardian",
+  "transfer_details",
+  "transfer_date",
+  "reason",
+  "column_break_15",
+  "destination_school",
+  "destination_class",
+  "destination_program",
+  "documents_section",
+  "documents_required",
+  "documents_submitted",
+  "column_break_21",
+  "transfer_certificate_issued",
+  "academic_records_transferred",
+  "approval_section",
+  "requested_by",
+  "approved_by",
+  "column_break_26",
+  "request_date",
+  "approval_date",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "STR-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transfer_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transfer Type",
+   "options": "Internal Transfer\nExternal Transfer\nWithdrawal\nGraduation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nCompleted\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "current_details",
+   "fieldtype": "Section Break",
+   "label": "Current Details"
+  },
+  {
+   "fieldname": "current_academic_year",
+   "fieldtype": "Link",
+   "label": "Current Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "current_class",
+   "fieldtype": "Link",
+   "label": "Current Class",
+   "options": "School Class"
+  },
+  {
+   "fieldname": "current_program",
+   "fieldtype": "Link",
+   "label": "Current Program",
+   "options": "Program"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_enrollment_date",
+   "fieldtype": "Date",
+   "label": "Current Enrollment Date"
+  },
+  {
+   "fieldname": "current_guardian",
+   "fieldtype": "Link",
+   "label": "Current Guardian",
+   "options": "Guardian"
+  },
+  {
+   "fieldname": "transfer_details",
+   "fieldtype": "Section Break",
+   "label": "Transfer Details"
+  },
+  {
+   "fieldname": "transfer_date",
+   "fieldtype": "Date",
+   "label": "Transfer Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Text",
+   "label": "Reason for Transfer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "destination_school",
+   "fieldtype": "Data",
+   "label": "Destination School"
+  },
+  {
+   "fieldname": "destination_class",
+   "fieldtype": "Data",
+   "label": "Destination Class"
+  },
+  {
+   "fieldname": "destination_program",
+   "fieldtype": "Data",
+   "label": "Destination Program"
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "documents_required",
+   "fieldtype": "Text",
+   "label": "Documents Required"
+  },
+  {
+   "fieldname": "documents_submitted",
+   "fieldtype": "Text",
+   "label": "Documents Submitted"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transfer_certificate_issued",
+   "fieldtype": "Check",
+   "label": "Transfer Certificate Issued"
+  },
+  {
+   "fieldname": "academic_records_transferred",
+   "fieldtype": "Check",
+   "label": "Academic Records Transferred"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarité",
+ "name": "Student Transfer",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

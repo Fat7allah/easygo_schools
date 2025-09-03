@@ -1,0 +1,212 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:term_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "term_name",
+  "academic_year",
+  "column_break_3",
+  "term_start_date",
+  "term_end_date",
+  "term_details",
+  "term_type",
+  "is_active",
+  "column_break_8",
+  "total_weeks",
+  "teaching_days",
+  "holidays",
+  "grading_section",
+  "grade_submission_start",
+  "grade_submission_end",
+  "column_break_13",
+  "report_card_template",
+  "final_grade_calculation",
+  "additional_info",
+  "description",
+  "special_events",
+  "column_break_18",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "term_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Term Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "term_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Term Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "term_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Term End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "term_details",
+   "fieldtype": "Section Break",
+   "label": "Term Details"
+  },
+  {
+   "fieldname": "term_type",
+   "fieldtype": "Select",
+   "label": "Term Type",
+   "options": "Regular Term\nSummer Term\nIntensive Term\nMakeup Term",
+   "default": "Regular Term"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active Term"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_weeks",
+   "fieldtype": "Int",
+   "label": "Total Weeks"
+  },
+  {
+   "fieldname": "teaching_days",
+   "fieldtype": "Int",
+   "label": "Teaching Days"
+  },
+  {
+   "fieldname": "holidays",
+   "fieldtype": "Table",
+   "label": "Holidays",
+   "options": "Academic Term Holiday"
+  },
+  {
+   "fieldname": "grading_section",
+   "fieldtype": "Section Break",
+   "label": "Grading & Assessment"
+  },
+  {
+   "fieldname": "grade_submission_start",
+   "fieldtype": "Date",
+   "label": "Grade Submission Start"
+  },
+  {
+   "fieldname": "grade_submission_end",
+   "fieldtype": "Date",
+   "label": "Grade Submission End"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report_card_template",
+   "fieldtype": "Link",
+   "label": "Report Card Template",
+   "options": "Print Format"
+  },
+  {
+   "fieldname": "final_grade_calculation",
+   "fieldtype": "Select",
+   "label": "Final Grade Calculation",
+   "options": "Average\nWeighted Average\nBest of Assessments\nCustom Formula",
+   "default": "Average"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "special_events",
+   "fieldtype": "Text",
+   "label": "Special Events"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarite",
+ "name": "Academic Term",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Parent"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

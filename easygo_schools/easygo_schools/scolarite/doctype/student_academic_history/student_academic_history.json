@@ -1,0 +1,294 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "academic_year",
+  "academic_term",
+  "academic_details",
+  "program",
+  "school_class",
+  "column_break_9",
+  "enrollment_date",
+  "completion_date",
+  "status",
+  "performance_metrics",
+  "total_subjects",
+  "subjects_passed",
+  "column_break_15",
+  "subjects_failed",
+  "overall_percentage",
+  "overall_grade",
+  "attendance_section",
+  "total_days",
+  "days_present",
+  "column_break_21",
+  "days_absent",
+  "attendance_percentage",
+  "disciplinary_section",
+  "disciplinary_actions",
+  "awards_recognition",
+  "column_break_26",
+  "extracurricular_activities",
+  "special_achievements",
+  "additional_info",
+  "remarks",
+  "promoted_to_class",
+  "column_break_31",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SAH-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term"
+  },
+  {
+   "fieldname": "academic_details",
+   "fieldtype": "Section Break",
+   "label": "Academic Details"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program"
+  },
+  {
+   "fieldname": "school_class",
+   "fieldtype": "Link",
+   "label": "School Class",
+   "options": "School Class"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enrollment_date",
+   "fieldtype": "Date",
+   "label": "Enrollment Date"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "In Progress\nCompleted\nPromoted\nRepeated\nTransferred\nWithdrawn",
+   "default": "In Progress"
+  },
+  {
+   "fieldname": "performance_metrics",
+   "fieldtype": "Section Break",
+   "label": "Performance Metrics"
+  },
+  {
+   "fieldname": "total_subjects",
+   "fieldtype": "Int",
+   "label": "Total Subjects"
+  },
+  {
+   "fieldname": "subjects_passed",
+   "fieldtype": "Int",
+   "label": "Subjects Passed"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subjects_failed",
+   "fieldtype": "Int",
+   "label": "Subjects Failed"
+  },
+  {
+   "fieldname": "overall_percentage",
+   "fieldtype": "Percent",
+   "label": "Overall Percentage"
+  },
+  {
+   "fieldname": "overall_grade",
+   "fieldtype": "Data",
+   "label": "Overall Grade"
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "total_days",
+   "fieldtype": "Int",
+   "label": "Total Days"
+  },
+  {
+   "fieldname": "days_present",
+   "fieldtype": "Int",
+   "label": "Days Present"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "days_absent",
+   "fieldtype": "Int",
+   "label": "Days Absent"
+  },
+  {
+   "fieldname": "attendance_percentage",
+   "fieldtype": "Percent",
+   "label": "Attendance Percentage"
+  },
+  {
+   "fieldname": "disciplinary_section",
+   "fieldtype": "Section Break",
+   "label": "Disciplinary & Recognition"
+  },
+  {
+   "fieldname": "disciplinary_actions",
+   "fieldtype": "Int",
+   "label": "Disciplinary Actions"
+  },
+  {
+   "fieldname": "awards_recognition",
+   "fieldtype": "Text",
+   "label": "Awards & Recognition"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "extracurricular_activities",
+   "fieldtype": "Text",
+   "label": "Extracurricular Activities"
+  },
+  {
+   "fieldname": "special_achievements",
+   "fieldtype": "Text",
+   "label": "Special Achievements"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "promoted_to_class",
+   "fieldtype": "Link",
+   "label": "Promoted to Class",
+   "options": "School Class"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarité",
+ "name": "Student Academic History",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Parent"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,388 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "work_order_type",
+  "priority",
+  "column_break_4",
+  "date",
+  "expected_completion_date",
+  "status",
+  "section_break_8",
+  "title",
+  "description",
+  "section_break_11",
+  "location",
+  "department",
+  "column_break_14",
+  "requested_by",
+  "assigned_to",
+  "section_break_17",
+  "maintenance_type",
+  "equipment",
+  "asset",
+  "column_break_21",
+  "estimated_cost",
+  "actual_cost",
+  "section_break_24",
+  "materials_required",
+  "section_break_26",
+  "work_details",
+  "completion_notes",
+  "column_break_29",
+  "start_time",
+  "end_time",
+  "total_hours",
+  "section_break_33",
+  "approval_required",
+  "approved_by",
+  "approval_date",
+  "column_break_37",
+  "rejection_reason",
+  "section_break_39",
+  "safety_requirements",
+  "safety_checklist_completed",
+  "column_break_42",
+  "tools_required",
+  "section_break_44",
+  "attachments",
+  "section_break_46",
+  "follow_up_required",
+  "follow_up_date",
+  "column_break_49",
+  "warranty_applicable",
+  "warranty_period"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "WO-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work_order_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Work Order Type",
+   "options": "Preventive Maintenance\nCorrective Maintenance\nEmergency Repair\nInstallation\nInspection\nCleaning\nUpgrade\nReplacement",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nIn Progress\nPending Approval\nApproved\nCompleted\nCancelled\nOn Hold"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Work Details"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Assignment"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "User"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Information"
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "Electrical\nPlumbing\nHVAC\nCarpentry\nPainting\nCleaning\nIT Equipment\nSecurity\nLandscaping\nGeneral"
+  },
+  {
+   "fieldname": "equipment",
+   "fieldtype": "Data",
+   "label": "Equipment/System"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "actual_cost",
+   "fieldtype": "Currency",
+   "label": "Actual Cost"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Materials"
+  },
+  {
+   "fieldname": "materials_required",
+   "fieldtype": "Table",
+   "label": "Materials Required",
+   "options": "Work Order Material"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Work Progress"
+  },
+  {
+   "fieldname": "work_details",
+   "fieldtype": "Text Editor",
+   "label": "Work Details"
+  },
+  {
+   "fieldname": "completion_notes",
+   "fieldtype": "Text Editor",
+   "label": "Completion Notes"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "total_hours",
+   "fieldtype": "Float",
+   "label": "Total Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "default": "0",
+   "fieldname": "approval_required",
+   "fieldtype": "Check",
+   "label": "Approval Required"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "section_break_39",
+   "fieldtype": "Section Break",
+   "label": "Safety & Tools"
+  },
+  {
+   "fieldname": "safety_requirements",
+   "fieldtype": "Small Text",
+   "label": "Safety Requirements"
+  },
+  {
+   "default": "0",
+   "fieldname": "safety_checklist_completed",
+   "fieldtype": "Check",
+   "label": "Safety Checklist Completed"
+  },
+  {
+   "fieldname": "column_break_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tools_required",
+   "fieldtype": "Small Text",
+   "label": "Tools Required"
+  },
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Work Order Attachment"
+  },
+  {
+   "fieldname": "section_break_46",
+   "fieldtype": "Section Break",
+   "label": "Follow-up"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "warranty_applicable",
+   "fieldtype": "Check",
+   "label": "Warranty Applicable"
+  },
+  {
+   "fieldname": "warranty_period",
+   "fieldtype": "Data",
+   "label": "Warranty Period"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Gestion Etablissement",
+ "name": "Work Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Employee",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,212 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "subject",
+  "column_break_4",
+  "assessment",
+  "assessment_date",
+  "academic_year",
+  "grading_details",
+  "grade",
+  "max_grade",
+  "percentage",
+  "column_break_11",
+  "letter_grade",
+  "grade_point",
+  "is_published",
+  "status_section",
+  "status",
+  "remarks",
+  "column_break_17",
+  "graded_by",
+  "graded_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "GRD-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assessment",
+   "fieldtype": "Link",
+   "label": "Assessment",
+   "options": "Assessment"
+  },
+  {
+   "fieldname": "assessment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Assessment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grading_details",
+   "fieldtype": "Section Break",
+   "label": "Grading Details"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Grade",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_grade",
+   "fieldtype": "Float",
+   "label": "Maximum Grade",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "letter_grade",
+   "fieldtype": "Select",
+   "label": "Letter Grade",
+   "options": "A+\nA\nA-\nB+\nB\nB-\nC+\nC\nC-\nD+\nD\nF",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grade_point",
+   "fieldtype": "Float",
+   "label": "Grade Point",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPublished\nRevised",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "graded_by",
+   "fieldtype": "Link",
+   "label": "Graded By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "graded_on",
+   "fieldtype": "Datetime",
+   "label": "Graded On",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarite",
+ "name": "Grade",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  },
+  {
+   "read": 1,
+   "role": "Parent"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

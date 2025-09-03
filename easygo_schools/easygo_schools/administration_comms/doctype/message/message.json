@@ -1,0 +1,198 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "thread",
+  "message_type",
+  "column_break_4",
+  "sender",
+  "sent_date",
+  "message_content",
+  "content",
+  "attachments",
+  "column_break_9",
+  "is_read",
+  "read_by",
+  "read_date",
+  "message_status",
+  "status",
+  "delivery_status",
+  "column_break_15",
+  "reply_to",
+  "edited",
+  "edit_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MSG-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "thread",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Thread",
+   "options": "Message Thread",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message_type",
+   "fieldtype": "Select",
+   "label": "Message Type",
+   "options": "Text\nFile\nImage\nSystem",
+   "default": "Text"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sender",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sender",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sent_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Sent Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message_content",
+   "fieldtype": "Section Break",
+   "label": "Message Content"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Text Editor",
+   "label": "Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Message Attachment"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_read",
+   "fieldtype": "Check",
+   "label": "Is Read"
+  },
+  {
+   "fieldname": "read_by",
+   "fieldtype": "Table",
+   "label": "Read By",
+   "options": "Message Read Receipt"
+  },
+  {
+   "fieldname": "read_date",
+   "fieldtype": "Datetime",
+   "label": "Read Date"
+  },
+  {
+   "fieldname": "message_status",
+   "fieldtype": "Section Break",
+   "label": "Message Status"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Sent\nDelivered\nRead\nFailed",
+   "default": "Sent"
+  },
+  {
+   "fieldname": "delivery_status",
+   "fieldtype": "Text",
+   "label": "Delivery Status"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reply_to",
+   "fieldtype": "Link",
+   "label": "Reply To",
+   "options": "Message"
+  },
+  {
+   "fieldname": "edited",
+   "fieldtype": "Check",
+   "label": "Edited"
+  },
+  {
+   "fieldname": "edit_history",
+   "fieldtype": "Text",
+   "label": "Edit History"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Administration Comms",
+ "name": "Message",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Parent",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

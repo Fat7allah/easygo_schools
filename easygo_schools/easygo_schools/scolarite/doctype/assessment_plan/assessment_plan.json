@@ -1,0 +1,216 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PLAN-{YYYY}-{#####}",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "assessment_plan_name",
+  "academic_year",
+  "academic_term",
+  "column_break_4",
+  "school_class",
+  "subject",
+  "teacher",
+  "section_break_8",
+  "assessment_type",
+  "total_marks",
+  "passing_marks",
+  "column_break_12",
+  "planned_date",
+  "duration_minutes",
+  "status",
+  "section_break_16",
+  "syllabus_coverage",
+  "learning_objectives",
+  "assessment_criteria",
+  "section_break_20",
+  "instructions",
+  "materials_required",
+  "special_requirements"
+ ],
+ "fields": [
+  {
+   "fieldname": "assessment_plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Assessment Plan Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "label": "Academic Term",
+   "options": "Academic Term"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "school_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Class",
+   "options": "School Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "teacher",
+   "fieldtype": "Link",
+   "label": "Teacher",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Assessment Details"
+  },
+  {
+   "fieldname": "assessment_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Assessment Type",
+   "options": "Quiz\nTest\nExam\nProject\nPresentation\nPractical\nOral\nAssignment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Int",
+   "label": "Total Marks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "passing_marks",
+   "fieldtype": "Int",
+   "label": "Passing Marks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "planned_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planned Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_minutes",
+   "fieldtype": "Int",
+   "label": "Duration (Minutes)"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nScheduled\nConducted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Curriculum & Objectives"
+  },
+  {
+   "fieldname": "syllabus_coverage",
+   "fieldtype": "Text Editor",
+   "label": "Syllabus Coverage"
+  },
+  {
+   "fieldname": "learning_objectives",
+   "fieldtype": "Text Editor",
+   "label": "Learning Objectives"
+  },
+  {
+   "fieldname": "assessment_criteria",
+   "fieldtype": "Text Editor",
+   "label": "Assessment Criteria"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Instructions & Requirements"
+  },
+  {
+   "fieldname": "instructions",
+   "fieldtype": "Text Editor",
+   "label": "Instructions for Students"
+  },
+  {
+   "fieldname": "materials_required",
+   "fieldtype": "Small Text",
+   "label": "Materials Required"
+  },
+  {
+   "fieldname": "special_requirements",
+   "fieldtype": "Small Text",
+   "label": "Special Requirements"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Assessment Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

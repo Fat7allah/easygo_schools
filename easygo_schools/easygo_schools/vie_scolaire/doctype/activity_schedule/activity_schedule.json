@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "activity",
+  "activity_name",
+  "column_break_4",
+  "schedule_date",
+  "start_time",
+  "end_time",
+  "section_break_8",
+  "venue",
+  "instructor",
+  "column_break_11",
+  "max_participants",
+  "registered_participants",
+  "section_break_14",
+  "description",
+  "requirements",
+  "column_break_17",
+  "equipment_needed",
+  "special_instructions",
+  "section_break_20",
+  "status",
+  "is_recurring",
+  "column_break_23",
+  "recurrence_pattern",
+  "end_recurrence_date",
+  "section_break_26",
+  "attendance_taken",
+  "attendance_count",
+  "column_break_29",
+  "cancelled_reason",
+  "rescheduled_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ACT-SCH-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity",
+   "options": "Extracurricular Activity",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "activity.activity_name",
+   "fieldname": "activity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Schedule Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Venue & Instructor"
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Link",
+   "label": "Venue",
+   "options": "Room"
+  },
+  {
+   "fieldname": "instructor",
+   "fieldtype": "Link",
+   "label": "Instructor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "activity.max_participants",
+   "fieldname": "max_participants",
+   "fieldtype": "Int",
+   "label": "Max Participants"
+  },
+  {
+   "default": "0",
+   "fieldname": "registered_participants",
+   "fieldtype": "Int",
+   "label": "Registered Participants",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Activity Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "requirements",
+   "fieldtype": "Small Text",
+   "label": "Requirements"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "equipment_needed",
+   "fieldtype": "Small Text",
+   "label": "Equipment Needed"
+  },
+  {
+   "fieldname": "special_instructions",
+   "fieldtype": "Small Text",
+   "label": "Special Instructions"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Schedule Status"
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled\nRescheduled"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_recurring",
+   "fieldtype": "Check",
+   "label": "Is Recurring"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "is_recurring",
+   "fieldname": "recurrence_pattern",
+   "fieldtype": "Select",
+   "label": "Recurrence Pattern",
+   "options": "Daily\nWeekly\nBi-weekly\nMonthly"
+  },
+  {
+   "depends_on": "is_recurring",
+   "fieldname": "end_recurrence_date",
+   "fieldtype": "Date",
+   "label": "End Recurrence Date"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "default": "0",
+   "fieldname": "attendance_taken",
+   "fieldtype": "Check",
+   "label": "Attendance Taken"
+  },
+  {
+   "fieldname": "attendance_count",
+   "fieldtype": "Int",
+   "label": "Attendance Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status=='Cancelled'",
+   "fieldname": "cancelled_reason",
+   "fieldtype": "Small Text",
+   "label": "Cancellation Reason"
+  },
+  {
+   "depends_on": "eval:doc.status=='Rescheduled'",
+   "fieldname": "rescheduled_to",
+   "fieldtype": "Link",
+   "label": "Rescheduled To",
+   "options": "Activity Schedule"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Activity Schedule",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Activities Coordinator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

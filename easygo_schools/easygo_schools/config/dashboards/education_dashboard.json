@@ -1,0 +1,47 @@
+{
+ "cards": [
+  {
+   "card": "Total Students",
+   "col": 3
+  },
+  {
+   "card": "Total Teachers",
+   "col": 3
+  },
+  {
+   "card": "Active Classes",
+   "col": 3
+  },
+  {
+   "card": "Monthly Revenue",
+   "col": 3
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Student Enrollment Chart",
+   "width": "Half"
+  },
+  {
+   "chart": "Attendance Chart",
+   "width": "Half"
+  },
+  {
+   "chart": "Fee Collection Chart",
+   "width": "Full"
+  }
+ ],
+ "creation": "2024-01-01 00:00:00.000000",
+ "dashboard_name": "Education Overview",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Education Dashboard",
+ "owner": "Administrator",
+ "restrict_to_domain": ""
+}

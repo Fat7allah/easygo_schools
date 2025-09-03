@@ -1,0 +1,294 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RC-{YYYY}-{#####}",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "student_name",
+  "academic_year",
+  "column_break_4",
+  "academic_term",
+  "school_class",
+  "report_date",
+  "section_break_8",
+  "subjects",
+  "section_break_10",
+  "overall_grade",
+  "overall_percentage",
+  "class_rank",
+  "column_break_14",
+  "total_marks",
+  "obtained_marks",
+  "grade_point_average",
+  "section_break_18",
+  "attendance_percentage",
+  "days_present",
+  "days_absent",
+  "column_break_22",
+  "conduct_grade",
+  "effort_grade",
+  "section_break_25",
+  "teacher_comments",
+  "principal_comments",
+  "section_break_28",
+  "extracurricular_activities",
+  "achievements",
+  "section_break_31",
+  "next_term_begins",
+  "promotion_status",
+  "recommendations"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.title",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_term",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Term",
+   "options": "Academic Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "school_class",
+   "fieldtype": "Link",
+   "label": "Class",
+   "options": "School Class",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Report Date"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Subject Grades"
+  },
+  {
+   "fieldname": "subjects",
+   "fieldtype": "Table",
+   "label": "Subjects",
+   "options": "Report Card Subject"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Overall Performance"
+  },
+  {
+   "fieldname": "overall_grade",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Overall Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overall_percentage",
+   "fieldtype": "Percent",
+   "label": "Overall Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "class_rank",
+   "fieldtype": "Int",
+   "label": "Class Rank",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Float",
+   "label": "Total Marks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "obtained_marks",
+   "fieldtype": "Float",
+   "label": "Obtained Marks",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grade_point_average",
+   "fieldtype": "Float",
+   "label": "Grade Point Average",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "attendance_percentage",
+   "fieldtype": "Percent",
+   "label": "Attendance Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "days_present",
+   "fieldtype": "Int",
+   "label": "Days Present",
+   "read_only": 1
+  },
+  {
+   "fieldname": "days_absent",
+   "fieldtype": "Int",
+   "label": "Days Absent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conduct_grade",
+   "fieldtype": "Select",
+   "label": "Conduct Grade",
+   "options": "Excellent\nVery Good\nGood\nSatisfactory\nNeeds Improvement"
+  },
+  {
+   "fieldname": "effort_grade",
+   "fieldtype": "Select",
+   "label": "Effort Grade",
+   "options": "Excellent\nVery Good\nGood\nSatisfactory\nNeeds Improvement"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "teacher_comments",
+   "fieldtype": "Text Editor",
+   "label": "Teacher Comments"
+  },
+  {
+   "fieldname": "principal_comments",
+   "fieldtype": "Text Editor",
+   "label": "Principal Comments"
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "label": "Activities & Achievements"
+  },
+  {
+   "fieldname": "extracurricular_activities",
+   "fieldtype": "Table",
+   "label": "Extracurricular Activities",
+   "options": "Report Card Activity"
+  },
+  {
+   "fieldname": "achievements",
+   "fieldtype": "Table",
+   "label": "Achievements",
+   "options": "Report Card Achievement"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break",
+   "label": "Next Term Information"
+  },
+  {
+   "fieldname": "next_term_begins",
+   "fieldtype": "Date",
+   "label": "Next Term Begins"
+  },
+  {
+   "fieldname": "promotion_status",
+   "fieldtype": "Select",
+   "label": "Promotion Status",
+   "options": "Promoted\nConditional Promotion\nRetained\nPending"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Small Text",
+   "label": "Recommendations"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Report Card",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

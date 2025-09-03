@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:scale_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scale_name",
+  "scale_type",
+  "column_break_3",
+  "is_default",
+  "is_active",
+  "scale_details",
+  "description",
+  "minimum_score",
+  "column_break_8",
+  "maximum_score",
+  "passing_grade",
+  "grade_intervals",
+  "intervals",
+  "column_break_12",
+  "grade_points_enabled",
+  "honor_roll_threshold",
+  "additional_settings",
+  "rounding_method",
+  "decimal_places",
+  "column_break_17",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "scale_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Scale Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "scale_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Scale Type",
+   "options": "Letter Grade\nPercentage\nPoints\nGPA\nCustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default Scale"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "scale_details",
+   "fieldtype": "Section Break",
+   "label": "Scale Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "minimum_score",
+   "fieldtype": "Float",
+   "label": "Minimum Score",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maximum_score",
+   "fieldtype": "Float",
+   "label": "Maximum Score",
+   "reqd": 1
+  },
+  {
+   "fieldname": "passing_grade",
+   "fieldtype": "Float",
+   "label": "Passing Grade",
+   "reqd": 1
+  },
+  {
+   "fieldname": "grade_intervals",
+   "fieldtype": "Section Break",
+   "label": "Grade Intervals"
+  },
+  {
+   "fieldname": "intervals",
+   "fieldtype": "Table",
+   "label": "Grade Intervals",
+   "options": "Grading Scale Interval",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grade_points_enabled",
+   "fieldtype": "Check",
+   "label": "Grade Points Enabled"
+  },
+  {
+   "fieldname": "honor_roll_threshold",
+   "fieldtype": "Float",
+   "label": "Honor Roll Threshold"
+  },
+  {
+   "fieldname": "additional_settings",
+   "fieldtype": "Section Break",
+   "label": "Additional Settings"
+  },
+  {
+   "fieldname": "rounding_method",
+   "fieldtype": "Select",
+   "label": "Rounding Method",
+   "options": "Round to Nearest\nRound Up\nRound Down\nNo Rounding",
+   "default": "Round to Nearest"
+  },
+  {
+   "fieldname": "decimal_places",
+   "fieldtype": "Int",
+   "label": "Decimal Places",
+   "default": 2
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarité",
+ "name": "Grading Scale",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Parent"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

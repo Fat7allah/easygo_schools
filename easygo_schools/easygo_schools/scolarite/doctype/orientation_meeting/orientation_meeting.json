@@ -1,0 +1,388 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "academic_year",
+  "current_grade",
+  "meeting_date",
+  "section_break_8",
+  "meeting_type",
+  "priority",
+  "column_break_11",
+  "duration_minutes",
+  "meeting_status",
+  "section_break_14",
+  "orientation_counselor",
+  "class_teacher",
+  "column_break_17",
+  "parent_guardian",
+  "other_attendees",
+  "section_break_20",
+  "meeting_agenda",
+  "discussion_topics",
+  "column_break_23",
+  "student_concerns",
+  "parent_concerns",
+  "section_break_26",
+  "academic_performance_discussed",
+  "career_interests_explored",
+  "column_break_29",
+  "stream_options_reviewed",
+  "subject_selections_discussed",
+  "section_break_32",
+  "student_feedback",
+  "parent_feedback",
+  "column_break_35",
+  "counselor_observations",
+  "meeting_outcomes",
+  "section_break_38",
+  "action_items",
+  "follow_up_required",
+  "column_break_41",
+  "next_meeting_date",
+  "completion_status",
+  "section_break_44",
+  "meeting_notes",
+  "recommendations_made",
+  "column_break_47",
+  "documents_shared",
+  "resources_provided"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ORI-MEET-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_group",
+   "fieldname": "current_grade",
+   "fieldtype": "Data",
+   "label": "Current Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "meeting_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Meeting Date & Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Meeting Details"
+  },
+  {
+   "fieldname": "meeting_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Meeting Type",
+   "options": "Initial Consultation\nStream Selection\nCareer Guidance\nAcademic Review\nParent Conference\nFollow-up Session\nCrisis Intervention\nTransition Planning",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "60",
+   "fieldname": "duration_minutes",
+   "fieldtype": "Int",
+   "label": "Duration (Minutes)"
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "meeting_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled\nRescheduled\nNo Show"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Attendees"
+  },
+  {
+   "fieldname": "orientation_counselor",
+   "fieldtype": "Link",
+   "label": "Orientation Counselor",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_teacher",
+   "fieldtype": "Link",
+   "label": "Class Teacher",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_guardian",
+   "fieldtype": "Link",
+   "label": "Parent/Guardian",
+   "options": "Guardian"
+  },
+  {
+   "fieldname": "other_attendees",
+   "fieldtype": "Table",
+   "label": "Other Attendees",
+   "options": "Meeting Attendee"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Meeting Agenda"
+  },
+  {
+   "fieldname": "meeting_agenda",
+   "fieldtype": "Text Editor",
+   "label": "Meeting Agenda"
+  },
+  {
+   "fieldname": "discussion_topics",
+   "fieldtype": "Table",
+   "label": "Discussion Topics",
+   "options": "Meeting Topic"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_concerns",
+   "fieldtype": "Small Text",
+   "label": "Student Concerns"
+  },
+  {
+   "fieldname": "parent_concerns",
+   "fieldtype": "Small Text",
+   "label": "Parent Concerns"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Discussion Areas"
+  },
+  {
+   "default": "0",
+   "fieldname": "academic_performance_discussed",
+   "fieldtype": "Check",
+   "label": "Academic Performance Discussed"
+  },
+  {
+   "default": "0",
+   "fieldname": "career_interests_explored",
+   "fieldtype": "Check",
+   "label": "Career Interests Explored"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "stream_options_reviewed",
+   "fieldtype": "Check",
+   "label": "Stream Options Reviewed"
+  },
+  {
+   "default": "0",
+   "fieldname": "subject_selections_discussed",
+   "fieldtype": "Check",
+   "label": "Subject Selections Discussed"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Feedback & Observations"
+  },
+  {
+   "fieldname": "student_feedback",
+   "fieldtype": "Small Text",
+   "label": "Student Feedback"
+  },
+  {
+   "fieldname": "parent_feedback",
+   "fieldtype": "Small Text",
+   "label": "Parent Feedback"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "counselor_observations",
+   "fieldtype": "Text Editor",
+   "label": "Counselor Observations"
+  },
+  {
+   "fieldname": "meeting_outcomes",
+   "fieldtype": "Small Text",
+   "label": "Meeting Outcomes"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break",
+   "label": "Action Items & Follow-up"
+  },
+  {
+   "fieldname": "action_items",
+   "fieldtype": "Table",
+   "label": "Action Items",
+   "options": "Meeting Action Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_meeting_date",
+   "fieldtype": "Date",
+   "label": "Next Meeting Date"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "completion_status",
+   "fieldtype": "Select",
+   "label": "Completion Status",
+   "options": "Pending\nPartially Complete\nComplete\nRequires Follow-up"
+  },
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Documentation"
+  },
+  {
+   "fieldname": "meeting_notes",
+   "fieldtype": "Text Editor",
+   "label": "Meeting Notes"
+  },
+  {
+   "fieldname": "recommendations_made",
+   "fieldtype": "Text Editor",
+   "label": "Recommendations Made"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "documents_shared",
+   "fieldtype": "Table",
+   "label": "Documents Shared",
+   "options": "Meeting Document"
+  },
+  {
+   "fieldname": "resources_provided",
+   "fieldtype": "Small Text",
+   "label": "Resources Provided"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Orientation Meeting",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academic Counselor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,288 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "lesson_title",
+  "subject",
+  "column_break_4",
+  "school_class",
+  "teacher",
+  "academic_year",
+  "lesson_details",
+  "lesson_date",
+  "duration_minutes",
+  "column_break_10",
+  "lesson_type",
+  "status",
+  "objectives_section",
+  "learning_objectives",
+  "success_criteria",
+  "column_break_15",
+  "prior_knowledge",
+  "differentiation",
+  "content_section",
+  "lesson_content",
+  "activities",
+  "column_break_20",
+  "resources_needed",
+  "homework_assigned",
+  "assessment_section",
+  "assessment_methods",
+  "evaluation_criteria",
+  "column_break_25",
+  "reflection_notes",
+  "student_feedback",
+  "additional_info",
+  "notes",
+  "attachments",
+  "column_break_30",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "LP-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lesson_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lesson Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "school_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "School Class",
+   "options": "School Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "teacher",
+   "fieldtype": "Link",
+   "label": "Teacher",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "lesson_details",
+   "fieldtype": "Section Break",
+   "label": "Lesson Details"
+  },
+  {
+   "fieldname": "lesson_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Lesson Date"
+  },
+  {
+   "fieldname": "duration_minutes",
+   "fieldtype": "Int",
+   "label": "Duration (Minutes)",
+   "default": 60
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lesson_type",
+   "fieldtype": "Select",
+   "label": "Lesson Type",
+   "options": "Introduction\nPractice\nAssessment\nReview\nProject\nLab\nField Trip\nPresentation\nOther"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPlanned\nIn Progress\nCompleted\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "objectives_section",
+   "fieldtype": "Section Break",
+   "label": "Learning Objectives"
+  },
+  {
+   "fieldname": "learning_objectives",
+   "fieldtype": "Text",
+   "label": "Learning Objectives"
+  },
+  {
+   "fieldname": "success_criteria",
+   "fieldtype": "Text",
+   "label": "Success Criteria"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prior_knowledge",
+   "fieldtype": "Text",
+   "label": "Prior Knowledge Required"
+  },
+  {
+   "fieldname": "differentiation",
+   "fieldtype": "Text",
+   "label": "Differentiation Strategies"
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Lesson Content"
+  },
+  {
+   "fieldname": "lesson_content",
+   "fieldtype": "Text Editor",
+   "label": "Lesson Content"
+  },
+  {
+   "fieldname": "activities",
+   "fieldtype": "Text",
+   "label": "Activities"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resources_needed",
+   "fieldtype": "Text",
+   "label": "Resources Needed"
+  },
+  {
+   "fieldname": "homework_assigned",
+   "fieldtype": "Link",
+   "label": "Homework Assigned",
+   "options": "Homework"
+  },
+  {
+   "fieldname": "assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Assessment & Reflection"
+  },
+  {
+   "fieldname": "assessment_methods",
+   "fieldtype": "Text",
+   "label": "Assessment Methods"
+  },
+  {
+   "fieldname": "evaluation_criteria",
+   "fieldtype": "Text",
+   "label": "Evaluation Criteria"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reflection_notes",
+   "fieldtype": "Text",
+   "label": "Teacher Reflection"
+  },
+  {
+   "fieldname": "student_feedback",
+   "fieldtype": "Text",
+   "label": "Student Feedback"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarité",
+ "name": "Lesson Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

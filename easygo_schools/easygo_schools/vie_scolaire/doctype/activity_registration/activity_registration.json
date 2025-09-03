@@ -1,0 +1,389 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "activity",
+  "activity_name",
+  "registration_date",
+  "section_break_8",
+  "guardian_consent",
+  "guardian_name",
+  "column_break_11",
+  "consent_date",
+  "consent_method",
+  "section_break_14",
+  "medical_clearance",
+  "medical_notes",
+  "column_break_17",
+  "emergency_contact",
+  "emergency_phone",
+  "section_break_20",
+  "skill_level",
+  "previous_experience",
+  "column_break_23",
+  "special_requirements",
+  "dietary_restrictions",
+  "section_break_26",
+  "status",
+  "priority",
+  "column_break_29",
+  "approved_by",
+  "approval_date",
+  "section_break_32",
+  "start_date",
+  "end_date",
+  "column_break_35",
+  "sessions_attended",
+  "total_sessions",
+  "section_break_38",
+  "fees_applicable",
+  "registration_fee",
+  "column_break_41",
+  "payment_status",
+  "payment_reference",
+  "section_break_44",
+  "withdrawal_date",
+  "withdrawal_reason",
+  "column_break_47",
+  "refund_amount",
+  "refund_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ACT-REG-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity",
+   "options": "Extracurricular Activity",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "activity.activity_name",
+   "fieldname": "activity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Guardian Consent"
+  },
+  {
+   "default": "0",
+   "fieldname": "guardian_consent",
+   "fieldtype": "Check",
+   "label": "Guardian Consent Given",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consent_date",
+   "fieldtype": "Date",
+   "label": "Consent Date"
+  },
+  {
+   "fieldname": "consent_method",
+   "fieldtype": "Select",
+   "label": "Consent Method",
+   "options": "Written Form\nDigital Signature\nEmail Confirmation\nPhone Confirmation"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Medical Information"
+  },
+  {
+   "default": "0",
+   "fieldname": "medical_clearance",
+   "fieldtype": "Check",
+   "label": "Medical Clearance Required"
+  },
+  {
+   "fieldname": "medical_notes",
+   "fieldtype": "Small Text",
+   "label": "Medical Notes"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Data",
+   "label": "Emergency Contact Name"
+  },
+  {
+   "fieldname": "emergency_phone",
+   "fieldtype": "Data",
+   "label": "Emergency Phone"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Student Information"
+  },
+  {
+   "fieldname": "skill_level",
+   "fieldtype": "Select",
+   "label": "Skill Level",
+   "options": "Beginner\nIntermediate\nAdvanced\nExpert"
+  },
+  {
+   "fieldname": "previous_experience",
+   "fieldtype": "Small Text",
+   "label": "Previous Experience"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "special_requirements",
+   "fieldtype": "Small Text",
+   "label": "Special Requirements"
+  },
+  {
+   "fieldname": "dietary_restrictions",
+   "fieldtype": "Select",
+   "label": "Dietary Restrictions",
+   "options": "None\nVegetarian\nVegan\nHalal\nKosher\nGluten-Free\nNut-Free\nDairy-Free"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Registration Status"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nApproved\nActive\nWaitlisted\nWithdrawn\nCompleted\nSuspended"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "High\nNormal\nLow"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Activity Period"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sessions_attended",
+   "fieldtype": "Int",
+   "label": "Sessions Attended",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_sessions",
+   "fieldtype": "Int",
+   "label": "Total Sessions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break",
+   "label": "Fees & Payment"
+  },
+  {
+   "default": "0",
+   "fieldname": "fees_applicable",
+   "fieldtype": "Check",
+   "label": "Fees Applicable"
+  },
+  {
+   "depends_on": "fees_applicable",
+   "fieldname": "registration_fee",
+   "fieldtype": "Currency",
+   "label": "Registration Fee"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Unpaid",
+   "depends_on": "fees_applicable",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Unpaid\nPaid\nPartial\nRefunded"
+  },
+  {
+   "depends_on": "fees_applicable",
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Withdrawal Information"
+  },
+  {
+   "fieldname": "withdrawal_date",
+   "fieldtype": "Date",
+   "label": "Withdrawal Date"
+  },
+  {
+   "fieldname": "withdrawal_reason",
+   "fieldtype": "Small Text",
+   "label": "Withdrawal Reason"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "refund_amount",
+   "fieldtype": "Currency",
+   "label": "Refund Amount"
+  },
+  {
+   "fieldname": "refund_status",
+   "fieldtype": "Select",
+   "label": "Refund Status",
+   "options": "Not Applicable\nPending\nProcessed\nCompleted"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Activity Registration",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Activities Coordinator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Guardian",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

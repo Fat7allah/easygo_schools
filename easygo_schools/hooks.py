@@ -1,9 +1,13 @@
+from . import __version__ as app_version
+
 app_name = "easygo_schools"
-app_title = "Easygo Schools"
-app_publisher = "easygo"
-app_description = "schools management system"
-app_email = "admin@easygo.ma"
-app_license = "mit"
+app_title = "EasyGo Schools"
+app_publisher = "EasyGo Education Team"
+app_description = "Comprehensive educational institution management system for Morocco"
+app_icon = "octicon octicon-mortar-board"
+app_color = "blue"
+app_email = "contact@easygo-education.ma"
+app_license = "MIT"
 
 # Apps
 # ------------------
@@ -83,7 +87,7 @@ app_license = "mit"
 # ------------
 
 # before_install = "easygo_schools.install.before_install"
-# after_install = "easygo_schools.install.after_install"
+after_install = "easygo_schools.patches.v1_bootstrap.execute"
 
 # Uninstallation
 # ------------
@@ -234,6 +238,71 @@ app_license = "mit"
 # auth_hooks = [
 # 	"easygo_schools.auth.validate"
 # ]
+
+# Fixtures
+# --------
+# Export fixtures for the app
+
+fixtures = [
+    {
+        "doctype": "Role",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Student",
+                    "Parent",
+                    "Teacher",
+                    "Principal",
+                    "Accountant",
+                    "HR Manager",
+                    "Maintenance",
+                    "Transport",
+                    "Canteen",
+                    "Director",
+                ],
+            ]
+        ],
+    },
+    {
+        "doctype": "Desktop Icon",
+        "filters": [["module_name", "=", "EasyGo Schools"]],
+    },
+    "Letter Head",
+    "Web Form",
+]
+
+# Website
+# -------
+
+website_route_rules = [
+    {"from_route": "/student/<path:app_path>", "to_route": "student"},
+    {"from_route": "/parent/<path:app_path>", "to_route": "parent"},
+    {"from_route": "/teacher/<path:app_path>", "to_route": "teacher"},
+]
+
+# Portal menu items
+portal_menu_items = [
+    {
+        "title": "Student Portal",
+        "route": "/student",
+        "reference_doctype": "Student",
+        "role": "Student",
+    },
+    {
+        "title": "Parent Portal",
+        "route": "/parent",
+        "reference_doctype": "Guardian",
+        "role": "Parent",
+    },
+    {
+        "title": "Teacher Portal",
+        "route": "/teacher",
+        "reference_doctype": "Employee",
+        "role": "Teacher",
+    },
+]
 
 # Automatically update python controller files with type annotations for this app.
 # export_python_type_annotations = True

@@ -1,0 +1,345 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "template_name",
+  "template_type",
+  "column_break_4",
+  "category",
+  "status",
+  "is_default",
+  "section_break_8",
+  "description",
+  "usage_instructions",
+  "section_break_11",
+  "template_content",
+  "section_break_13",
+  "variables",
+  "section_break_15",
+  "letterhead",
+  "print_format",
+  "column_break_18",
+  "page_size",
+  "orientation",
+  "margins",
+  "section_break_22",
+  "header_content",
+  "footer_content",
+  "section_break_25",
+  "css_styles",
+  "javascript_code",
+  "section_break_28",
+  "applicable_doctypes",
+  "section_break_30",
+  "access_roles",
+  "section_break_32",
+  "version",
+  "created_by",
+  "column_break_35",
+  "approved_by",
+  "approval_date",
+  "section_break_38",
+  "tags",
+  "keywords",
+  "column_break_41",
+  "language",
+  "region"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "TMPL-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "template_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Template Type",
+   "options": "Letter\nCertificate\nReport\nInvoice\nReceipt\nNotification\nContract\nMemo\nForm\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Academic\nAdministrative\nFinancial\nHR\nCommunication\nLegal\nMarketing\nOperational"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nActive\nInactive\nArchived"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default Template"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Template Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "usage_instructions",
+   "fieldtype": "Text Editor",
+   "label": "Usage Instructions"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Template Content"
+  },
+  {
+   "fieldname": "template_content",
+   "fieldtype": "Code",
+   "label": "Template Content",
+   "options": "HTML",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Variables"
+  },
+  {
+   "fieldname": "variables",
+   "fieldtype": "Table",
+   "label": "Template Variables",
+   "options": "Document Template Variable"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Print Settings"
+  },
+  {
+   "fieldname": "letterhead",
+   "fieldtype": "Link",
+   "label": "Letterhead",
+   "options": "Letter Head"
+  },
+  {
+   "fieldname": "print_format",
+   "fieldtype": "Link",
+   "label": "Print Format",
+   "options": "Print Format"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "A4",
+   "fieldname": "page_size",
+   "fieldtype": "Select",
+   "label": "Page Size",
+   "options": "A4\nA3\nA5\nLetter\nLegal"
+  },
+  {
+   "default": "Portrait",
+   "fieldname": "orientation",
+   "fieldtype": "Select",
+   "label": "Orientation",
+   "options": "Portrait\nLandscape"
+  },
+  {
+   "fieldname": "margins",
+   "fieldtype": "Data",
+   "label": "Margins (CSS)"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "Header & Footer"
+  },
+  {
+   "fieldname": "header_content",
+   "fieldtype": "Code",
+   "label": "Header Content",
+   "options": "HTML"
+  },
+  {
+   "fieldname": "footer_content",
+   "fieldtype": "Code",
+   "label": "Footer Content",
+   "options": "HTML"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break",
+   "label": "Styling & Scripts"
+  },
+  {
+   "fieldname": "css_styles",
+   "fieldtype": "Code",
+   "label": "CSS Styles",
+   "options": "CSS"
+  },
+  {
+   "fieldname": "javascript_code",
+   "fieldtype": "Code",
+   "label": "JavaScript Code",
+   "options": "JavaScript"
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break",
+   "label": "Applicability"
+  },
+  {
+   "fieldname": "applicable_doctypes",
+   "fieldtype": "Table",
+   "label": "Applicable DocTypes",
+   "options": "Document Template DocType"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "label": "Access Control"
+  },
+  {
+   "fieldname": "access_roles",
+   "fieldtype": "Table",
+   "label": "Access Roles",
+   "options": "Document Template Role"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Version Control"
+  },
+  {
+   "default": "1.0",
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break",
+   "label": "Metadata"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "fieldname": "keywords",
+   "fieldtype": "Small Text",
+   "label": "Keywords"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "en",
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Administration Comms",
+ "name": "Document Template",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Template Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

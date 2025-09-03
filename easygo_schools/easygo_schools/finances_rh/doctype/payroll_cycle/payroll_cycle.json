@@ -1,0 +1,256 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "payroll_cycle_name",
+  "payroll_frequency",
+  "column_break_4",
+  "start_date",
+  "end_date",
+  "payment_date",
+  "status",
+  "employee_filters",
+  "company",
+  "department",
+  "column_break_11",
+  "employee_grade",
+  "branch",
+  "designation",
+  "processing_section",
+  "salary_slips_created",
+  "salary_slips_submitted",
+  "column_break_17",
+  "total_working_days",
+  "total_employees",
+  "total_amount",
+  "summary_section",
+  "gross_pay",
+  "total_deduction",
+  "column_break_23",
+  "net_pay",
+  "employer_contribution",
+  "cost_center"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PAY-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payroll_cycle_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payroll Cycle Name",
+   "reqd": 1
+  },
+  {
+   "default": "Monthly",
+   "fieldname": "payroll_frequency",
+   "fieldtype": "Select",
+   "label": "Payroll Frequency",
+   "options": "Monthly\nFortnightly\nWeekly\nDaily",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nProcessing\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "employee_filters",
+   "fieldtype": "Section Break",
+   "label": "Employee Filters"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_grade",
+   "fieldtype": "Data",
+   "label": "Employee Grade"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "processing_section",
+   "fieldtype": "Section Break",
+   "label": "Processing Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_slips_created",
+   "fieldtype": "Int",
+   "label": "Salary Slips Created",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_slips_submitted",
+   "fieldtype": "Int",
+   "label": "Salary Slips Submitted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_working_days",
+   "fieldtype": "Int",
+   "label": "Total Working Days",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_employees",
+   "fieldtype": "Int",
+   "label": "Total Employees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Payroll Summary"
+  },
+  {
+   "fieldname": "gross_pay",
+   "fieldtype": "Currency",
+   "label": "Gross Pay",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_deduction",
+   "fieldtype": "Currency",
+   "label": "Total Deduction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_pay",
+   "fieldtype": "Currency",
+   "label": "Net Pay",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employer_contribution",
+   "fieldtype": "Currency",
+   "label": "Employer Contribution",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "School Cost Center"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Finances RH",
+ "name": "Payroll Cycle",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Employee"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

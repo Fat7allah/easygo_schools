@@ -1,0 +1,253 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:COMM-{YYYY}-{#####}",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "communication_title",
+  "communication_type",
+  "priority",
+  "column_break_4",
+  "sender",
+  "communication_date",
+  "status",
+  "section_break_8",
+  "target_audience",
+  "specific_recipients",
+  "section_break_11",
+  "subject",
+  "message_content",
+  "section_break_14",
+  "delivery_method",
+  "scheduled_delivery",
+  "delivery_date",
+  "column_break_18",
+  "requires_acknowledgment",
+  "acknowledgment_deadline",
+  "section_break_21",
+  "attachments",
+  "related_documents",
+  "section_break_24",
+  "delivery_status",
+  "delivery_report",
+  "acknowledgment_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "communication_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Communication Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "communication_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Communication Type",
+   "options": "Announcement\nNotice\nCircular\nAlert\nReminder\nInvitation\nNewsletter\nReport\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "user",
+   "fieldname": "sender",
+   "fieldtype": "Link",
+   "label": "Sender",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "communication_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Communication Date",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nScheduled\nSent\nDelivered\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Recipients"
+  },
+  {
+   "fieldname": "target_audience",
+   "fieldtype": "Select",
+   "label": "Target Audience",
+   "options": "All Students\nAll Parents\nAll Teachers\nAll Staff\nSpecific Class\nSpecific Grade\nSpecific Recipients\nCustom Group"
+  },
+  {
+   "depends_on": "eval:doc.target_audience=='Specific Recipients'",
+   "fieldname": "specific_recipients",
+   "fieldtype": "Table",
+   "label": "Specific Recipients",
+   "options": "Communication Recipient"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Message Content"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message_content",
+   "fieldtype": "Text Editor",
+   "label": "Message Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Delivery Options"
+  },
+  {
+   "fieldname": "delivery_method",
+   "fieldtype": "Select",
+   "label": "Delivery Method",
+   "options": "Email\nSMS\nPush Notification\nPortal Message\nAll Methods",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "scheduled_delivery",
+   "fieldtype": "Check",
+   "label": "Scheduled Delivery"
+  },
+  {
+   "depends_on": "scheduled_delivery",
+   "fieldname": "delivery_date",
+   "fieldtype": "Datetime",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_acknowledgment",
+   "fieldtype": "Check",
+   "label": "Requires Acknowledgment"
+  },
+  {
+   "depends_on": "requires_acknowledgment",
+   "fieldname": "acknowledgment_deadline",
+   "fieldtype": "Date",
+   "label": "Acknowledgment Deadline"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break",
+   "label": "Attachments & References"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "related_documents",
+   "fieldtype": "Table",
+   "label": "Related Documents",
+   "options": "Communication Document"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Delivery Status"
+  },
+  {
+   "fieldname": "delivery_status",
+   "fieldtype": "Small Text",
+   "label": "Delivery Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_report",
+   "fieldtype": "Text",
+   "label": "Delivery Report",
+   "read_only": 1
+  },
+  {
+   "depends_on": "requires_acknowledgment",
+   "fieldname": "acknowledgment_summary",
+   "fieldtype": "Text",
+   "label": "Acknowledgment Summary",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "School Communication",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  },
+  {
+   "read": 1,
+   "role": "Parent"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

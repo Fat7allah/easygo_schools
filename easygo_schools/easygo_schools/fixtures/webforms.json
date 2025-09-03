@@ -1,0 +1,368 @@
+[
+ {
+  "doctype": "Web Form",
+  "title": "Student Admission Application",
+  "route": "admission-application",
+  "is_standard": 1,
+  "module": "EasyGo Education",
+  "doc_type": "Student",
+  "allow_edit": 1,
+  "allow_multiple": 1,
+  "show_sidebar": 1,
+  "allow_print": 1,
+  "allow_delete": 0,
+  "is_multi_step": 1,
+  "introduction_text": "<p>Welcome to our school admission process. Please fill out this form completely and accurately.</p>",
+  "success_message": "<p>Thank you for your application. We will review it and contact you soon.</p>",
+  "web_form_fields": [
+   {
+    "fieldname": "student_name",
+    "label": "Student Full Name",
+    "fieldtype": "Data",
+    "reqd": 1,
+    "max_length": 100
+   },
+   {
+    "fieldname": "date_of_birth",
+    "label": "Date of Birth",
+    "fieldtype": "Date",
+    "reqd": 1
+   },
+   {
+    "fieldname": "gender",
+    "label": "Gender",
+    "fieldtype": "Select",
+    "options": "Male\nFemale",
+    "reqd": 1
+   },
+   {
+    "fieldname": "nationality",
+    "label": "Nationality",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "previous_school",
+    "label": "Previous School",
+    "fieldtype": "Data"
+   },
+   {
+    "fieldname": "guardian_name",
+    "label": "Guardian Name",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "guardian_email",
+    "label": "Guardian Email",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "guardian_phone",
+    "label": "Guardian Phone",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "address",
+    "label": "Address",
+    "fieldtype": "Small Text",
+    "reqd": 1
+   },
+   {
+    "fieldname": "program_applied",
+    "label": "Program Applied For",
+    "fieldtype": "Link",
+    "options": "Program",
+    "reqd": 1
+   }
+  ]
+ },
+ {
+  "doctype": "Web Form",
+  "title": "Attendance Justification",
+  "route": "attendance-justification",
+  "is_standard": 1,
+  "module": "EasyGo Education",
+  "doc_type": "Attendance Justification",
+  "allow_edit": 1,
+  "allow_multiple": 1,
+  "show_sidebar": 1,
+  "allow_print": 1,
+  "allow_delete": 0,
+  "introduction_text": "<p>Please provide justification for your child's absence from school.</p>",
+  "success_message": "<p>Your justification has been submitted and will be reviewed by the school.</p>",
+  "web_form_fields": [
+   {
+    "fieldname": "student",
+    "label": "Student",
+    "fieldtype": "Link",
+    "options": "Student",
+    "reqd": 1
+   },
+   {
+    "fieldname": "absence_date",
+    "label": "Date of Absence",
+    "fieldtype": "Date",
+    "reqd": 1
+   },
+   {
+    "fieldname": "reason_category",
+    "label": "Reason Category",
+    "fieldtype": "Select",
+    "options": "Medical\nFamily Emergency\nReligious Observance\nOther",
+    "reqd": 1
+   },
+   {
+    "fieldname": "detailed_reason",
+    "label": "Detailed Reason",
+    "fieldtype": "Text Editor",
+    "reqd": 1
+   },
+   {
+    "fieldname": "supporting_document",
+    "label": "Supporting Document",
+    "fieldtype": "Attach"
+   },
+   {
+    "fieldname": "guardian_name",
+    "label": "Guardian Name",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "contact_number",
+    "label": "Contact Number",
+    "fieldtype": "Data",
+    "reqd": 1
+   }
+  ]
+ },
+ {
+  "doctype": "Web Form",
+  "title": "Parent Consent Form",
+  "route": "parent-consent",
+  "is_standard": 1,
+  "module": "EasyGo Education",
+  "doc_type": "Parent Consent",
+  "allow_edit": 1,
+  "allow_multiple": 1,
+  "show_sidebar": 1,
+  "allow_print": 1,
+  "allow_delete": 0,
+  "introduction_text": "<p>Please review the activity details and provide your consent.</p>",
+  "success_message": "<p>Thank you for providing your consent. We will contact you if we need any additional information.</p>",
+  "web_form_fields": [
+   {
+    "fieldname": "student",
+    "label": "Student",
+    "fieldtype": "Link",
+    "options": "Student",
+    "reqd": 1
+   },
+   {
+    "fieldname": "consent_type",
+    "label": "Consent Type",
+    "fieldtype": "Select",
+    "options": "Field Trip\nExtracurricular Activity\nMedical Treatment\nPhoto/Video Release\nTransportation\nSpecial Event\nOther",
+    "reqd": 1
+   },
+   {
+    "fieldname": "consent_title",
+    "label": "Activity/Event Title",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "activity_date",
+    "label": "Activity Date",
+    "fieldtype": "Date"
+   },
+   {
+    "fieldname": "activity_location",
+    "label": "Activity Location",
+    "fieldtype": "Data"
+   },
+   {
+    "fieldname": "description",
+    "label": "Activity Description",
+    "fieldtype": "Text Editor",
+    "reqd": 1
+   },
+   {
+    "fieldname": "consent_given",
+    "label": "I give my consent",
+    "fieldtype": "Check",
+    "reqd": 1
+   },
+   {
+    "fieldname": "guardian_name",
+    "label": "Guardian Name",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "digital_signature",
+    "label": "Digital Signature",
+    "fieldtype": "Signature"
+   },
+   {
+    "fieldname": "emergency_contact",
+    "label": "Emergency Contact Number",
+    "fieldtype": "Data",
+    "reqd": 1
+   }
+  ]
+ },
+ {
+  "doctype": "Web Form",
+  "title": "Meeting Request",
+  "route": "meeting-request",
+  "is_standard": 1,
+  "module": "EasyGo Education",
+  "doc_type": "Meeting Request",
+  "allow_edit": 1,
+  "allow_multiple": 1,
+  "show_sidebar": 1,
+  "allow_print": 1,
+  "allow_delete": 0,
+  "introduction_text": "<p>Request a meeting with your child's teacher or school administration.</p>",
+  "success_message": "<p>Your meeting request has been submitted. We will contact you to confirm the appointment.</p>",
+  "web_form_fields": [
+   {
+    "fieldname": "student",
+    "label": "Student (if applicable)",
+    "fieldtype": "Link",
+    "options": "Student"
+   },
+   {
+    "fieldname": "meeting_type",
+    "label": "Meeting Type",
+    "fieldtype": "Select",
+    "options": "Parent-Teacher Conference\nAcademic Discussion\nBehavioral Concern\nAdministrative Meeting\nOther",
+    "reqd": 1
+   },
+   {
+    "fieldname": "requested_with",
+    "label": "Meeting Requested With",
+    "fieldtype": "Select",
+    "options": "Class Teacher\nSubject Teacher\nPrincipal\nVice Principal\nCounselor\nOther",
+    "reqd": 1
+   },
+   {
+    "fieldname": "preferred_date",
+    "label": "Preferred Date",
+    "fieldtype": "Date",
+    "reqd": 1
+   },
+   {
+    "fieldname": "preferred_time",
+    "label": "Preferred Time",
+    "fieldtype": "Time"
+   },
+   {
+    "fieldname": "meeting_purpose",
+    "label": "Purpose of Meeting",
+    "fieldtype": "Text Editor",
+    "reqd": 1
+   },
+   {
+    "fieldname": "urgency",
+    "label": "Urgency Level",
+    "fieldtype": "Select",
+    "options": "Low\nMedium\nHigh\nUrgent",
+    "default": "Medium"
+   },
+   {
+    "fieldname": "guardian_name",
+    "label": "Your Name",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "contact_email",
+    "label": "Email Address",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "contact_phone",
+    "label": "Phone Number",
+    "fieldtype": "Data",
+    "reqd": 1
+   }
+  ]
+ },
+ {
+  "doctype": "Web Form",
+  "title": "Transport Registration",
+  "route": "transport-registration",
+  "is_standard": 1,
+  "module": "EasyGo Education",
+  "doc_type": "Transport Registration",
+  "allow_edit": 1,
+  "allow_multiple": 1,
+  "show_sidebar": 1,
+  "allow_print": 1,
+  "allow_delete": 0,
+  "introduction_text": "<p>Register your child for school transport services.</p>",
+  "success_message": "<p>Your transport registration has been submitted. We will contact you with route details and payment information.</p>",
+  "web_form_fields": [
+   {
+    "fieldname": "student",
+    "label": "Student",
+    "fieldtype": "Link",
+    "options": "Student",
+    "reqd": 1
+   },
+   {
+    "fieldname": "pickup_address",
+    "label": "Pickup Address",
+    "fieldtype": "Small Text",
+    "reqd": 1
+   },
+   {
+    "fieldname": "preferred_route",
+    "label": "Preferred Route",
+    "fieldtype": "Link",
+    "options": "Transport Route"
+   },
+   {
+    "fieldname": "pickup_time_preference",
+    "label": "Pickup Time Preference",
+    "fieldtype": "Select",
+    "options": "Early Morning\nMorning\nLate Morning"
+   },
+   {
+    "fieldname": "special_requirements",
+    "label": "Special Requirements",
+    "fieldtype": "Small Text"
+   },
+   {
+    "fieldname": "emergency_contact_name",
+    "label": "Emergency Contact Name",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "emergency_contact_phone",
+    "label": "Emergency Contact Phone",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "guardian_name",
+    "label": "Guardian Name",
+    "fieldtype": "Data",
+    "reqd": 1
+   },
+   {
+    "fieldname": "guardian_phone",
+    "label": "Guardian Phone",
+    "fieldtype": "Data",
+    "reqd": 1
+   }
+  ]
+ }
+]

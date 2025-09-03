@@ -1,0 +1,402 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "incident_date",
+  "incident_time",
+  "reported_by",
+  "section_break_8",
+  "incident_location",
+  "incident_type",
+  "column_break_11",
+  "severity_level",
+  "witnesses",
+  "section_break_14",
+  "incident_description",
+  "circumstances",
+  "section_break_17",
+  "injury_type",
+  "body_parts_affected",
+  "column_break_20",
+  "first_aid_given",
+  "first_aid_by",
+  "section_break_23",
+  "medical_attention_required",
+  "hospital_visit",
+  "column_break_26",
+  "doctor_name",
+  "medical_report",
+  "section_break_29",
+  "parent_notified",
+  "parent_notification_time",
+  "column_break_32",
+  "parent_contacted_by",
+  "notification_method",
+  "section_break_35",
+  "follow_up_required",
+  "follow_up_date",
+  "column_break_38",
+  "follow_up_notes",
+  "status",
+  "section_break_41",
+  "preventive_measures",
+  "recommendations",
+  "section_break_44",
+  "attachments",
+  "section_break_46",
+  "investigation_notes",
+  "investigated_by",
+  "column_break_49",
+  "investigation_date",
+  "case_closed_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ACC-REPORT-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "incident_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Incident Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_time",
+   "fieldtype": "Time",
+   "label": "Incident Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reported_by",
+   "fieldtype": "Link",
+   "label": "Reported By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Incident Details"
+  },
+  {
+   "fieldname": "incident_location",
+   "fieldtype": "Select",
+   "label": "Incident Location",
+   "options": "Classroom\nPlayground\nCafeteria\nLibrary\nLaboratory\nGym\nCorridor\nStaircase\nToilet\nTransport\nField Trip\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Incident Type",
+   "options": "Fall\nCollision\nCut/Laceration\nBurn\nSports Injury\nAllergic Reaction\nChoking\nFainting\nFight\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "severity_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Severity Level",
+   "options": "Minor\nModerate\nSevere\nCritical",
+   "reqd": 1
+  },
+  {
+   "fieldname": "witnesses",
+   "fieldtype": "Small Text",
+   "label": "Witnesses"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "incident_description",
+   "fieldtype": "Text Editor",
+   "label": "Incident Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "circumstances",
+   "fieldtype": "Text Editor",
+   "label": "Circumstances Leading to Incident"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break",
+   "label": "Injury Information"
+  },
+  {
+   "fieldname": "injury_type",
+   "fieldtype": "Select",
+   "label": "Injury Type",
+   "options": "Bruise\nCut\nScrape\nSprain\nFracture\nBurn\nBump\nNosebleed\nHeadache\nNausea\nNo Visible Injury\nOther"
+  },
+  {
+   "fieldname": "body_parts_affected",
+   "fieldtype": "Small Text",
+   "label": "Body Parts Affected"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "first_aid_given",
+   "fieldtype": "Check",
+   "label": "First Aid Given"
+  },
+  {
+   "depends_on": "first_aid_given",
+   "fieldname": "first_aid_by",
+   "fieldtype": "Data",
+   "label": "First Aid Given By"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break",
+   "label": "Medical Attention"
+  },
+  {
+   "default": "0",
+   "fieldname": "medical_attention_required",
+   "fieldtype": "Check",
+   "label": "Medical Attention Required"
+  },
+  {
+   "default": "0",
+   "depends_on": "medical_attention_required",
+   "fieldname": "hospital_visit",
+   "fieldtype": "Check",
+   "label": "Hospital Visit Required"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "medical_attention_required",
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Doctor Name"
+  },
+  {
+   "depends_on": "medical_attention_required",
+   "fieldname": "medical_report",
+   "fieldtype": "Attach",
+   "label": "Medical Report"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break",
+   "label": "Parent Notification"
+  },
+  {
+   "default": "0",
+   "fieldname": "parent_notified",
+   "fieldtype": "Check",
+   "label": "Parent Notified"
+  },
+  {
+   "depends_on": "parent_notified",
+   "fieldname": "parent_notification_time",
+   "fieldtype": "Datetime",
+   "label": "Parent Notification Time"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "parent_notified",
+   "fieldname": "parent_contacted_by",
+   "fieldtype": "Data",
+   "label": "Parent Contacted By"
+  },
+  {
+   "depends_on": "parent_notified",
+   "fieldname": "notification_method",
+   "fieldtype": "Select",
+   "label": "Notification Method",
+   "options": "Phone Call\nSMS\nEmail\nIn Person"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break",
+   "label": "Follow-up"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "depends_on": "follow_up_required",
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "follow_up_notes",
+   "fieldtype": "Small Text",
+   "label": "Follow-up Notes"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nUnder Investigation\nResolved\nClosed"
+  },
+  {
+   "fieldname": "section_break_41",
+   "fieldtype": "Section Break",
+   "label": "Prevention & Recommendations"
+  },
+  {
+   "fieldname": "preventive_measures",
+   "fieldtype": "Text Editor",
+   "label": "Preventive Measures Taken"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text Editor",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Accident Report Attachment"
+  },
+  {
+   "fieldname": "section_break_46",
+   "fieldtype": "Section Break",
+   "label": "Investigation"
+  },
+  {
+   "fieldname": "investigation_notes",
+   "fieldtype": "Text Editor",
+   "label": "Investigation Notes"
+  },
+  {
+   "fieldname": "investigated_by",
+   "fieldtype": "Link",
+   "label": "Investigated By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "investigation_date",
+   "fieldtype": "Date",
+   "label": "Investigation Date"
+  },
+  {
+   "fieldname": "case_closed_date",
+   "fieldtype": "Date",
+   "label": "Case Closed Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Accident Report",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Practitioner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Teacher",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

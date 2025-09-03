@@ -1,0 +1,322 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:room_number",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room_number",
+  "room_name",
+  "column_break_3",
+  "building",
+  "floor",
+  "room_details",
+  "room_type",
+  "capacity",
+  "column_break_8",
+  "area_sqm",
+  "is_active",
+  "status",
+  "facilities_section",
+  "has_projector",
+  "has_whiteboard",
+  "column_break_14",
+  "has_computer",
+  "has_air_conditioning",
+  "has_internet",
+  "equipment_section",
+  "equipment_list",
+  "special_features",
+  "column_break_20",
+  "accessibility_features",
+  "safety_equipment",
+  "booking_section",
+  "is_bookable",
+  "booking_advance_days",
+  "column_break_25",
+  "booking_restrictions",
+  "default_booking_duration",
+  "maintenance_section",
+  "last_maintenance_date",
+  "next_maintenance_date",
+  "column_break_30",
+  "maintenance_notes",
+  "condition_status",
+  "additional_info",
+  "description",
+  "usage_notes",
+  "column_break_35",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Name"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "building",
+   "fieldtype": "Data",
+   "label": "Building"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Data",
+   "label": "Floor"
+  },
+  {
+   "fieldname": "room_details",
+   "fieldtype": "Section Break",
+   "label": "Room Details"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Room Type",
+   "options": "Classroom\nLaboratory\nLibrary\nAuditorium\nGym\nOffice\nMeeting Room\nComputer Lab\nArt Room\nMusic Room\nCafeteria\nStorage\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area_sqm",
+   "fieldtype": "Float",
+   "label": "Area (sq.m)"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nOccupied\nMaintenance\nOut of Service\nReserved",
+   "default": "Available"
+  },
+  {
+   "fieldname": "facilities_section",
+   "fieldtype": "Section Break",
+   "label": "Facilities & Equipment"
+  },
+  {
+   "fieldname": "has_projector",
+   "fieldtype": "Check",
+   "label": "Has Projector"
+  },
+  {
+   "fieldname": "has_whiteboard",
+   "fieldtype": "Check",
+   "label": "Has Whiteboard"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "has_computer",
+   "fieldtype": "Check",
+   "label": "Has Computer"
+  },
+  {
+   "fieldname": "has_air_conditioning",
+   "fieldtype": "Check",
+   "label": "Has Air Conditioning"
+  },
+  {
+   "fieldname": "has_internet",
+   "fieldtype": "Check",
+   "label": "Has Internet"
+  },
+  {
+   "fieldname": "equipment_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Equipment"
+  },
+  {
+   "fieldname": "equipment_list",
+   "fieldtype": "Text",
+   "label": "Equipment List"
+  },
+  {
+   "fieldname": "special_features",
+   "fieldtype": "Text",
+   "label": "Special Features"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accessibility_features",
+   "fieldtype": "Text",
+   "label": "Accessibility Features"
+  },
+  {
+   "fieldname": "safety_equipment",
+   "fieldtype": "Text",
+   "label": "Safety Equipment"
+  },
+  {
+   "fieldname": "booking_section",
+   "fieldtype": "Section Break",
+   "label": "Booking Configuration"
+  },
+  {
+   "fieldname": "is_bookable",
+   "fieldtype": "Check",
+   "label": "Is Bookable",
+   "default": 1
+  },
+  {
+   "fieldname": "booking_advance_days",
+   "fieldtype": "Int",
+   "label": "Booking Advance Days",
+   "default": 30
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "booking_restrictions",
+   "fieldtype": "Text",
+   "label": "Booking Restrictions"
+  },
+  {
+   "fieldname": "default_booking_duration",
+   "fieldtype": "Int",
+   "label": "Default Booking Duration (Hours)",
+   "default": 2
+  },
+  {
+   "fieldname": "maintenance_section",
+   "fieldtype": "Section Break",
+   "label": "Maintenance"
+  },
+  {
+   "fieldname": "last_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Last Maintenance Date"
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next Maintenance Date"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_notes",
+   "fieldtype": "Text",
+   "label": "Maintenance Notes"
+  },
+  {
+   "fieldname": "condition_status",
+   "fieldtype": "Select",
+   "label": "Condition Status",
+   "options": "Excellent\nGood\nFair\nPoor\nNeeds Repair",
+   "default": "Good"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "usage_notes",
+   "fieldtype": "Text",
+   "label": "Usage Notes"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Gestion Établissement",
+ "name": "Room",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Teacher",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

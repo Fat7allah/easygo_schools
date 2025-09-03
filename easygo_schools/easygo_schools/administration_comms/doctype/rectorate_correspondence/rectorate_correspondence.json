@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "correspondence_type",
+  "subject",
+  "column_break_4",
+  "date",
+  "priority",
+  "status",
+  "section_break_8",
+  "rectorate_reference",
+  "ministry_reference",
+  "academic_year",
+  "column_break_12",
+  "sender_department",
+  "recipient_department",
+  "classification",
+  "content_section",
+  "content",
+  "official_attachments",
+  "response_section",
+  "response_required",
+  "response_deadline",
+  "column_break_20",
+  "response_content",
+  "response_date",
+  "response_attachments",
+  "tracking_section",
+  "distribution_list",
+  "acknowledgment_required",
+  "column_break_26",
+  "tags",
+  "notes",
+  "confidential"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "RECT-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "correspondence_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Circular\nDirective\nRequest\nReport\nNotification\nInquiry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nSent\nReceived\nIn Progress\nCompleted\nArchived"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Official References"
+  },
+  {
+   "fieldname": "rectorate_reference",
+   "fieldtype": "Data",
+   "label": "Rectorate Reference"
+  },
+  {
+   "fieldname": "ministry_reference",
+   "fieldtype": "Data",
+   "label": "Ministry Reference"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sender_department",
+   "fieldtype": "Data",
+   "label": "Sender Department"
+  },
+  {
+   "fieldname": "recipient_department",
+   "fieldtype": "Data",
+   "label": "Recipient Department"
+  },
+  {
+   "default": "Public",
+   "fieldname": "classification",
+   "fieldtype": "Select",
+   "label": "Classification",
+   "options": "Public\nInternal\nConfidential\nRestricted"
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Text Editor",
+   "label": "Content"
+  },
+  {
+   "fieldname": "official_attachments",
+   "fieldtype": "Table",
+   "label": "Official Attachments",
+   "options": "File"
+  },
+  {
+   "fieldname": "response_section",
+   "fieldtype": "Section Break",
+   "label": "Response"
+  },
+  {
+   "default": "0",
+   "fieldname": "response_required",
+   "fieldtype": "Check",
+   "label": "Response Required"
+  },
+  {
+   "depends_on": "response_required",
+   "fieldname": "response_deadline",
+   "fieldtype": "Date",
+   "label": "Response Deadline"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "response_content",
+   "fieldtype": "Text Editor",
+   "label": "Response Content"
+  },
+  {
+   "fieldname": "response_date",
+   "fieldtype": "Date",
+   "label": "Response Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_attachments",
+   "fieldtype": "Table",
+   "label": "Response Attachments",
+   "options": "File"
+  },
+  {
+   "fieldname": "tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Distribution & Tracking"
+  },
+  {
+   "fieldname": "distribution_list",
+   "fieldtype": "Small Text",
+   "label": "Distribution List"
+  },
+  {
+   "default": "0",
+   "fieldname": "acknowledgment_required",
+   "fieldtype": "Check",
+   "label": "Acknowledgment Required"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "confidential",
+   "fieldtype": "Check",
+   "label": "Confidential"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Administration Comms",
+ "name": "Rectorate Correspondence",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

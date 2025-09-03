@@ -1,0 +1,253 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "fee_structure_name",
+  "academic_year",
+  "column_break_4",
+  "program",
+  "is_active",
+  "fee_components",
+  "components",
+  "column_break_8",
+  "total_amount",
+  "currency",
+  "payment_schedule",
+  "payment_frequency",
+  "installments",
+  "column_break_13",
+  "due_date_calculation",
+  "late_fee_applicable",
+  "late_fee_amount",
+  "discounts_section",
+  "discount_rules",
+  "column_break_18",
+  "scholarship_applicable",
+  "sibling_discount",
+  "additional_settings",
+  "description",
+  "terms_and_conditions",
+  "column_break_23",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "FEE-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fee_structure_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fee Structure Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Program",
+   "options": "Program"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "fee_components",
+   "fieldtype": "Section Break",
+   "label": "Fee Components"
+  },
+  {
+   "fieldname": "components",
+   "fieldtype": "Table",
+   "label": "Fee Components",
+   "options": "Fee Structure Component",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "default": "MAD"
+  },
+  {
+   "fieldname": "payment_schedule",
+   "fieldtype": "Section Break",
+   "label": "Payment Schedule"
+  },
+  {
+   "fieldname": "payment_frequency",
+   "fieldtype": "Select",
+   "label": "Payment Frequency",
+   "options": "Annual\nSemi-Annual\nQuarterly\nMonthly\nCustom",
+   "default": "Annual"
+  },
+  {
+   "fieldname": "installments",
+   "fieldtype": "Table",
+   "label": "Installments",
+   "options": "Fee Structure Installment"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_date_calculation",
+   "fieldtype": "Select",
+   "label": "Due Date Calculation",
+   "options": "Fixed Date\nDays from Enrollment\nStart of Term\nCustom",
+   "default": "Start of Term"
+  },
+  {
+   "fieldname": "late_fee_applicable",
+   "fieldtype": "Check",
+   "label": "Late Fee Applicable"
+  },
+  {
+   "fieldname": "late_fee_amount",
+   "fieldtype": "Currency",
+   "label": "Late Fee Amount",
+   "depends_on": "late_fee_applicable"
+  },
+  {
+   "fieldname": "discounts_section",
+   "fieldtype": "Section Break",
+   "label": "Discounts & Scholarships"
+  },
+  {
+   "fieldname": "discount_rules",
+   "fieldtype": "Table",
+   "label": "Discount Rules",
+   "options": "Fee Structure Discount"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scholarship_applicable",
+   "fieldtype": "Check",
+   "label": "Scholarship Applicable"
+  },
+  {
+   "fieldname": "sibling_discount",
+   "fieldtype": "Percent",
+   "label": "Sibling Discount (%)"
+  },
+  {
+   "fieldname": "additional_settings",
+   "fieldtype": "Section Break",
+   "label": "Additional Settings"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Text Editor",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Finances RH",
+ "name": "Fee Structure",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Parent"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

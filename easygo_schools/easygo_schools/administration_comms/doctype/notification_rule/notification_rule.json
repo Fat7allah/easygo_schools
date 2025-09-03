@@ -1,0 +1,347 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "rule_name",
+  "description",
+  "column_break_4",
+  "is_active",
+  "priority",
+  "execution_order",
+  "section_break_8",
+  "trigger_event",
+  "document_type",
+  "column_break_11",
+  "trigger_condition",
+  "condition_script",
+  "section_break_14",
+  "notification_type",
+  "delivery_method",
+  "column_break_17",
+  "send_to_roles",
+  "send_to_users",
+  "section_break_20",
+  "email_template",
+  "sms_template",
+  "column_break_23",
+  "subject_template",
+  "message_template",
+  "section_break_26",
+  "delay_minutes",
+  "retry_attempts",
+  "column_break_29",
+  "escalation_enabled",
+  "escalation_delay_hours",
+  "section_break_32",
+  "last_executed",
+  "execution_count",
+  "column_break_35",
+  "success_count",
+  "failure_count",
+  "section_break_38",
+  "rule_notes",
+  "created_by_user",
+  "column_break_41",
+  "last_modified_by",
+  "modification_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NOTIF-RULE-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rule Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "default": "100",
+   "fieldname": "execution_order",
+   "fieldtype": "Int",
+   "label": "Execution Order"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Trigger Configuration"
+  },
+  {
+   "fieldname": "trigger_event",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Trigger Event",
+   "options": "on_save\non_submit\non_cancel\non_update\non_delete\nafter_insert\nbefore_save\nbefore_submit\nbefore_cancel\nscheduled\ncustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trigger_condition",
+   "fieldtype": "Small Text",
+   "label": "Trigger Condition"
+  },
+  {
+   "fieldname": "condition_script",
+   "fieldtype": "Code",
+   "label": "Condition Script (Python)"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Notification Settings"
+  },
+  {
+   "fieldname": "notification_type",
+   "fieldtype": "Select",
+   "label": "Notification Type",
+   "options": "Email\nSMS\nSystem Notification\nPush Notification\nAll Methods",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_method",
+   "fieldtype": "Select",
+   "label": "Delivery Method",
+   "options": "Immediate\nScheduled\nBatch\nQueue"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "send_to_roles",
+   "fieldtype": "Table",
+   "label": "Send to Roles",
+   "options": "Notification Role"
+  },
+  {
+   "fieldname": "send_to_users",
+   "fieldtype": "Table",
+   "label": "Send to Users",
+   "options": "Notification User"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Message Templates"
+  },
+  {
+   "fieldname": "email_template",
+   "fieldtype": "Link",
+   "label": "Email Template",
+   "options": "Email Template"
+  },
+  {
+   "fieldname": "sms_template",
+   "fieldtype": "Link",
+   "label": "SMS Template",
+   "options": "SMS Template"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subject_template",
+   "fieldtype": "Small Text",
+   "label": "Subject Template"
+  },
+  {
+   "fieldname": "message_template",
+   "fieldtype": "Text Editor",
+   "label": "Message Template"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Timing & Retry"
+  },
+  {
+   "default": "0",
+   "fieldname": "delay_minutes",
+   "fieldtype": "Int",
+   "label": "Delay (Minutes)"
+  },
+  {
+   "default": "3",
+   "fieldname": "retry_attempts",
+   "fieldtype": "Int",
+   "label": "Retry Attempts"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "escalation_enabled",
+   "fieldtype": "Check",
+   "label": "Enable Escalation"
+  },
+  {
+   "default": "24",
+   "fieldname": "escalation_delay_hours",
+   "fieldtype": "Int",
+   "label": "Escalation Delay (Hours)"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Execution Statistics"
+  },
+  {
+   "fieldname": "last_executed",
+   "fieldtype": "Datetime",
+   "label": "Last Executed",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "execution_count",
+   "fieldtype": "Int",
+   "label": "Execution Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "success_count",
+   "fieldtype": "Int",
+   "label": "Success Count",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "failure_count",
+   "fieldtype": "Int",
+   "label": "Failure Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break",
+   "label": "Notes & Audit"
+  },
+  {
+   "fieldname": "rule_notes",
+   "fieldtype": "Text Editor",
+   "label": "Rule Notes"
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Link",
+   "label": "Last Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "modification_reason",
+   "fieldtype": "Small Text",
+   "label": "Modification Reason"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Notification Rule",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Academic Counselor"
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

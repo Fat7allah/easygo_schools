@@ -1,0 +1,370 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "academic_year",
+  "incident_date",
+  "incident_details",
+  "incident_type",
+  "severity_level",
+  "column_break_9",
+  "location",
+  "reported_by",
+  "witness",
+  "incident_description",
+  "student_statement",
+  "column_break_15",
+  "witness_statement",
+  "evidence_attachments",
+  "action_taken",
+  "action_type",
+  "action_description",
+  "column_break_21",
+  "start_date",
+  "end_date",
+  "duration_days",
+  "follow_up_section",
+  "follow_up_required",
+  "follow_up_date",
+  "column_break_27",
+  "follow_up_notes",
+  "counseling_required",
+  "parent_meeting_required",
+  "notifications_section",
+  "parent_notified",
+  "parent_notification_date",
+  "column_break_33",
+  "parent_response",
+  "teacher_notified",
+  "status_tracking",
+  "status",
+  "resolution_notes",
+  "column_break_39",
+  "resolved_date",
+  "resolved_by",
+  "additional_info",
+  "behavioral_notes",
+  "improvement_plan",
+  "column_break_44",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "DA-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "incident_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Incident Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_details",
+   "fieldtype": "Section Break",
+   "label": "Incident Details"
+  },
+  {
+   "fieldname": "incident_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Incident Type",
+   "options": "Misconduct\nDisrespect\nFighting\nBullying\nVandalism\nCheating\nSkipping Class\nLate Arrival\nDress Code Violation\nTechnology Misuse\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "severity_level",
+   "fieldtype": "Select",
+   "label": "Severity Level",
+   "options": "Minor\nModerate\nMajor\nSevere",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "reported_by",
+   "fieldtype": "Link",
+   "label": "Reported By",
+   "options": "User"
+  },
+  {
+   "fieldname": "witness",
+   "fieldtype": "Data",
+   "label": "Witness"
+  },
+  {
+   "fieldname": "incident_description",
+   "fieldtype": "Text",
+   "label": "Incident Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_statement",
+   "fieldtype": "Text",
+   "label": "Student Statement"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "witness_statement",
+   "fieldtype": "Text",
+   "label": "Witness Statement"
+  },
+  {
+   "fieldname": "evidence_attachments",
+   "fieldtype": "Attach",
+   "label": "Evidence Attachments"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Section Break",
+   "label": "Action Taken"
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "label": "Action Type",
+   "options": "Verbal Warning\nWritten Warning\nDetention\nSuspension\nExpulsion\nCounseling\nCommunity Service\nParent Conference\nBehavior Contract\nOther"
+  },
+  {
+   "fieldname": "action_description",
+   "fieldtype": "Text",
+   "label": "Action Description"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Action Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "Action End Date"
+  },
+  {
+   "fieldname": "duration_days",
+   "fieldtype": "Int",
+   "label": "Duration (Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "follow_up_section",
+   "fieldtype": "Section Break",
+   "label": "Follow-up"
+  },
+  {
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "follow_up_notes",
+   "fieldtype": "Text",
+   "label": "Follow-up Notes"
+  },
+  {
+   "fieldname": "counseling_required",
+   "fieldtype": "Check",
+   "label": "Counseling Required"
+  },
+  {
+   "fieldname": "parent_meeting_required",
+   "fieldtype": "Check",
+   "label": "Parent Meeting Required"
+  },
+  {
+   "fieldname": "notifications_section",
+   "fieldtype": "Section Break",
+   "label": "Notifications"
+  },
+  {
+   "fieldname": "parent_notified",
+   "fieldtype": "Check",
+   "label": "Parent Notified"
+  },
+  {
+   "fieldname": "parent_notification_date",
+   "fieldtype": "Datetime",
+   "label": "Parent Notification Date"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_response",
+   "fieldtype": "Text",
+   "label": "Parent Response"
+  },
+  {
+   "fieldname": "teacher_notified",
+   "fieldtype": "Check",
+   "label": "Teachers Notified"
+  },
+  {
+   "fieldname": "status_tracking",
+   "fieldtype": "Section Break",
+   "label": "Status & Resolution"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nIn Progress\nResolved\nClosed\nAppealed",
+   "default": "Open"
+  },
+  {
+   "fieldname": "resolution_notes",
+   "fieldtype": "Text",
+   "label": "Resolution Notes"
+  },
+  {
+   "fieldname": "column_break_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resolved_date",
+   "fieldtype": "Date",
+   "label": "Resolved Date"
+  },
+  {
+   "fieldname": "resolved_by",
+   "fieldtype": "Link",
+   "label": "Resolved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "behavioral_notes",
+   "fieldtype": "Text",
+   "label": "Behavioral Notes"
+  },
+  {
+   "fieldname": "improvement_plan",
+   "fieldtype": "Text",
+   "label": "Improvement Plan"
+  },
+  {
+   "fieldname": "column_break_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Vie Scolaire",
+ "name": "Disciplinary Action",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Teacher",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Parent"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

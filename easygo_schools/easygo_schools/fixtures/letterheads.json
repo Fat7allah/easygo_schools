@@ -1,0 +1,50 @@
+[
+ {
+  "align": "Center",
+  "creation": "2024-01-01 00:00:00.000000",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Letter Head",
+  "footer": "<div style=\"text-align: center; font-size: 10px; color: #666;\">\n<p>© 2024 EasyGo Education Management System | www.easygo-edu.com | contact@easygo-edu.com</p>\n</div>",
+  "footer_left": "",
+  "footer_right": "",
+  "is_default": 1,
+  "letter_head_name": "EasyGo Education Default",
+  "modified": "2024-01-01 00:00:00.000000",
+  "name": "EasyGo Education Default",
+  "source": "HTML",
+  "content": "<div style=\"text-align: center; border-bottom: 2px solid #007bff; padding-bottom: 20px; margin-bottom: 30px;\">\n<h1 style=\"color: #007bff; margin: 0; font-size: 28px;\">{{ school_name or \"EasyGo Education\" }}</h1>\n<p style=\"margin: 5px 0; color: #666; font-size: 14px;\">{{ school_address or \"Educational Excellence Through Innovation\" }}</p>\n<p style=\"margin: 5px 0; color: #666; font-size: 12px;\">Tel: {{ school_phone or \"+212 XXX XXX XXX\" }} | Email: {{ school_email or \"info@school.edu\" }}</p>\n</div>"
+ },
+ {
+  "align": "Center",
+  "creation": "2024-01-01 00:00:00.000000",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Letter Head",
+  "footer": "<div style=\"text-align: center; font-size: 10px; color: #666;\">\n<p>Document officiel - À conserver précieusement</p>\n</div>",
+  "footer_left": "",
+  "footer_right": "",
+  "is_default": 0,
+  "letter_head_name": "Official Documents",
+  "modified": "2024-01-01 00:00:00.000000",
+  "name": "Official Documents",
+  "source": "HTML",
+  "content": "<div style=\"text-align: center; border: 3px solid #28a745; padding: 20px; margin-bottom: 30px; background: #f8f9fa;\">\n<h1 style=\"color: #28a745; margin: 0; font-size: 24px;\">{{ school_name or \"ÉTABLISSEMENT SCOLAIRE\" }}</h1>\n<p style=\"margin: 10px 0; color: #333; font-weight: bold;\">DOCUMENT OFFICIEL</p>\n<p style=\"margin: 5px 0; color: #666; font-size: 12px;\">{{ school_address }}</p>\n<p style=\"margin: 5px 0; color: #666; font-size: 12px;\">Tél: {{ school_phone }} | Email: {{ school_email }}</p>\n</div>"
+ },
+ {
+  "align": "Center",
+  "creation": "2024-01-01 00:00:00.000000",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Letter Head",
+  "footer": "<div style=\"text-align: center; font-size: 10px; color: #666;\">\n<p>Confidentiel - Usage interne uniquement</p>\n</div>",
+  "footer_left": "",
+  "footer_right": "",
+  "is_default": 0,
+  "letter_head_name": "Internal Reports",
+  "modified": "2024-01-01 00:00:00.000000",
+  "name": "Internal Reports",
+  "source": "HTML",
+  "content": "<div style=\"text-align: left; border-left: 4px solid #6f42c1; padding-left: 20px; margin-bottom: 30px;\">\n<h2 style=\"color: #6f42c1; margin: 0; font-size: 20px;\">{{ school_name or \"EasyGo Education\" }}</h2>\n<p style=\"margin: 5px 0; color: #666; font-size: 12px;\">Rapport Interne</p>\n<p style=\"margin: 5px 0; color: #666; font-size: 10px;\">Généré le {{ frappe.utils.format_date(frappe.utils.nowdate(), \"dd/mm/yyyy\") }}</p>\n</div>"
+ }
+]

@@ -1,0 +1,264 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:equipment_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "equipment_name",
+  "equipment_type",
+  "column_break_3",
+  "room",
+  "status",
+  "equipment_details",
+  "description",
+  "brand",
+  "column_break_8",
+  "model",
+  "serial_number",
+  "purchase_info",
+  "purchase_date",
+  "purchase_cost",
+  "column_break_13",
+  "supplier",
+  "warranty_expiry",
+  "maintenance_section",
+  "last_maintenance",
+  "next_maintenance",
+  "column_break_18",
+  "maintenance_frequency",
+  "maintenance_notes",
+  "condition_section",
+  "condition_rating",
+  "issues_reported",
+  "column_break_23",
+  "repair_history",
+  "replacement_needed",
+  "additional_info",
+  "notes",
+  "attachments",
+  "column_break_28",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Equipment Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "equipment_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Equipment Type",
+   "options": "Computer\nProjector\nPrinter\nWhiteboard\nAudio System\nLab Equipment\nSports Equipment\nFurniture\nSafety Equipment\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Room"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nUnder Maintenance\nOut of Order\nRetired",
+   "default": "Active"
+  },
+  {
+   "fieldname": "equipment_details",
+   "fieldtype": "Section Break",
+   "label": "Equipment Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "purchase_info",
+   "fieldtype": "Section Break",
+   "label": "Purchase Information"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "purchase_cost",
+   "fieldtype": "Currency",
+   "label": "Purchase Cost"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Data",
+   "label": "Supplier"
+  },
+  {
+   "fieldname": "warranty_expiry",
+   "fieldtype": "Date",
+   "label": "Warranty Expiry"
+  },
+  {
+   "fieldname": "maintenance_section",
+   "fieldtype": "Section Break",
+   "label": "Maintenance"
+  },
+  {
+   "fieldname": "last_maintenance",
+   "fieldtype": "Date",
+   "label": "Last Maintenance"
+  },
+  {
+   "fieldname": "next_maintenance",
+   "fieldtype": "Date",
+   "label": "Next Maintenance"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_frequency",
+   "fieldtype": "Select",
+   "label": "Maintenance Frequency",
+   "options": "Weekly\nMonthly\nQuarterly\nSemi-Annual\nAnnual\nAs Needed"
+  },
+  {
+   "fieldname": "maintenance_notes",
+   "fieldtype": "Text",
+   "label": "Maintenance Notes"
+  },
+  {
+   "fieldname": "condition_section",
+   "fieldtype": "Section Break",
+   "label": "Condition & Issues"
+  },
+  {
+   "fieldname": "condition_rating",
+   "fieldtype": "Select",
+   "label": "Condition Rating",
+   "options": "Excellent\nGood\nFair\nPoor\nDefective"
+  },
+  {
+   "fieldname": "issues_reported",
+   "fieldtype": "Text",
+   "label": "Issues Reported"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "repair_history",
+   "fieldtype": "Text",
+   "label": "Repair History"
+  },
+  {
+   "fieldname": "replacement_needed",
+   "fieldtype": "Check",
+   "label": "Replacement Needed"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Gestion Établissement",
+ "name": "Equipment",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

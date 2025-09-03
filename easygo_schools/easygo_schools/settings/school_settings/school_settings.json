@@ -1,0 +1,224 @@
+{
+ "actions": [],
+ "allow_copy": 0,
+ "allow_events_in_timeline": 0,
+ "allow_guest_to_view": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "field:name",
+ "beta": 0,
+ "creation": "2025-08-19 14:32:00.000000",
+ "custom": 0,
+ "docstatus": 0,
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "school_details_section",
+  "school_name",
+  "school_name_arabic",
+  "column_break_4",
+  "school_code",
+  "massar_code",
+  "section_break_7",
+  "address",
+  "column_break_9",
+  "phone",
+  "email",
+  "website",
+  "academic_settings_section",
+  "current_academic_year",
+  "column_break_15",
+  "default_grading_scale",
+  "numbering_section",
+  "student_naming_series",
+  "column_break_19",
+  "fee_bill_naming_series",
+  "notification_settings_section",
+  "enable_sms_notifications",
+  "column_break_23",
+  "enable_email_notifications",
+  "enable_whatsapp_notifications"
+ ],
+ "fields": [
+  {
+   "fieldname": "school_details_section",
+   "fieldtype": "Section Break",
+   "label": "School Details"
+  },
+  {
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "label": "School Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "school_name_arabic",
+   "fieldtype": "Data",
+   "label": "School Name (Arabic)"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "school_code",
+   "fieldtype": "Data",
+   "label": "School Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "massar_code",
+   "fieldtype": "Data",
+   "label": "MASSAR Code",
+   "length": 11
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "academic_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Academic Settings"
+  },
+  {
+   "fieldname": "current_academic_year",
+   "fieldtype": "Link",
+   "label": "Current Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_grading_scale",
+   "fieldtype": "Link",
+   "label": "Default Grading Scale",
+   "options": "Grading Scale"
+  },
+  {
+   "fieldname": "numbering_section",
+   "fieldtype": "Section Break",
+   "label": "Numbering Series"
+  },
+  {
+   "fieldname": "student_naming_series",
+   "fieldtype": "Select",
+   "label": "Student Naming Series",
+   "options": "STU-.YYYY.-\nSTU-.####"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fee_bill_naming_series",
+   "fieldtype": "Select",
+   "label": "Fee Bill Naming Series",
+   "options": "FB-.YYYY.-\nFB-.####"
+  },
+  {
+   "fieldname": "notification_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Notification Settings"
+  },
+  {
+   "fieldname": "enable_sms_notifications",
+   "fieldtype": "Check",
+   "label": "Enable SMS Notifications"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enable_email_notifications",
+   "fieldtype": "Check",
+   "label": "Enable Email Notifications",
+   "default": 1
+  },
+  {
+   "fieldname": "enable_whatsapp_notifications",
+   "fieldtype": "Check",
+   "label": "Enable WhatsApp Notifications"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_heading": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "image_view": 0,
+ "in_create": 0,
+ "is_submittable": 0,
+ "issingle": 1,
+ "istable": 0,
+ "max_attachments": 0,
+ "modified": "2025-08-19 14:32:00.000000",
+ "modified_by": "Administrator",
+ "module": "Referentiels",
+ "name": "School Settings",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Director",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 0,
+ "read_only": 0,
+ "read_only_onload": 0,
+ "show_name_in_global_search": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "school_name",
+ "track_changes": 1,
+ "track_seen": 0,
+ "track_views": 0
+}

@@ -1,0 +1,109 @@
+/* EasyGo Education Custom Styles */
+
+/* RTL Support */
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .form-control {
+    text-align: right;
+}
+
+/* Arabic Font Support */
+.arabic-text {
+    font-family: 'Amiri', 'Noto Sans Arabic', 'Arial Unicode MS', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+/* Portal Styles */
+.portal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.portal-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.portal-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Dashboard Widgets */
+.dashboard-widget {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.widget-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Status Indicators */
+.status-present { color: #28a745; }
+.status-absent { color: #dc3545; }
+.status-late { color: #ffc107; }
+.status-excused { color: #17a2b8; }
+
+.status-paid { color: #28a745; }
+.status-pending { color: #ffc107; }
+.status-overdue { color: #dc3545; }
+
+/* Form Enhancements */
+.form-section {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.required-field::after {
+    content: " *";
+    color: #dc3545;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .portal-header {
+        padding: 1rem 0;
+    }
+    
+    .dashboard-widget {
+        padding: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .print-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #666;
+    }
+}

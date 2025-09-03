@@ -1,0 +1,187 @@
+{
+ "actions": [],
+ "allow_copy": 0,
+ "allow_events_in_timeline": 0,
+ "allow_guest_to_view": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "autoname": "field:name",
+ "beta": 0,
+ "creation": "2025-08-19 14:32:00.000000",
+ "custom": 0,
+ "docstatus": 0,
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "accounting_section",
+  "default_currency",
+  "column_break_3",
+  "fiscal_year_start_date",
+  "payment_settings_section",
+  "default_payment_terms",
+  "column_break_7",
+  "late_fee_percentage",
+  "bank_details_section",
+  "bank_name",
+  "column_break_11",
+  "bank_account",
+  "rib_number",
+  "integration_settings_section",
+  "enable_online_payments",
+  "column_break_16",
+  "payment_gateway_url",
+  "api_key"
+ ],
+ "fields": [
+  {
+   "fieldname": "accounting_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Settings"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Select",
+   "label": "Default Currency",
+   "options": "MAD\nEUR\nUSD",
+   "default": "MAD",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fiscal_year_start_date",
+   "fieldtype": "Date",
+   "label": "Fiscal Year Start Date",
+   "default": "01-09"
+  },
+  {
+   "fieldname": "payment_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Settings"
+  },
+  {
+   "fieldname": "default_payment_terms",
+   "fieldtype": "Int",
+   "label": "Default Payment Terms (Days)",
+   "default": 30
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "late_fee_percentage",
+   "fieldtype": "Float",
+   "label": "Late Fee Percentage",
+   "default": 5.0
+  },
+  {
+   "fieldname": "bank_details_section",
+   "fieldtype": "Section Break",
+   "label": "Bank Details"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Data",
+   "label": "Bank Account Number"
+  },
+  {
+   "fieldname": "rib_number",
+   "fieldtype": "Data",
+   "label": "RIB Number"
+  },
+  {
+   "fieldname": "integration_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Integration Settings"
+  },
+  {
+   "fieldname": "enable_online_payments",
+   "fieldtype": "Check",
+   "label": "Enable Online Payments"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_gateway_url",
+   "fieldtype": "Data",
+   "label": "Payment Gateway URL"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  }
+ ],
+ "has_web_view": 0,
+ "hide_heading": 0,
+ "hide_toolbar": 0,
+ "idx": 0,
+ "image_view": 0,
+ "in_create": 0,
+ "is_submittable": 0,
+ "issingle": 1,
+ "istable": 0,
+ "max_attachments": 0,
+ "modified": "2025-08-19 14:32:00.000000",
+ "modified_by": "Administrator",
+ "module": "Referentiels",
+ "name": "Finance Settings",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Director",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accountant",
+   "write": 1
+  }
+ ],
+ "quick_entry": 0,
+ "read_only": 0,
+ "read_only_onload": 0,
+ "show_name_in_global_search": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "default_currency",
+ "track_changes": 1,
+ "track_seen": 0,
+ "track_views": 0
+}

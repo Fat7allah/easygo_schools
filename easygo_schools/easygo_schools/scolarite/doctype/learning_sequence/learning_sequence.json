@@ -1,0 +1,291 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:sequence_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sequence_name",
+  "subject",
+  "column_break_3",
+  "school_class",
+  "academic_year",
+  "sequence_details",
+  "description",
+  "start_date",
+  "column_break_8",
+  "end_date",
+  "total_lessons",
+  "status",
+  "objectives_section",
+  "learning_objectives",
+  "competencies",
+  "column_break_14",
+  "prerequisites",
+  "assessment_criteria",
+  "lessons_section",
+  "lessons",
+  "resources_section",
+  "resources_needed",
+  "recommended_materials",
+  "column_break_20",
+  "digital_resources",
+  "external_links",
+  "progress_section",
+  "lessons_completed",
+  "completion_percentage",
+  "column_break_25",
+  "student_feedback",
+  "teacher_notes",
+  "additional_info",
+  "notes",
+  "created_by",
+  "column_break_30",
+  "creation_date",
+  "last_updated"
+ ],
+ "fields": [
+  {
+   "fieldname": "sequence_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sequence Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "school_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "School Class",
+   "options": "School Class"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "sequence_details",
+   "fieldtype": "Section Break",
+   "label": "Sequence Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "total_lessons",
+   "fieldtype": "Int",
+   "label": "Total Lessons"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPlanned\nActive\nCompleted\nSuspended",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "objectives_section",
+   "fieldtype": "Section Break",
+   "label": "Learning Objectives"
+  },
+  {
+   "fieldname": "learning_objectives",
+   "fieldtype": "Text",
+   "label": "Learning Objectives"
+  },
+  {
+   "fieldname": "competencies",
+   "fieldtype": "Text",
+   "label": "Competencies to Develop"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prerequisites",
+   "fieldtype": "Text",
+   "label": "Prerequisites"
+  },
+  {
+   "fieldname": "assessment_criteria",
+   "fieldtype": "Text",
+   "label": "Assessment Criteria"
+  },
+  {
+   "fieldname": "lessons_section",
+   "fieldtype": "Section Break",
+   "label": "Lessons"
+  },
+  {
+   "fieldname": "lessons",
+   "fieldtype": "Table",
+   "label": "Lessons",
+   "options": "Learning Sequence Lesson"
+  },
+  {
+   "fieldname": "resources_section",
+   "fieldtype": "Section Break",
+   "label": "Resources"
+  },
+  {
+   "fieldname": "resources_needed",
+   "fieldtype": "Text",
+   "label": "Resources Needed"
+  },
+  {
+   "fieldname": "recommended_materials",
+   "fieldtype": "Text",
+   "label": "Recommended Materials"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "digital_resources",
+   "fieldtype": "Text",
+   "label": "Digital Resources"
+  },
+  {
+   "fieldname": "external_links",
+   "fieldtype": "Text",
+   "label": "External Links"
+  },
+  {
+   "fieldname": "progress_section",
+   "fieldtype": "Section Break",
+   "label": "Progress Tracking"
+  },
+  {
+   "fieldname": "lessons_completed",
+   "fieldtype": "Int",
+   "label": "Lessons Completed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completion_percentage",
+   "fieldtype": "Percent",
+   "label": "Completion Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "student_feedback",
+   "fieldtype": "Text",
+   "label": "Student Feedback"
+  },
+  {
+   "fieldname": "teacher_notes",
+   "fieldtype": "Text",
+   "label": "Teacher Notes"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_updated",
+   "fieldtype": "Datetime",
+   "label": "Last Updated",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarité",
+ "name": "Learning Sequence",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

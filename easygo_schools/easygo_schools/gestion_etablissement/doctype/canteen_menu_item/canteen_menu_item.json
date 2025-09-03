@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "stock_item",
+  "column_break_3",
+  "quantity",
+  "unit",
+  "section_break_6",
+  "unit_cost",
+  "total_cost",
+  "column_break_9",
+  "servings",
+  "cost_per_serving",
+  "section_break_12",
+  "calories_per_serving",
+  "protein_per_serving",
+  "column_break_15",
+  "carbs_per_serving",
+  "fat_per_serving",
+  "section_break_18",
+  "preparation_method",
+  "cooking_time",
+  "column_break_21",
+  "allergens",
+  "dietary_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stock_item",
+   "fieldtype": "Link",
+   "label": "Stock Item",
+   "options": "Stock Item"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "precision": 2,
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Cost Information"
+  },
+  {
+   "fieldname": "unit_cost",
+   "fieldtype": "Currency",
+   "label": "Unit Cost"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "servings",
+   "fieldtype": "Int",
+   "label": "Number of Servings"
+  },
+  {
+   "fieldname": "cost_per_serving",
+   "fieldtype": "Currency",
+   "label": "Cost per Serving",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Nutritional Information"
+  },
+  {
+   "fieldname": "calories_per_serving",
+   "fieldtype": "Float",
+   "label": "Calories per Serving",
+   "precision": 1
+  },
+  {
+   "fieldname": "protein_per_serving",
+   "fieldtype": "Float",
+   "label": "Protein per Serving (g)",
+   "precision": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "carbs_per_serving",
+   "fieldtype": "Float",
+   "label": "Carbs per Serving (g)",
+   "precision": 1
+  },
+  {
+   "fieldname": "fat_per_serving",
+   "fieldtype": "Float",
+   "label": "Fat per Serving (g)",
+   "precision": 1
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Preparation Details"
+  },
+  {
+   "fieldname": "preparation_method",
+   "fieldtype": "Small Text",
+   "label": "Preparation Method"
+  },
+  {
+   "fieldname": "cooking_time",
+   "fieldtype": "Int",
+   "label": "Cooking Time (minutes)"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allergens",
+   "fieldtype": "Small Text",
+   "label": "Allergens"
+  },
+  {
+   "fieldname": "dietary_notes",
+   "fieldtype": "Small Text",
+   "label": "Dietary Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Canteen Menu Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

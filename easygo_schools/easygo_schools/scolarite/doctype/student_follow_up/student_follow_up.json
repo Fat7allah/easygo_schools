@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:FOLLOW-{YYYY}-{#####}",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "student_name",
+  "school_class",
+  "column_break_4",
+  "follow_up_date",
+  "follow_up_type",
+  "status",
+  "section_break_8",
+  "subject",
+  "concern_area",
+  "description",
+  "section_break_12",
+  "action_taken",
+  "recommendations",
+  "section_break_15",
+  "next_follow_up_date",
+  "assigned_to",
+  "priority",
+  "section_break_19",
+  "parent_notified",
+  "notification_date",
+  "parent_response",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student.school_class",
+   "fieldname": "school_class",
+   "fieldtype": "Link",
+   "label": "Class",
+   "options": "School Class",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Follow-up Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "follow_up_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Follow-up Type",
+   "options": "Academic\nBehavioral\nAttendance\nHealth\nSocial\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nIn Progress\nResolved\nClosed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Follow-up Details"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "label": "Subject",
+   "options": "Subject"
+  },
+  {
+   "fieldname": "concern_area",
+   "fieldtype": "Small Text",
+   "label": "Concern Area"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Actions & Recommendations"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Text Editor",
+   "label": "Action Taken"
+  },
+  {
+   "fieldname": "recommendations",
+   "fieldtype": "Text Editor",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Follow-up Planning"
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "fieldtype": "Date",
+   "label": "Next Follow-up Date"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Parent Communication"
+  },
+  {
+   "default": "0",
+   "fieldname": "parent_notified",
+   "fieldtype": "Check",
+   "label": "Parent Notified"
+  },
+  {
+   "depends_on": "parent_notified",
+   "fieldname": "notification_date",
+   "fieldtype": "Date",
+   "label": "Notification Date"
+  },
+  {
+   "depends_on": "parent_notified",
+   "fieldname": "parent_response",
+   "fieldtype": "Small Text",
+   "label": "Parent Response"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Student Follow-up",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

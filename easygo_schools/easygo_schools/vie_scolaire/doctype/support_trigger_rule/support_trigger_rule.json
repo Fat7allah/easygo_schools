@@ -1,0 +1,300 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "rule_name",
+  "is_active",
+  "column_break_4",
+  "priority",
+  "category",
+  "section_break_7",
+  "trigger_type",
+  "academic_threshold",
+  "column_break_10",
+  "attendance_threshold",
+  "behavioral_threshold",
+  "section_break_13",
+  "grade_level",
+  "subject_filter",
+  "column_break_16",
+  "time_period",
+  "consecutive_periods",
+  "section_break_19",
+  "conditions",
+  "description",
+  "column_break_22",
+  "action_type",
+  "notification_template",
+  "section_break_25",
+  "assigned_counselor",
+  "escalation_level",
+  "column_break_28",
+  "auto_create_plan",
+  "follow_up_days",
+  "section_break_31",
+  "created_by",
+  "last_triggered",
+  "column_break_34",
+  "trigger_count",
+  "success_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SUP-RULE-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rule Name",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Academic\nAttendance\nBehavioral\nSocial\nEmotional\nCombined"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Trigger Conditions"
+  },
+  {
+   "fieldname": "trigger_type",
+   "fieldtype": "Select",
+   "label": "Trigger Type",
+   "options": "Grade Below Threshold\nAttendance Below Threshold\nMissed Assignments\nBehavioral Incidents\nCombined Criteria\nCustom Condition",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.trigger_type.includes('Grade') || doc.trigger_type.includes('Academic')",
+   "fieldname": "academic_threshold",
+   "fieldtype": "Float",
+   "label": "Academic Threshold (%)"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.trigger_type.includes('Attendance')",
+   "fieldname": "attendance_threshold",
+   "fieldtype": "Float",
+   "label": "Attendance Threshold (%)"
+  },
+  {
+   "depends_on": "eval:doc.trigger_type.includes('Behavioral')",
+   "fieldname": "behavioral_threshold",
+   "fieldtype": "Int",
+   "label": "Behavioral Incidents Count"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Scope & Filters"
+  },
+  {
+   "fieldname": "grade_level",
+   "fieldtype": "Link",
+   "label": "Grade Level",
+   "options": "Student Group"
+  },
+  {
+   "fieldname": "subject_filter",
+   "fieldtype": "Link",
+   "label": "Subject Filter",
+   "options": "Subject"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Current Term",
+   "fieldname": "time_period",
+   "fieldtype": "Select",
+   "label": "Time Period",
+   "options": "Current Week\nCurrent Month\nCurrent Term\nCurrent Year\nLast 30 Days\nCustom Period"
+  },
+  {
+   "fieldname": "consecutive_periods",
+   "fieldtype": "Int",
+   "label": "Consecutive Periods"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Rule Details"
+  },
+  {
+   "fieldname": "conditions",
+   "fieldtype": "Code",
+   "label": "Custom Conditions (Python)",
+   "options": "Python"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Create Remedial Plan",
+   "fieldname": "action_type",
+   "fieldtype": "Select",
+   "label": "Action Type",
+   "options": "Create Remedial Plan\nSend Notification\nSchedule Meeting\nAssign Counselor\nCreate Intervention\nCustom Action"
+  },
+  {
+   "fieldname": "notification_template",
+   "fieldtype": "Link",
+   "label": "Notification Template",
+   "options": "Notification Template"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break",
+   "label": "Assignment & Escalation"
+  },
+  {
+   "fieldname": "assigned_counselor",
+   "fieldtype": "Link",
+   "label": "Assigned Counselor",
+   "options": "Employee"
+  },
+  {
+   "default": "Level 1",
+   "fieldname": "escalation_level",
+   "fieldtype": "Select",
+   "label": "Escalation Level",
+   "options": "Level 1\nLevel 2\nLevel 3\nCritical"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_create_plan",
+   "fieldtype": "Check",
+   "label": "Auto Create Remedial Plan"
+  },
+  {
+   "default": "7",
+   "fieldname": "follow_up_days",
+   "fieldtype": "Int",
+   "label": "Follow-up Days"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break",
+   "label": "Statistics"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_triggered",
+   "fieldtype": "Datetime",
+   "label": "Last Triggered",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "trigger_count",
+   "fieldtype": "Int",
+   "label": "Trigger Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "success_rate",
+   "fieldtype": "Percent",
+   "label": "Success Rate",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Support Trigger Rule",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academic Counselor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

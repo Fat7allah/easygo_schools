@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ _("Fee Bill") }} - {{ doc.name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            font-size: 12px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .school-info {
+            flex: 1;
+        }
+        .school-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .bill-info {
+            text-align: right;
+            flex: 1;
+        }
+        .bill-number {
+            font-size: 16px;
+            font-weight: bold;
+            color: #666;
+        }
+        .student-info {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .fees-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .fees-table th,
+        .fees-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .fees-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .amount {
+            text-align: right !important;
+            font-weight: 500;
+        }
+        .total-row {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .payment-summary {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .summary-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            width: 30%;
+        }
+        .summary-value {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .amount-due {
+            color: #dc3545;
+        }
+        .amount-paid {
+            color: #28a745;
+        }
+        .payment-instructions {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 10px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+        .status-badge {
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .status-paid {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .status-overdue {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="school-info">
+            <div class="school-name">{{ frappe.db.get_single_value("School Settings", "school_name") or "École" }}</div>
+            <div>{{ frappe.db.get_single_value("School Settings", "address") or "" }}</div>
+            <div>{{ _("Tel") }}: {{ frappe.db.get_single_value("School Settings", "phone") or "" }}</div>
+        </div>
+        <div class="bill-info">
+            <div class="bill-number">{{ _("Bill No") }}: {{ doc.name }}</div>
+            <div>{{ _("Date") }}: {{ frappe.utils.formatdate(doc.posting_date) }}</div>
+            <div>{{ _("Due Date") }}: {{ frappe.utils.formatdate(doc.due_date) }}</div>
+            <div class="status-badge status-{{ doc.status.lower() }}">{{ _(doc.status) }}</div>
+        </div>
+    </div>
+
+    <div class="student-info">
+        <div class="info-row">
+            <span><strong>{{ _("Student") }}:</strong> {{ doc.student_name }}</span>
+            <span><strong>{{ _("Class") }}:</strong> {{ doc.school_class }}</span>
+        </div>
+        <div class="info-row">
+            <span><strong>{{ _("MASSAR Code") }}:</strong> {{ doc.massar_code }}</span>
+            <span><strong>{{ _("Academic Year") }}:</strong> {{ doc.academic_year }}</span>
+        </div>
+        <div class="info-row">
+            <span><strong>{{ _("Parent/Guardian") }}:</strong> {{ doc.guardian_name }}</span>
+            <span><strong>{{ _("Phone") }}:</strong> {{ doc.guardian_phone }}</span>
+        </div>
+    </div>
+
+    <table class="fees-table">
+        <thead>
+            <tr>
+                <th>{{ _("Description") }}</th>
+                <th>{{ _("Period") }}</th>
+                <th>{{ _("Amount") }} ({{ _("MAD") }})</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in doc.fee_items %}
+            <tr>
+                <td>{{ item.fee_type }}</td>
+                <td>{{ item.period or "-" }}</td>
+                <td class="amount">{{ "{:,.2f}".format(item.amount) }}</td>
+            </tr>
+            {% endfor %}
+            <tr class="total-row">
+                <td colspan="2"><strong>{{ _("Total Amount") }}</strong></td>
+                <td class="amount"><strong>{{ "{:,.2f}".format(doc.total_amount) }}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="payment-summary">
+        <div class="summary-box">
+            <div class="summary-value">{{ "{:,.2f}".format(doc.total_amount) }} {{ _("MAD") }}</div>
+            <div>{{ _("Total Amount") }}</div>
+        </div>
+        <div class="summary-box">
+            <div class="summary-value amount-paid">{{ "{:,.2f}".format(doc.paid_amount) }} {{ _("MAD") }}</div>
+            <div>{{ _("Paid Amount") }}</div>
+        </div>
+        <div class="summary-box">
+            <div class="summary-value amount-due">{{ "{:,.2f}".format(doc.outstanding_amount) }} {{ _("MAD") }}</div>
+            <div>{{ _("Outstanding") }}</div>
+        </div>
+    </div>
+
+    {% if doc.outstanding_amount > 0 %}
+    <div class="payment-instructions">
+        <strong>{{ _("Payment Instructions") }}:</strong><br>
+        {{ _("Please pay the outstanding amount by the due date to avoid late fees.") }}<br>
+        {{ _("Payment methods") }}: {{ _("Cash, Bank Transfer, Online Payment") }}<br>
+        {% if frappe.db.get_single_value("Finance Settings", "bank_account") %}
+        <strong>{{ _("Bank Account") }}:</strong> {{ frappe.db.get_single_value("Finance Settings", "bank_account") }}
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if doc.notes %}
+    <div style="margin-top: 20px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
+        <strong>{{ _("Notes") }}:</strong><br>
+        {{ doc.notes }}
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        <div>{{ _("This is a computer-generated document and does not require a signature.") }}</div>
+        <div>{{ _("For inquiries, contact the school administration.") }}</div>
+        <div>{{ _("Generated on") }} {{ frappe.utils.format_datetime(frappe.utils.now()) }}</div>
+    </div>
+</body>
+</html>

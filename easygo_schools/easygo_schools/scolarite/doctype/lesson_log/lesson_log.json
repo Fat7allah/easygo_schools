@@ -1,0 +1,331 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "lesson_plan",
+  "lesson_title",
+  "column_break_4",
+  "subject",
+  "school_class",
+  "teacher",
+  "lesson_details",
+  "lesson_date",
+  "start_time",
+  "column_break_10",
+  "end_time",
+  "duration_minutes",
+  "status",
+  "content_section",
+  "content_covered",
+  "activities_conducted",
+  "column_break_16",
+  "resources_used",
+  "homework_assigned",
+  "attendance_section",
+  "students_present",
+  "students_absent",
+  "column_break_21",
+  "total_students",
+  "attendance_percentage",
+  "assessment_section",
+  "assessment_notes",
+  "student_performance",
+  "column_break_26",
+  "challenges_faced",
+  "improvements_needed",
+  "reflection_section",
+  "teacher_reflection",
+  "student_feedback",
+  "column_break_31",
+  "next_lesson_prep",
+  "follow_up_actions",
+  "additional_info",
+  "notes",
+  "attachments",
+  "column_break_36",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "LL-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lesson_plan",
+   "fieldtype": "Link",
+   "label": "Lesson Plan",
+   "options": "Lesson Plan"
+  },
+  {
+   "fieldname": "lesson_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lesson Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "school_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "School Class",
+   "options": "School Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "teacher",
+   "fieldtype": "Link",
+   "label": "Teacher",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "lesson_details",
+   "fieldtype": "Section Break",
+   "label": "Lesson Details"
+  },
+  {
+   "fieldname": "lesson_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Lesson Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "duration_minutes",
+   "fieldtype": "Int",
+   "label": "Duration (Minutes)"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled",
+   "default": "Scheduled"
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Content Delivered"
+  },
+  {
+   "fieldname": "content_covered",
+   "fieldtype": "Text",
+   "label": "Content Covered"
+  },
+  {
+   "fieldname": "activities_conducted",
+   "fieldtype": "Text",
+   "label": "Activities Conducted"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resources_used",
+   "fieldtype": "Text",
+   "label": "Resources Used"
+  },
+  {
+   "fieldname": "homework_assigned",
+   "fieldtype": "Link",
+   "label": "Homework Assigned",
+   "options": "Homework"
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "students_present",
+   "fieldtype": "Int",
+   "label": "Students Present"
+  },
+  {
+   "fieldname": "students_absent",
+   "fieldtype": "Int",
+   "label": "Students Absent"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_students",
+   "fieldtype": "Int",
+   "label": "Total Students",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_percentage",
+   "fieldtype": "Percent",
+   "label": "Attendance Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Assessment & Performance"
+  },
+  {
+   "fieldname": "assessment_notes",
+   "fieldtype": "Text",
+   "label": "Assessment Notes"
+  },
+  {
+   "fieldname": "student_performance",
+   "fieldtype": "Select",
+   "label": "Overall Student Performance",
+   "options": "Excellent\nGood\nSatisfactory\nNeeds Improvement\nPoor"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "challenges_faced",
+   "fieldtype": "Text",
+   "label": "Challenges Faced"
+  },
+  {
+   "fieldname": "improvements_needed",
+   "fieldtype": "Text",
+   "label": "Improvements Needed"
+  },
+  {
+   "fieldname": "reflection_section",
+   "fieldtype": "Section Break",
+   "label": "Reflection & Follow-up"
+  },
+  {
+   "fieldname": "teacher_reflection",
+   "fieldtype": "Text",
+   "label": "Teacher Reflection"
+  },
+  {
+   "fieldname": "student_feedback",
+   "fieldtype": "Text",
+   "label": "Student Feedback"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_lesson_prep",
+   "fieldtype": "Text",
+   "label": "Next Lesson Preparation"
+  },
+  {
+   "fieldname": "follow_up_actions",
+   "fieldtype": "Text",
+   "label": "Follow-up Actions"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarité",
+ "name": "Lesson Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,342 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "academic_year",
+  "current_grade",
+  "orientation_date",
+  "section_break_8",
+  "orientation_counselor",
+  "class_teacher",
+  "column_break_11",
+  "parent_guardian",
+  "meeting_scheduled",
+  "section_break_14",
+  "academic_performance",
+  "interests_aptitudes",
+  "column_break_17",
+  "career_aspirations",
+  "strengths_weaknesses",
+  "section_break_20",
+  "recommended_streams",
+  "alternative_options",
+  "column_break_23",
+  "required_subjects",
+  "elective_subjects",
+  "section_break_26",
+  "action_plan",
+  "timeline",
+  "column_break_29",
+  "resources_needed",
+  "follow_up_schedule",
+  "section_break_32",
+  "status",
+  "priority",
+  "column_break_35",
+  "completion_date",
+  "effectiveness_rating",
+  "section_break_38",
+  "student_feedback",
+  "parent_feedback",
+  "column_break_41",
+  "counselor_notes",
+  "next_review_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ORI-PLAN-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_group",
+   "fieldname": "current_grade",
+   "fieldtype": "Data",
+   "label": "Current Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "orientation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Orientation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Team Assignment"
+  },
+  {
+   "fieldname": "orientation_counselor",
+   "fieldtype": "Link",
+   "label": "Orientation Counselor",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_teacher",
+   "fieldtype": "Link",
+   "label": "Class Teacher",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_guardian",
+   "fieldtype": "Link",
+   "label": "Parent/Guardian",
+   "options": "Guardian"
+  },
+  {
+   "default": "0",
+   "fieldname": "meeting_scheduled",
+   "fieldtype": "Check",
+   "label": "Meeting Scheduled"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Student Assessment"
+  },
+  {
+   "fieldname": "academic_performance",
+   "fieldtype": "Text Editor",
+   "label": "Academic Performance"
+  },
+  {
+   "fieldname": "interests_aptitudes",
+   "fieldtype": "Text Editor",
+   "label": "Interests & Aptitudes"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "career_aspirations",
+   "fieldtype": "Small Text",
+   "label": "Career Aspirations"
+  },
+  {
+   "fieldname": "strengths_weaknesses",
+   "fieldtype": "Small Text",
+   "label": "Strengths & Areas for Improvement"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Recommendations"
+  },
+  {
+   "fieldname": "recommended_streams",
+   "fieldtype": "Table",
+   "label": "Recommended Streams",
+   "options": "Orientation Stream Recommendation"
+  },
+  {
+   "fieldname": "alternative_options",
+   "fieldtype": "Small Text",
+   "label": "Alternative Options"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "required_subjects",
+   "fieldtype": "Table",
+   "label": "Required Subjects",
+   "options": "Orientation Subject Requirement"
+  },
+  {
+   "fieldname": "elective_subjects",
+   "fieldtype": "Small Text",
+   "label": "Elective Subjects"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Implementation Plan"
+  },
+  {
+   "fieldname": "action_plan",
+   "fieldtype": "Text Editor",
+   "label": "Action Plan"
+  },
+  {
+   "fieldname": "timeline",
+   "fieldtype": "Small Text",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resources_needed",
+   "fieldtype": "Small Text",
+   "label": "Resources Needed"
+  },
+  {
+   "fieldname": "follow_up_schedule",
+   "fieldtype": "Select",
+   "label": "Follow-up Schedule",
+   "options": "Monthly\nQuarterly\nBi-annual\nAnnual\nAs Needed"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Status & Progress"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nOn Hold\nRevision Required"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "effectiveness_rating",
+   "fieldtype": "Rating",
+   "label": "Effectiveness Rating"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break",
+   "label": "Feedback & Notes"
+  },
+  {
+   "fieldname": "student_feedback",
+   "fieldtype": "Small Text",
+   "label": "Student Feedback"
+  },
+  {
+   "fieldname": "parent_feedback",
+   "fieldtype": "Small Text",
+   "label": "Parent Feedback"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "counselor_notes",
+   "fieldtype": "Text Editor",
+   "label": "Counselor Notes"
+  },
+  {
+   "fieldname": "next_review_date",
+   "fieldtype": "Date",
+   "label": "Next Review Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Orientation Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academic Counselor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

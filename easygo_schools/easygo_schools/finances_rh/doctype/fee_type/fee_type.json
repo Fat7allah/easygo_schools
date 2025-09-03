@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:fee_type_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fee_type_name",
+  "category",
+  "column_break_3",
+  "is_mandatory",
+  "is_active",
+  "fee_details",
+  "description",
+  "default_amount",
+  "column_break_8",
+  "frequency",
+  "due_date_calculation",
+  "payment_section",
+  "payment_methods",
+  "late_fee_applicable",
+  "column_break_13",
+  "late_fee_amount",
+  "grace_period_days",
+  "additional_info",
+  "notes",
+  "account_head",
+  "column_break_18",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "fee_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Fee Type Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Tuition\nTransport\nMeals\nActivities\nBooks\nUniform\nExamination\nLibrary\nLaboratory\nSports\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "label": "Is Mandatory",
+   "default": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "fee_details",
+   "fieldtype": "Section Break",
+   "label": "Fee Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "default_amount",
+   "fieldtype": "Currency",
+   "label": "Default Amount"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "One-time\nMonthly\nQuarterly\nSemester\nAnnual",
+   "default": "Monthly"
+  },
+  {
+   "fieldname": "due_date_calculation",
+   "fieldtype": "Select",
+   "label": "Due Date Calculation",
+   "options": "Fixed Date\nStart of Month\nEnd of Month\nCustom"
+  },
+  {
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Settings"
+  },
+  {
+   "fieldname": "payment_methods",
+   "fieldtype": "Select",
+   "label": "Allowed Payment Methods",
+   "options": "Cash\nBank Transfer\nCheque\nCard\nOnline\nAll Methods",
+   "default": "All Methods"
+  },
+  {
+   "fieldname": "late_fee_applicable",
+   "fieldtype": "Check",
+   "label": "Late Fee Applicable"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "late_fee_amount",
+   "fieldtype": "Currency",
+   "label": "Late Fee Amount"
+  },
+  {
+   "fieldname": "grace_period_days",
+   "fieldtype": "Int",
+   "label": "Grace Period (Days)",
+   "default": 0
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "account_head",
+   "fieldtype": "Link",
+   "label": "Account Head",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Finances RH",
+ "name": "Fee Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

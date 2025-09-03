@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:account_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account_name",
+  "account_code",
+  "account_type",
+  "column_break_4",
+  "parent_account",
+  "is_group",
+  "is_active",
+  "section_break_8",
+  "account_currency",
+  "opening_balance",
+  "balance_date",
+  "column_break_12",
+  "bank_name",
+  "bank_account_number",
+  "iban",
+  "section_break_16",
+  "description",
+  "account_manager",
+  "section_break_19",
+  "budget_allocated",
+  "budget_consumed",
+  "budget_remaining"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "account_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "account_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Account Type",
+   "options": "Asset\nLiability\nEquity\nIncome\nExpense\nBank\nCash",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_account",
+   "fieldtype": "Link",
+   "label": "Parent Account",
+   "options": "School Account"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Balance Information"
+  },
+  {
+   "default": "MAD",
+   "fieldname": "account_currency",
+   "fieldtype": "Select",
+   "label": "Account Currency",
+   "options": "MAD\nEUR\nUSD"
+  },
+  {
+   "fieldname": "opening_balance",
+   "fieldtype": "Currency",
+   "label": "Opening Balance"
+  },
+  {
+   "fieldname": "balance_date",
+   "fieldtype": "Date",
+   "label": "Balance Date"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.account_type=='Bank'",
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "depends_on": "eval:doc.account_type=='Bank'",
+   "fieldname": "bank_account_number",
+   "fieldtype": "Data",
+   "label": "Bank Account Number"
+  },
+  {
+   "depends_on": "eval:doc.account_type=='Bank'",
+   "fieldname": "iban",
+   "fieldtype": "Data",
+   "label": "IBAN"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "account_manager",
+   "fieldtype": "Link",
+   "label": "Account Manager",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Budget Information"
+  },
+  {
+   "fieldname": "budget_allocated",
+   "fieldtype": "Currency",
+   "label": "Budget Allocated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "budget_consumed",
+   "fieldtype": "Currency",
+   "label": "Budget Consumed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "budget_remaining",
+   "fieldtype": "Currency",
+   "label": "Budget Remaining",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "School Account",
+ "naming_rule": "By fieldname",
+ "nsm_parent_field": "parent_account",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

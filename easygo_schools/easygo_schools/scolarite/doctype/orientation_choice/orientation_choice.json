@@ -1,0 +1,423 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "academic_year",
+  "current_grade",
+  "choice_date",
+  "section_break_8",
+  "orientation_plan",
+  "counselor",
+  "column_break_11",
+  "parent_guardian",
+  "guardian_consent",
+  "section_break_14",
+  "first_choice_stream",
+  "first_choice_reason",
+  "column_break_17",
+  "second_choice_stream",
+  "second_choice_reason",
+  "section_break_20",
+  "third_choice_stream",
+  "third_choice_reason",
+  "column_break_23",
+  "alternative_options",
+  "backup_plan",
+  "section_break_26",
+  "required_subjects",
+  "elective_subjects",
+  "column_break_29",
+  "subject_prerequisites",
+  "additional_requirements",
+  "section_break_32",
+  "career_goals",
+  "university_aspirations",
+  "column_break_35",
+  "professional_interests",
+  "skill_development_areas",
+  "section_break_38",
+  "status",
+  "approval_status",
+  "column_break_41",
+  "submission_date",
+  "approval_date",
+  "section_break_44",
+  "student_confidence_level",
+  "parent_satisfaction",
+  "column_break_47",
+  "counselor_recommendation",
+  "final_decision",
+  "section_break_50",
+  "student_comments",
+  "parent_comments",
+  "column_break_53",
+  "counselor_notes",
+  "follow_up_required"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ORI-CHOICE-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_group",
+   "fieldname": "current_grade",
+   "fieldtype": "Data",
+   "label": "Current Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "choice_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Choice Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Guidance Information"
+  },
+  {
+   "fieldname": "orientation_plan",
+   "fieldtype": "Link",
+   "label": "Orientation Plan",
+   "options": "Orientation Plan"
+  },
+  {
+   "fieldname": "counselor",
+   "fieldtype": "Link",
+   "label": "Orientation Counselor",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_guardian",
+   "fieldtype": "Link",
+   "label": "Parent/Guardian",
+   "options": "Guardian"
+  },
+  {
+   "default": "0",
+   "fieldname": "guardian_consent",
+   "fieldtype": "Check",
+   "label": "Guardian Consent Given"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Stream Choices"
+  },
+  {
+   "fieldname": "first_choice_stream",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "First Choice Stream",
+   "options": "Academic Stream",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_choice_reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for First Choice"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "second_choice_stream",
+   "fieldtype": "Link",
+   "label": "Second Choice Stream",
+   "options": "Academic Stream"
+  },
+  {
+   "fieldname": "second_choice_reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for Second Choice"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "third_choice_stream",
+   "fieldtype": "Link",
+   "label": "Third Choice Stream",
+   "options": "Academic Stream"
+  },
+  {
+   "fieldname": "third_choice_reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for Third Choice"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alternative_options",
+   "fieldtype": "Small Text",
+   "label": "Alternative Options Considered"
+  },
+  {
+   "fieldname": "backup_plan",
+   "fieldtype": "Small Text",
+   "label": "Backup Plan"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Subject Requirements"
+  },
+  {
+   "fieldname": "required_subjects",
+   "fieldtype": "Table",
+   "label": "Required Subjects",
+   "options": "Orientation Subject Choice"
+  },
+  {
+   "fieldname": "elective_subjects",
+   "fieldtype": "Table",
+   "label": "Elective Subjects",
+   "options": "Orientation Subject Choice"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subject_prerequisites",
+   "fieldtype": "Small Text",
+   "label": "Subject Prerequisites"
+  },
+  {
+   "fieldname": "additional_requirements",
+   "fieldtype": "Small Text",
+   "label": "Additional Requirements"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Future Aspirations"
+  },
+  {
+   "fieldname": "career_goals",
+   "fieldtype": "Small Text",
+   "label": "Career Goals"
+  },
+  {
+   "fieldname": "university_aspirations",
+   "fieldtype": "Small Text",
+   "label": "University Aspirations"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "professional_interests",
+   "fieldtype": "Small Text",
+   "label": "Professional Interests"
+  },
+  {
+   "fieldname": "skill_development_areas",
+   "fieldtype": "Small Text",
+   "label": "Skill Development Areas"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break",
+   "label": "Status & Approval"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nUnder Review\nApproved\nRejected\nRevision Required"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Pending\nApproved by Counselor\nApproved by Guardian\nFully Approved\nRejected\nConditional Approval"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "submission_date",
+   "fieldtype": "Datetime",
+   "label": "Submission Date"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "section_break_44",
+   "fieldtype": "Section Break",
+   "label": "Assessment & Feedback"
+  },
+  {
+   "fieldname": "student_confidence_level",
+   "fieldtype": "Rating",
+   "label": "Student Confidence Level"
+  },
+  {
+   "fieldname": "parent_satisfaction",
+   "fieldtype": "Rating",
+   "label": "Parent Satisfaction"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "counselor_recommendation",
+   "fieldtype": "Select",
+   "label": "Counselor Recommendation",
+   "options": "Strongly Recommend\nRecommend\nRecommend with Conditions\nNeed More Assessment\nNot Recommended"
+  },
+  {
+   "fieldname": "final_decision",
+   "fieldtype": "Link",
+   "label": "Final Decision Stream",
+   "options": "Academic Stream"
+  },
+  {
+   "fieldname": "section_break_50",
+   "fieldtype": "Section Break",
+   "label": "Comments & Notes"
+  },
+  {
+   "fieldname": "student_comments",
+   "fieldtype": "Small Text",
+   "label": "Student Comments"
+  },
+  {
+   "fieldname": "parent_comments",
+   "fieldtype": "Small Text",
+   "label": "Parent Comments"
+  },
+  {
+   "fieldname": "column_break_53",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "counselor_notes",
+   "fieldtype": "Text Editor",
+   "label": "Counselor Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Orientation Choice",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academic Counselor",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Guardian",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Student",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

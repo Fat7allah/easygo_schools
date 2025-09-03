@@ -1,0 +1,271 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:asset_code",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_code",
+  "asset_name",
+  "asset_category",
+  "column_break_4",
+  "asset_type",
+  "status",
+  "is_active",
+  "section_break_8",
+  "description",
+  "specifications",
+  "section_break_11",
+  "purchase_date",
+  "purchase_cost",
+  "supplier",
+  "column_break_15",
+  "warranty_period",
+  "warranty_expiry",
+  "depreciation_method",
+  "section_break_19",
+  "current_location",
+  "assigned_to",
+  "responsible_person",
+  "column_break_23",
+  "condition_status",
+  "last_maintenance_date",
+  "next_maintenance_date",
+  "section_break_27",
+  "asset_image",
+  "qr_code",
+  "barcode",
+  "section_break_31",
+  "maintenance_history",
+  "asset_documents"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "asset_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Asset Category",
+   "options": "IT Equipment\nFurniture\nLaboratory Equipment\nSports Equipment\nVehicles\nBuilding\nElectrical\nPlumbing\nSecurity\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asset_type",
+   "fieldtype": "Select",
+   "label": "Asset Type",
+   "options": "Fixed Asset\nMovable Asset\nConsumable\nIntangible"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nUnder Maintenance\nDamaged\nDisposed\nLost"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Asset Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "specifications",
+   "fieldtype": "Small Text",
+   "label": "Specifications"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Purchase Information"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "purchase_cost",
+   "fieldtype": "Currency",
+   "label": "Purchase Cost"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Data",
+   "label": "Supplier"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warranty_period",
+   "fieldtype": "Int",
+   "label": "Warranty Period (Months)"
+  },
+  {
+   "fieldname": "warranty_expiry",
+   "fieldtype": "Date",
+   "label": "Warranty Expiry"
+  },
+  {
+   "fieldname": "depreciation_method",
+   "fieldtype": "Select",
+   "label": "Depreciation Method",
+   "options": "Straight Line\nWritten Down Value\nDouble Declining Balance\nSum of Years Digits"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Location & Assignment"
+  },
+  {
+   "fieldname": "current_location",
+   "fieldtype": "Link",
+   "label": "Current Location",
+   "options": "Room"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "responsible_person",
+   "fieldtype": "Link",
+   "label": "Responsible Person",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Good",
+   "fieldname": "condition_status",
+   "fieldtype": "Select",
+   "label": "Condition Status",
+   "options": "Excellent\nGood\nFair\nPoor\nDamaged"
+  },
+  {
+   "fieldname": "last_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Last Maintenance Date"
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next Maintenance Date"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break",
+   "label": "Asset Identification"
+  },
+  {
+   "fieldname": "asset_image",
+   "fieldtype": "Attach Image",
+   "label": "Asset Image"
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Data",
+   "label": "QR Code"
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "label": "Barcode"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break",
+   "label": "History & Documents"
+  },
+  {
+   "fieldname": "maintenance_history",
+   "fieldtype": "Table",
+   "label": "Maintenance History",
+   "options": "Asset Maintenance History"
+  },
+  {
+   "fieldname": "asset_documents",
+   "fieldtype": "Table",
+   "label": "Asset Documents",
+   "options": "Asset Document"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "School Asset",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Asset Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

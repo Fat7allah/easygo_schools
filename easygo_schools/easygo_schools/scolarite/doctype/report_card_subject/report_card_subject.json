@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "subject_name",
+  "column_break_3",
+  "total_marks",
+  "obtained_marks",
+  "percentage",
+  "column_break_7",
+  "grade",
+  "grade_point",
+  "teacher_remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subject",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "subject.subject_name",
+   "fieldname": "subject_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Marks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "obtained_marks",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Obtained Marks",
+   "reqd": 1
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grade",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grade_point",
+   "fieldtype": "Float",
+   "label": "Grade Point",
+   "precision": 2,
+   "read_only": 1
+  },
+  {
+   "fieldname": "teacher_remarks",
+   "fieldtype": "Small Text",
+   "label": "Teacher Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Report Card Subject",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

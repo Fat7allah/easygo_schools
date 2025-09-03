@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ _("Document") }}{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Amiri', 'Traditional Arabic', 'Al Bayan', 'Geeza Pro', serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .school-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .document-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+        
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+        
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .label {
+            font-weight: bold;
+            color: #495057;
+            min-width: 120px;
+        }
+        
+        .value {
+            color: #212529;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            font-size: 13px;
+        }
+        
+        .data-table th,
+        .data-table td {
+            border: 1px solid #dee2e6;
+            padding: 12px 8px;
+            text-align: center;
+        }
+        
+        .data-table th {
+            background-color: #f1f3f4;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .data-table .text-column {
+            text-align: right !important;
+            font-weight: 500;
+        }
+        
+        .data-table .number-column {
+            text-align: center !important;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .summary-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            gap: 15px;
+        }
+        
+        .summary-box {
+            border: 2px solid #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            background-color: #ffffff;
+        }
+        
+        .summary-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .summary-label {
+            color: #6c757d;
+            font-size: 12px;
+        }
+        
+        .grade-excellent { 
+            color: #28a745; 
+            font-weight: bold; 
+        }
+        
+        .grade-good { 
+            color: #17a2b8; 
+            font-weight: bold; 
+        }
+        
+        .grade-average { 
+            color: #fd7e14; 
+            font-weight: bold; 
+        }
+        
+        .grade-poor { 
+            color: #dc3545; 
+            font-weight: bold; 
+        }
+        
+        .status-paid {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        .status-overdue {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        .comments-section {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-right: 4px solid #007bff;
+        }
+        
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            gap: 20px;
+        }
+        
+        .signature-box {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .signature-line {
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            padding-top: 8px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 11px;
+            border-top: 1px solid #dee2e6;
+            padding-top: 20px;
+        }
+        
+        .amount {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        
+        .currency {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        
+        /* Print-specific styles */
+        @media print {
+            body {
+                font-size: 12px;
+            }
+            
+            .summary-section {
+                flex-direction: column;
+            }
+            
+            .summary-box {
+                margin-bottom: 10px;
+            }
+            
+            .signature-section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+                font-size: 13px;
+            }
+            
+            .summary-section {
+                flex-direction: column;
+            }
+            
+            .info-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .label {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div class="header">
+        <div class="school-name">
+            {{ frappe.db.get_single_value("School Settings", "school_name_arabic") or 
+               frappe.db.get_single_value("School Settings", "school_name") or "المدرسة" }}
+        </div>
+        <div class="document-title">{% block document_title %}{{ _("Document") }}{% endblock %}</div>
+    </div>
+    
+    <div class="info-section">
+        {% block info_section %}{% endblock %}
+    </div>
+    
+    <div class="main-content">
+        {% block main_content %}{% endblock %}
+    </div>
+    
+    {% block signature_section %}
+    <div class="signature-section">
+        <div class="signature-box">
+            <div class="signature-line">مدرس الفصل</div>
+        </div>
+        <div class="signature-box">
+            <div class="signature-line">مدير المدرسة</div>
+        </div>
+        <div class="signature-box">
+            <div class="signature-line">ولي الأمر</div>
+        </div>
+    </div>
+    {% endblock %}
+    
+    <div class="footer">
+        تم الإنشاء في {{ frappe.utils.format_datetime(frappe.utils.now(), format_string="dd/MM/yyyy HH:mm") }}
+    </div>
+    {% endblock %}
+</body>
+</html>

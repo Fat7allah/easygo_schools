@@ -1,0 +1,36 @@
+{
+ "chart_name": "Fee Collection Trends",
+ "chart_type": "Bar",
+ "color": "#007bff",
+ "creation": "2024-01-01 00:00:00.000000",
+ "custom_options": {
+  "type": "bar",
+  "colors": ["#007bff", "#28a745"],
+  "axisOptions": {
+   "xIsSeries": 1
+  }
+ },
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Fee Bill",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[{\"fieldname\": \"status\", \"operator\": \"=\", \"value\": \"Paid\"}]",
+ "group_by_based_on": "posting_date",
+ "group_by_type": "Sum",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Finances RH",
+ "name": "Fee Collection Chart",
+ "number_of_groups": 12,
+ "owner": "Administrator",
+ "source": "Fee Bill",
+ "time_interval": "Monthly",
+ "timeseries": 1,
+ "type": "Sum",
+ "use_report_chart": 0,
+ "value_based_on": "total_amount",
+ "y_axis": []
+}

@@ -1,0 +1,343 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "remedial_plan",
+  "intervention_type",
+  "session_date",
+  "section_break_8",
+  "assigned_counselor",
+  "session_location",
+  "column_break_11",
+  "duration_minutes",
+  "session_mode",
+  "section_break_14",
+  "session_reason",
+  "session_description",
+  "column_break_17",
+  "objectives",
+  "planned_activities",
+  "section_break_20",
+  "status",
+  "priority",
+  "column_break_23",
+  "attendance_status",
+  "session_start_time",
+  "section_break_26",
+  "session_notes",
+  "student_response",
+  "column_break_29",
+  "outcomes_achieved",
+  "homework_assigned",
+  "section_break_32",
+  "effectiveness_rating",
+  "student_engagement",
+  "column_break_35",
+  "follow_up_required",
+  "next_session_date",
+  "section_break_38",
+  "parent_informed",
+  "parent_feedback",
+  "column_break_41",
+  "teacher_notified",
+  "coordination_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "INT-SES-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remedial_plan",
+   "fieldtype": "Link",
+   "label": "Remedial Plan",
+   "options": "Remedial Plan"
+  },
+  {
+   "fieldname": "intervention_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Intervention Type",
+   "options": "Academic Support\nBehavioral Counseling\nSocial Skills\nEmotional Support\nCareer Guidance\nPeer Mediation\nFamily Counseling\nCrisis Intervention",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Session Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Session Details"
+  },
+  {
+   "fieldname": "assigned_counselor",
+   "fieldtype": "Link",
+   "label": "Assigned Counselor",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "session_location",
+   "fieldtype": "Link",
+   "label": "Session Location",
+   "options": "Room"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "60",
+   "fieldname": "duration_minutes",
+   "fieldtype": "Int",
+   "label": "Duration (Minutes)"
+  },
+  {
+   "default": "In-Person",
+   "fieldname": "session_mode",
+   "fieldtype": "Select",
+   "label": "Session Mode",
+   "options": "In-Person\nVirtual\nPhone Call\nGroup Session"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Session Planning"
+  },
+  {
+   "fieldname": "session_reason",
+   "fieldtype": "Small Text",
+   "label": "Session Reason"
+  },
+  {
+   "fieldname": "session_description",
+   "fieldtype": "Text Editor",
+   "label": "Session Description"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "objectives",
+   "fieldtype": "Text Editor",
+   "label": "Session Objectives"
+  },
+  {
+   "fieldname": "planned_activities",
+   "fieldtype": "Small Text",
+   "label": "Planned Activities"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Session Status"
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled\nNo Show\nRescheduled"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attendance_status",
+   "fieldtype": "Select",
+   "label": "Attendance Status",
+   "options": "Present\nAbsent\nLate\nLeft Early"
+  },
+  {
+   "fieldname": "session_start_time",
+   "fieldtype": "Datetime",
+   "label": "Session Start Time"
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Session Documentation"
+  },
+  {
+   "fieldname": "session_notes",
+   "fieldtype": "Text Editor",
+   "label": "Session Notes"
+  },
+  {
+   "fieldname": "student_response",
+   "fieldtype": "Select",
+   "label": "Student Response",
+   "options": "Very Positive\nPositive\nNeutral\nResistant\nVery Resistant"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "outcomes_achieved",
+   "fieldtype": "Small Text",
+   "label": "Outcomes Achieved"
+  },
+  {
+   "fieldname": "homework_assigned",
+   "fieldtype": "Small Text",
+   "label": "Homework/Tasks Assigned"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break",
+   "label": "Session Evaluation"
+  },
+  {
+   "fieldname": "effectiveness_rating",
+   "fieldtype": "Rating",
+   "label": "Effectiveness Rating"
+  },
+  {
+   "fieldname": "student_engagement",
+   "fieldtype": "Select",
+   "label": "Student Engagement",
+   "options": "Highly Engaged\nEngaged\nSomewhat Engaged\nDisengaged\nRefused to Participate"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "depends_on": "follow_up_required",
+   "fieldname": "next_session_date",
+   "fieldtype": "Date",
+   "label": "Next Session Date"
+  },
+  {
+   "fieldname": "section_break_38",
+   "fieldtype": "Section Break",
+   "label": "Communication"
+  },
+  {
+   "default": "0",
+   "fieldname": "parent_informed",
+   "fieldtype": "Check",
+   "label": "Parent Informed"
+  },
+  {
+   "depends_on": "parent_informed",
+   "fieldname": "parent_feedback",
+   "fieldtype": "Small Text",
+   "label": "Parent Feedback"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "teacher_notified",
+   "fieldtype": "Check",
+   "label": "Teacher Notified"
+  },
+  {
+   "fieldname": "coordination_notes",
+   "fieldtype": "Small Text",
+   "label": "Coordination Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Intervention Session",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academic Counselor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

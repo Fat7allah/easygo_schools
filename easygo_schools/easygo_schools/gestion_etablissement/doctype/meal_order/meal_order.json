@@ -1,0 +1,322 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "menu",
+  "menu_date",
+  "meal_type",
+  "section_break_8",
+  "quantity",
+  "price_per_meal",
+  "column_break_11",
+  "total_amount",
+  "discount_amount",
+  "final_amount",
+  "section_break_15",
+  "order_type",
+  "order_date",
+  "column_break_18",
+  "status",
+  "delivery_time",
+  "section_break_21",
+  "special_instructions",
+  "dietary_requirements",
+  "column_break_24",
+  "allergen_notes",
+  "pickup_location",
+  "section_break_27",
+  "payment_status",
+  "payment_method",
+  "column_break_30",
+  "payment_reference",
+  "payment_date",
+  "section_break_33",
+  "served_by",
+  "served_date",
+  "column_break_36",
+  "feedback_rating",
+  "feedback_comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MEAL-ORDER-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "menu",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Menu",
+   "options": "Canteen Menu",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "menu.menu_date",
+   "fieldname": "menu_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Menu Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "menu.meal_type",
+   "fieldname": "meal_type",
+   "fieldtype": "Data",
+   "label": "Meal Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Order Details"
+  },
+  {
+   "default": "1",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "menu.price_per_meal",
+   "fieldname": "price_per_meal",
+   "fieldtype": "Currency",
+   "label": "Price per Meal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount"
+  },
+  {
+   "fieldname": "final_amount",
+   "fieldtype": "Currency",
+   "label": "Final Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Order Information"
+  },
+  {
+   "default": "Manual",
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "options": "Manual\nAutomatic\nSubscription"
+  },
+  {
+   "fieldname": "order_date",
+   "fieldtype": "Datetime",
+   "label": "Order Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nConfirmed\nPreparing\nReady\nServed\nCancelled"
+  },
+  {
+   "fieldname": "delivery_time",
+   "fieldtype": "Time",
+   "label": "Delivery Time"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break",
+   "label": "Special Requirements"
+  },
+  {
+   "fieldname": "special_instructions",
+   "fieldtype": "Small Text",
+   "label": "Special Instructions"
+  },
+  {
+   "fieldname": "dietary_requirements",
+   "fieldtype": "Select",
+   "label": "Dietary Requirements",
+   "options": "None\nVegetarian\nVegan\nHalal\nKosher\nGluten-Free\nNut-Free\nDairy-Free"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allergen_notes",
+   "fieldtype": "Small Text",
+   "label": "Allergen Notes"
+  },
+  {
+   "fieldname": "pickup_location",
+   "fieldtype": "Select",
+   "label": "Pickup Location",
+   "options": "Main Canteen\nSecondary Canteen\nClassroom Delivery\nStaff Room"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break",
+   "label": "Payment Information"
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Unpaid\nPaid\nRefunded\nPartial"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nCard\nMobile Payment\nSchool Account\nMeal Plan"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Datetime",
+   "label": "Payment Date"
+  },
+  {
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break",
+   "label": "Service Information"
+  },
+  {
+   "fieldname": "served_by",
+   "fieldtype": "Link",
+   "label": "Served By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "served_date",
+   "fieldtype": "Datetime",
+   "label": "Served Date"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "feedback_rating",
+   "fieldtype": "Rating",
+   "label": "Feedback Rating"
+  },
+  {
+   "fieldname": "feedback_comments",
+   "fieldtype": "Small Text",
+   "label": "Feedback Comments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Meal Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Canteen Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Guardian",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Student",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,276 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:activity_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activity_name",
+  "activity_type",
+  "column_break_3",
+  "supervisor",
+  "is_active",
+  "activity_details",
+  "description",
+  "objectives",
+  "column_break_8",
+  "requirements",
+  "age_group",
+  "schedule_section",
+  "start_date",
+  "end_date",
+  "column_break_13",
+  "meeting_schedule",
+  "location",
+  "capacity_section",
+  "max_participants",
+  "current_participants",
+  "column_break_18",
+  "enrollment_open",
+  "enrollment_deadline",
+  "resources_section",
+  "required_materials",
+  "budget_allocated",
+  "column_break_23",
+  "equipment_needed",
+  "external_resources",
+  "additional_info",
+  "notes",
+  "attachments",
+  "column_break_28",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "activity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "activity_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Activity Type",
+   "options": "Sports\nArts\nMusic\nDrama\nScience Club\nLanguage Club\nDebate\nChess\nRobotics\nCommunity Service\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supervisor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "activity_details",
+   "fieldtype": "Section Break",
+   "label": "Activity Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "objectives",
+   "fieldtype": "Text",
+   "label": "Objectives"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "requirements",
+   "fieldtype": "Text",
+   "label": "Requirements"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Select",
+   "label": "Age Group",
+   "options": "Elementary\nMiddle School\nHigh School\nAll Ages"
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meeting_schedule",
+   "fieldtype": "Data",
+   "label": "Meeting Schedule"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Room"
+  },
+  {
+   "fieldname": "capacity_section",
+   "fieldtype": "Section Break",
+   "label": "Capacity & Enrollment"
+  },
+  {
+   "fieldname": "max_participants",
+   "fieldtype": "Int",
+   "label": "Max Participants"
+  },
+  {
+   "fieldname": "current_participants",
+   "fieldtype": "Int",
+   "label": "Current Participants",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enrollment_open",
+   "fieldtype": "Check",
+   "label": "Enrollment Open",
+   "default": 1
+  },
+  {
+   "fieldname": "enrollment_deadline",
+   "fieldtype": "Date",
+   "label": "Enrollment Deadline"
+  },
+  {
+   "fieldname": "resources_section",
+   "fieldtype": "Section Break",
+   "label": "Resources"
+  },
+  {
+   "fieldname": "required_materials",
+   "fieldtype": "Text",
+   "label": "Required Materials"
+  },
+  {
+   "fieldname": "budget_allocated",
+   "fieldtype": "Currency",
+   "label": "Budget Allocated"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "equipment_needed",
+   "fieldtype": "Text",
+   "label": "Equipment Needed"
+  },
+  {
+   "fieldname": "external_resources",
+   "fieldtype": "Text",
+   "label": "External Resources"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Vie Scolaire",
+ "name": "Extracurricular Activity",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

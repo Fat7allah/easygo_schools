@@ -1,0 +1,301 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "guardian",
+  "guardian_name",
+  "consent_details",
+  "consent_type",
+  "activity_event",
+  "column_break_9",
+  "consent_date",
+  "expiry_date",
+  "status",
+  "description_section",
+  "activity_description",
+  "risks_involved",
+  "column_break_15",
+  "special_instructions",
+  "emergency_contact",
+  "consent_conditions",
+  "medical_info_section",
+  "medical_conditions",
+  "medications",
+  "column_break_21",
+  "allergies",
+  "dietary_restrictions",
+  "approval_section",
+  "consent_given",
+  "signature_date",
+  "column_break_26",
+  "digital_signature",
+  "witness_name",
+  "additional_info",
+  "remarks",
+  "attachments",
+  "column_break_31",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PC-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "guardian",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Guardian",
+   "options": "Guardian",
+   "reqd": 1
+  },
+  {
+   "fieldname": "guardian_name",
+   "fieldtype": "Data",
+   "label": "Guardian Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consent_details",
+   "fieldtype": "Section Break",
+   "label": "Consent Details"
+  },
+  {
+   "fieldname": "consent_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Consent Type",
+   "options": "Field Trip\nSports Activity\nMedical Treatment\nPhoto/Video Release\nTransportation\nExtracurricular Activity\nSpecial Event\nResearch Participation\nTechnology Use\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity_event",
+   "fieldtype": "Data",
+   "label": "Activity/Event Name"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consent_date",
+   "fieldtype": "Date",
+   "label": "Consent Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nApproved\nRejected\nExpired\nRevoked",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Activity Description"
+  },
+  {
+   "fieldname": "activity_description",
+   "fieldtype": "Text",
+   "label": "Activity Description"
+  },
+  {
+   "fieldname": "risks_involved",
+   "fieldtype": "Text",
+   "label": "Risks Involved"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "special_instructions",
+   "fieldtype": "Text",
+   "label": "Special Instructions"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Data",
+   "label": "Emergency Contact"
+  },
+  {
+   "fieldname": "consent_conditions",
+   "fieldtype": "Text",
+   "label": "Consent Conditions"
+  },
+  {
+   "fieldname": "medical_info_section",
+   "fieldtype": "Section Break",
+   "label": "Medical Information"
+  },
+  {
+   "fieldname": "medical_conditions",
+   "fieldtype": "Text",
+   "label": "Medical Conditions"
+  },
+  {
+   "fieldname": "medications",
+   "fieldtype": "Text",
+   "label": "Current Medications"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Text",
+   "label": "Allergies"
+  },
+  {
+   "fieldname": "dietary_restrictions",
+   "fieldtype": "Text",
+   "label": "Dietary Restrictions"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Consent Approval"
+  },
+  {
+   "fieldname": "consent_given",
+   "fieldtype": "Check",
+   "label": "Consent Given"
+  },
+  {
+   "fieldname": "signature_date",
+   "fieldtype": "Datetime",
+   "label": "Signature Date"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "digital_signature",
+   "fieldtype": "Attach",
+   "label": "Digital Signature"
+  },
+  {
+   "fieldname": "witness_name",
+   "fieldtype": "Data",
+   "label": "Witness Name"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Supporting Documents"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Administration Comms",
+ "name": "Parent Consent",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Parent",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

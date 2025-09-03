@@ -1,0 +1,236 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "student",
+  "student_name",
+  "column_break_4",
+  "attendance_date",
+  "status",
+  "justification_details",
+  "reason_type",
+  "reason_description",
+  "column_break_9",
+  "supporting_documents",
+  "medical_certificate",
+  "other_documents",
+  "submission_details",
+  "submitted_by",
+  "submission_date",
+  "column_break_15",
+  "submitted_via",
+  "contact_number",
+  "approval_section",
+  "approval_status",
+  "reviewed_by",
+  "column_break_20",
+  "review_date",
+  "review_comments",
+  "notification_sent"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ATJ-.YYYY.-.MM.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Attendance Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nApproved\nRejected\nPartially Approved",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "justification_details",
+   "fieldtype": "Section Break",
+   "label": "Justification Details"
+  },
+  {
+   "fieldname": "reason_type",
+   "fieldtype": "Select",
+   "label": "Reason Type",
+   "options": "Medical\nFamily Emergency\nPersonal\nTransport Issues\nWeather\nSchool Event\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason_description",
+   "fieldtype": "Text",
+   "label": "Reason Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supporting_documents",
+   "fieldtype": "Section Break",
+   "label": "Supporting Documents"
+  },
+  {
+   "fieldname": "medical_certificate",
+   "fieldtype": "Attach",
+   "label": "Medical Certificate"
+  },
+  {
+   "fieldname": "other_documents",
+   "fieldtype": "Table",
+   "label": "Other Documents",
+   "options": "Attendance Justification Document"
+  },
+  {
+   "fieldname": "submission_details",
+   "fieldtype": "Section Break",
+   "label": "Submission Details"
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User"
+  },
+  {
+   "fieldname": "submission_date",
+   "fieldtype": "Datetime",
+   "label": "Submission Date"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "submitted_via",
+   "fieldtype": "Select",
+   "label": "Submitted Via",
+   "options": "Portal\nEmail\nPhone\nIn Person"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Pending Review\nApproved\nRejected\nRequires More Info",
+   "default": "Pending Review"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "review_date",
+   "fieldtype": "Datetime",
+   "label": "Review Date"
+  },
+  {
+   "fieldname": "review_comments",
+   "fieldtype": "Text",
+   "label": "Review Comments"
+  },
+  {
+   "fieldname": "notification_sent",
+   "fieldtype": "Check",
+   "label": "Notification Sent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Vie Scolaire",
+ "name": "Attendance Justification",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Parent",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:resource_title",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "resource_title",
+  "resource_type",
+  "column_break_3",
+  "subject",
+  "is_active",
+  "resource_details",
+  "description",
+  "file_url",
+  "column_break_8",
+  "external_link",
+  "access_level",
+  "content_section",
+  "content",
+  "keywords",
+  "column_break_13",
+  "language",
+  "difficulty_level",
+  "metadata_section",
+  "file_size",
+  "file_format",
+  "column_break_18",
+  "upload_date",
+  "last_accessed",
+  "usage_section",
+  "download_count",
+  "view_count",
+  "column_break_23",
+  "rating",
+  "feedback_count",
+  "additional_info",
+  "notes",
+  "tags",
+  "column_break_28",
+  "created_by",
+  "creation_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "resource_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Resource Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "resource_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Resource Type",
+   "options": "Document\nVideo\nAudio\nImage\nPresentation\nWorksheet\nQuiz\nGame\nSimulation\nWebsite\nBook\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Subject"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "resource_details",
+   "fieldtype": "Section Break",
+   "label": "Resource Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "file_url",
+   "fieldtype": "Attach",
+   "label": "File"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "external_link",
+   "fieldtype": "Data",
+   "label": "External Link"
+  },
+  {
+   "fieldname": "access_level",
+   "fieldtype": "Select",
+   "label": "Access Level",
+   "options": "Public\nTeachers Only\nStudents Only\nRestricted",
+   "default": "Public"
+  },
+  {
+   "fieldname": "content_section",
+   "fieldtype": "Section Break",
+   "label": "Content Information"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Text Editor",
+   "label": "Content"
+  },
+  {
+   "fieldname": "keywords",
+   "fieldtype": "Data",
+   "label": "Keywords"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "French\nArabic\nEnglish\nOther",
+   "default": "French"
+  },
+  {
+   "fieldname": "difficulty_level",
+   "fieldtype": "Select",
+   "label": "Difficulty Level",
+   "options": "Beginner\nIntermediate\nAdvanced\nExpert"
+  },
+  {
+   "fieldname": "metadata_section",
+   "fieldtype": "Section Break",
+   "label": "File Metadata"
+  },
+  {
+   "fieldname": "file_size",
+   "fieldtype": "Data",
+   "label": "File Size",
+   "read_only": 1
+  },
+  {
+   "fieldname": "file_format",
+   "fieldtype": "Data",
+   "label": "File Format",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "upload_date",
+   "fieldtype": "Date",
+   "label": "Upload Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_accessed",
+   "fieldtype": "Datetime",
+   "label": "Last Accessed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "usage_section",
+   "fieldtype": "Section Break",
+   "label": "Usage Statistics"
+  },
+  {
+   "fieldname": "download_count",
+   "fieldtype": "Int",
+   "label": "Download Count",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "view_count",
+   "fieldtype": "Int",
+   "label": "View Count",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
+  },
+  {
+   "fieldname": "feedback_count",
+   "fieldtype": "Int",
+   "label": "Feedback Count",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarité",
+ "name": "Resource",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

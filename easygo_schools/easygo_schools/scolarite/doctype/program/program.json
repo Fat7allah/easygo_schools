@@ -1,0 +1,256 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:program_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "program_name",
+  "program_code",
+  "column_break_3",
+  "program_type",
+  "is_active",
+  "program_details",
+  "description",
+  "duration_years",
+  "column_break_8",
+  "minimum_age",
+  "maximum_age",
+  "entry_requirements",
+  "curriculum_section",
+  "subjects",
+  "total_credits_required",
+  "column_break_13",
+  "grading_scale",
+  "assessment_criteria",
+  "graduation_requirements",
+  "fees_section",
+  "tuition_fee",
+  "registration_fee",
+  "column_break_19",
+  "other_fees",
+  "fee_structure",
+  "additional_info",
+  "program_coordinator",
+  "department",
+  "column_break_24",
+  "accreditation_body",
+  "accreditation_status",
+  "last_review_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "program_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Program Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "program_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Program Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Program Type",
+   "options": "Primary Education\nSecondary Education\nHigh School\nVocational Training\nSpecial Education\nInternational Program",
+   "reqd": 1
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "program_details",
+   "fieldtype": "Section Break",
+   "label": "Program Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "duration_years",
+   "fieldtype": "Int",
+   "label": "Duration (Years)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "minimum_age",
+   "fieldtype": "Int",
+   "label": "Minimum Age"
+  },
+  {
+   "fieldname": "maximum_age",
+   "fieldtype": "Int",
+   "label": "Maximum Age"
+  },
+  {
+   "fieldname": "entry_requirements",
+   "fieldtype": "Text",
+   "label": "Entry Requirements"
+  },
+  {
+   "fieldname": "curriculum_section",
+   "fieldtype": "Section Break",
+   "label": "Curriculum"
+  },
+  {
+   "fieldname": "subjects",
+   "fieldtype": "Table",
+   "label": "Subjects",
+   "options": "Program Subject"
+  },
+  {
+   "fieldname": "total_credits_required",
+   "fieldtype": "Int",
+   "label": "Total Credits Required"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grading_scale",
+   "fieldtype": "Link",
+   "label": "Grading Scale",
+   "options": "Grading Scale"
+  },
+  {
+   "fieldname": "assessment_criteria",
+   "fieldtype": "Text",
+   "label": "Assessment Criteria"
+  },
+  {
+   "fieldname": "graduation_requirements",
+   "fieldtype": "Text",
+   "label": "Graduation Requirements"
+  },
+  {
+   "fieldname": "fees_section",
+   "fieldtype": "Section Break",
+   "label": "Fees"
+  },
+  {
+   "fieldname": "tuition_fee",
+   "fieldtype": "Currency",
+   "label": "Tuition Fee (Annual)"
+  },
+  {
+   "fieldname": "registration_fee",
+   "fieldtype": "Currency",
+   "label": "Registration Fee"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_fees",
+   "fieldtype": "Table",
+   "label": "Other Fees",
+   "options": "Program Fee"
+  },
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "label": "Fee Structure",
+   "options": "Fee Structure"
+  },
+  {
+   "fieldname": "additional_info",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "program_coordinator",
+   "fieldtype": "Link",
+   "label": "Program Coordinator",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accreditation_body",
+   "fieldtype": "Data",
+   "label": "Accreditation Body"
+  },
+  {
+   "fieldname": "accreditation_status",
+   "fieldtype": "Select",
+   "label": "Accreditation Status",
+   "options": "Accredited\nProvisional\nUnder Review\nNot Accredited"
+  },
+  {
+   "fieldname": "last_review_date",
+   "fieldtype": "Date",
+   "label": "Last Review Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarité",
+ "name": "Program",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Parent"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

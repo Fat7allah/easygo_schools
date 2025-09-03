@@ -1,0 +1,247 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:VAC-{YYYY}-{#####}",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "student_name",
+  "school_class",
+  "column_break_4",
+  "vaccination_date",
+  "administered_by",
+  "health_facility",
+  "section_break_8",
+  "vaccine_name",
+  "vaccine_type",
+  "manufacturer",
+  "column_break_12",
+  "batch_number",
+  "expiry_date",
+  "dose_number",
+  "section_break_16",
+  "administration_site",
+  "route_of_administration",
+  "dosage",
+  "section_break_20",
+  "adverse_reactions",
+  "reaction_severity",
+  "medical_attention_required",
+  "section_break_24",
+  "next_dose_due",
+  "vaccination_series_complete",
+  "notes",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student.school_class",
+   "fieldname": "school_class",
+   "fieldtype": "Link",
+   "label": "Class",
+   "options": "School Class",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vaccination_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Vaccination Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "administered_by",
+   "fieldtype": "Data",
+   "label": "Administered By",
+   "reqd": 1
+  },
+  {
+   "fieldname": "health_facility",
+   "fieldtype": "Data",
+   "label": "Health Facility"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Vaccine Details"
+  },
+  {
+   "fieldname": "vaccine_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vaccine Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vaccine_type",
+   "fieldtype": "Select",
+   "label": "Vaccine Type",
+   "options": "Routine\nCatch-up\nTravel\nOutbreak Response\nOther"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "Manufacturer"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "batch_number",
+   "fieldtype": "Data",
+   "label": "Batch Number"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "dose_number",
+   "fieldtype": "Int",
+   "label": "Dose Number"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Administration Details"
+  },
+  {
+   "fieldname": "administration_site",
+   "fieldtype": "Select",
+   "label": "Administration Site",
+   "options": "Left Arm\nRight Arm\nLeft Thigh\nRight Thigh\nOral\nNasal\nOther"
+  },
+  {
+   "fieldname": "route_of_administration",
+   "fieldtype": "Select",
+   "label": "Route of Administration",
+   "options": "Intramuscular\nSubcutaneous\nIntradermal\nOral\nIntranasal\nOther"
+  },
+  {
+   "fieldname": "dosage",
+   "fieldtype": "Data",
+   "label": "Dosage"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Adverse Reactions"
+  },
+  {
+   "fieldname": "adverse_reactions",
+   "fieldtype": "Small Text",
+   "label": "Adverse Reactions"
+  },
+  {
+   "depends_on": "adverse_reactions",
+   "fieldname": "reaction_severity",
+   "fieldtype": "Select",
+   "label": "Reaction Severity",
+   "options": "Mild\nModerate\nSevere"
+  },
+  {
+   "depends_on": "adverse_reactions",
+   "default": "0",
+   "fieldname": "medical_attention_required",
+   "fieldtype": "Check",
+   "label": "Medical Attention Required"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Follow-up"
+  },
+  {
+   "fieldname": "next_dose_due",
+   "fieldtype": "Date",
+   "label": "Next Dose Due"
+  },
+  {
+   "default": "0",
+   "fieldname": "vaccination_series_complete",
+   "fieldtype": "Check",
+   "label": "Vaccination Series Complete"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Vaccination Record",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Healthcare Practitioner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

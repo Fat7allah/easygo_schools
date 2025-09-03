@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ _("Report Card") }} - {{ doc.student_name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            font-size: 12px;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .school-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .report-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #666;
+        }
+        .student-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .grades-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .grades-table th,
+        .grades-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .grades-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .subject-name {
+            text-align: left !important;
+            font-weight: 500;
+        }
+        .grade-excellent { color: #28a745; font-weight: bold; }
+        .grade-good { color: #17a2b8; font-weight: bold; }
+        .grade-average { color: #ffc107; font-weight: bold; }
+        .grade-poor { color: #dc3545; font-weight: bold; }
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .summary-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            width: 30%;
+        }
+        .summary-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .summary-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 10px;
+        }
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .signature-box {
+            text-align: center;
+            width: 30%;
+        }
+        .signature-line {
+            border-top: 1px solid #333;
+            margin-top: 40px;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="school-name">{{ frappe.db.get_single_value("School Settings", "school_name") or "École" }}</div>
+        <div class="report-title">{{ _("Report Card") }} - {{ doc.academic_term }}</div>
+    </div>
+
+    <div class="student-info">
+        <div>
+            <strong>{{ _("Student") }}:</strong> {{ doc.student_name }}<br>
+            <strong>{{ _("Class") }}:</strong> {{ doc.school_class }}<br>
+            <strong>{{ _("MASSAR Code") }}:</strong> {{ doc.massar_code }}
+        </div>
+        <div>
+            <strong>{{ _("Academic Year") }}:</strong> {{ doc.academic_year }}<br>
+            <strong>{{ _("Term") }}:</strong> {{ doc.academic_term }}<br>
+            <strong>{{ _("Date") }}:</strong> {{ frappe.utils.formatdate(doc.creation) }}
+        </div>
+    </div>
+
+    <table class="grades-table">
+        <thead>
+            <tr>
+                <th>{{ _("Subject") }}</th>
+                <th>{{ _("Coefficient") }}</th>
+                <th>{{ _("Grade") }}</th>
+                <th>{{ _("Class Average") }}</th>
+                <th>{{ _("Rank") }}</th>
+                <th>{{ _("Appreciation") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for grade in doc.grades %}
+            <tr>
+                <td class="subject-name">{{ grade.subject }}</td>
+                <td>{{ grade.coefficient }}</td>
+                <td class="{% if grade.grade >= 16 %}grade-excellent{% elif grade.grade >= 14 %}grade-good{% elif grade.grade >= 10 %}grade-average{% else %}grade-poor{% endif %}">
+                    {{ "%.2f"|format(grade.grade) }}/20
+                </td>
+                <td>{{ "%.2f"|format(grade.class_average) }}/20</td>
+                <td>{{ grade.rank }}/{{ grade.total_students }}</td>
+                <td>{{ grade.appreciation }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="summary">
+        <div class="summary-box">
+            <div class="summary-value">{{ "%.2f"|format(doc.overall_average) }}/20</div>
+            <div class="summary-label">{{ _("Overall Average") }}</div>
+        </div>
+        <div class="summary-box">
+            <div class="summary-value">{{ doc.class_rank }}/{{ doc.total_students }}</div>
+            <div class="summary-label">{{ _("Class Rank") }}</div>
+        </div>
+        <div class="summary-box">
+            <div class="summary-value">{{ doc.attendance_percentage }}%</div>
+            <div class="summary-label">{{ _("Attendance") }}</div>
+        </div>
+    </div>
+
+    {% if doc.teacher_comments %}
+    <div style="margin-top: 20px; padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
+        <strong>{{ _("Teacher Comments") }}:</strong><br>
+        {{ doc.teacher_comments }}
+    </div>
+    {% endif %}
+
+    <div class="signature-section">
+        <div class="signature-box">
+            <div class="signature-line">{{ _("Class Teacher") }}</div>
+        </div>
+        <div class="signature-box">
+            <div class="signature-line">{{ _("Principal") }}</div>
+        </div>
+        <div class="signature-box">
+            <div class="signature-line">{{ _("Parent/Guardian") }}</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        {{ _("Generated on") }} {{ frappe.utils.format_datetime(frappe.utils.now()) }}
+    </div>
+</body>
+</html>

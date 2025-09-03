@@ -1,0 +1,232 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "menu_name",
+  "menu_date",
+  "column_break_4",
+  "meal_type",
+  "is_active",
+  "section_break_7",
+  "menu_items",
+  "section_break_9",
+  "total_cost",
+  "price_per_meal",
+  "column_break_12",
+  "estimated_servings",
+  "actual_servings",
+  "section_break_15",
+  "nutritional_info",
+  "allergen_info",
+  "column_break_18",
+  "dietary_restrictions",
+  "special_notes",
+  "section_break_21",
+  "prepared_by",
+  "approved_by",
+  "column_break_24",
+  "preparation_date",
+  "approval_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MENU-.YYYY.-.MM.-.DD.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "menu_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Menu Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "menu_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Menu Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meal_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Meal Type",
+   "options": "Breakfast\nLunch\nDinner\nSnack\nSpecial Event",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Menu Items"
+  },
+  {
+   "fieldname": "menu_items",
+   "fieldtype": "Table",
+   "label": "Menu Items",
+   "options": "Canteen Menu Item"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Cost & Servings"
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "price_per_meal",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price per Meal"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "estimated_servings",
+   "fieldtype": "Int",
+   "label": "Estimated Servings"
+  },
+  {
+   "fieldname": "actual_servings",
+   "fieldtype": "Int",
+   "label": "Actual Servings"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Nutritional & Dietary Information"
+  },
+  {
+   "fieldname": "nutritional_info",
+   "fieldtype": "Text Editor",
+   "label": "Nutritional Information"
+  },
+  {
+   "fieldname": "allergen_info",
+   "fieldtype": "Small Text",
+   "label": "Allergen Information"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dietary_restrictions",
+   "fieldtype": "Select",
+   "label": "Dietary Restrictions",
+   "options": "None\nVegetarian\nVegan\nHalal\nKosher\nGluten-Free\nNut-Free\nDairy-Free"
+  },
+  {
+   "fieldname": "special_notes",
+   "fieldtype": "Small Text",
+   "label": "Special Notes"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break",
+   "label": "Preparation & Approval"
+  },
+  {
+   "fieldname": "prepared_by",
+   "fieldtype": "Link",
+   "label": "Prepared By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preparation_date",
+   "fieldtype": "Date",
+   "label": "Preparation Date"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "EasyGo Education",
+ "name": "Canteen Menu",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Canteen Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Education Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Guardian"
+  },
+  {
+   "read": 1,
+   "role": "Student"
+  },
+  {
+   "read": 1,
+   "role": "Teacher"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

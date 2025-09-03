@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lesson_order",
+  "lesson_title",
+  "column_break_3",
+  "lesson_plan",
+  "planned_date",
+  "status",
+  "lesson_details",
+  "duration_minutes",
+  "objectives",
+  "column_break_9",
+  "activities",
+  "resources",
+  "completion_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "lesson_order",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lesson_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lesson Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lesson_plan",
+   "fieldtype": "Link",
+   "label": "Lesson Plan",
+   "options": "Lesson Plan"
+  },
+  {
+   "fieldname": "planned_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planned Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Planned\nIn Progress\nCompleted\nSkipped",
+   "default": "Planned"
+  },
+  {
+   "fieldname": "lesson_details",
+   "fieldtype": "Section Break",
+   "label": "Lesson Details"
+  },
+  {
+   "fieldname": "duration_minutes",
+   "fieldtype": "Int",
+   "label": "Duration (Minutes)"
+  },
+  {
+   "fieldname": "objectives",
+   "fieldtype": "Text",
+   "label": "Objectives"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "activities",
+   "fieldtype": "Text",
+   "label": "Activities"
+  },
+  {
+   "fieldname": "resources",
+   "fieldtype": "Text",
+   "label": "Resources"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scolarité",
+ "name": "Learning Sequence Lesson",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
