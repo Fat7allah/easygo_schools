@@ -3,7 +3,8 @@
 import frappe
 from frappe import _
 from frappe.model.document import Document
-from frappe.utils import getdate, get_time, now_datetime, add_days, add_weeks, add_months
+from frappe.utils import getdate, get_time, now_datetime, add_days, add_months
+from frappe.utils.data import add_to_date
 
 
 class ActivitySchedule(Document):
@@ -106,9 +107,9 @@ class ActivitySchedule(Document):
             if self.recurrence_pattern == "Daily":
                 current_date = add_days(current_date, 1)
             elif self.recurrence_pattern == "Weekly":
-                current_date = add_weeks(current_date, 1)
+                current_date = add_to_date(current_date, weeks=1)
             elif self.recurrence_pattern == "Bi-weekly":
-                current_date = add_weeks(current_date, 2)
+                current_date = add_to_date(current_date, weeks=2)
             elif self.recurrence_pattern == "Monthly":
                 current_date = add_months(current_date, 1)
             

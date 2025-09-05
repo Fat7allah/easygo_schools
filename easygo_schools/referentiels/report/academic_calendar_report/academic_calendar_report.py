@@ -126,7 +126,6 @@ def get_conditions(filters):
 
 def calculate_working_days(start_date, end_date):
     """Calculate working days and holidays between two dates"""
-    from frappe.utils import get_weekdays
     
     total_days = (getdate(end_date) - getdate(start_date)).days + 1
     working_days = 0
