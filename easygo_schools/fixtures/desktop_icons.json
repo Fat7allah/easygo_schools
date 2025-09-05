@@ -42,7 +42,7 @@
   "is_query_report": 0,
   "label": "Fee Management",
   "link": "List/Fee Bill",
-  "module_name": "Finances RH",
+  "module_name": "Scolarite",
   "name": "Fee Management",
   "standard": 1,
   "type": "link"
@@ -54,7 +54,7 @@
   "is_query_report": 0,
   "label": "Communications",
   "link": "List/School Communication",
-  "module_name": "Administration Comms",
+  "module_name": "Administration Communications",
   "name": "Communications",
   "standard": 1,
   "type": "link"
