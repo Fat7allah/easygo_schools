@@ -265,10 +265,6 @@ fixtures = [
             ]
         ],
     },
-    {
-        "doctype": "Desktop Icon",
-        "filters": [["module_name", "=", "EasyGo Schools"]],
-    },
     "Letter Head",
     "Web Form",
 ]
