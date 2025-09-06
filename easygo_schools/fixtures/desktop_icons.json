@@ -6,7 +6,7 @@
   "is_query_report": 0,
   "label": "Students",
   "link": "List/Student",
-  "module_name": "Scolarité",
+  "module_name": "Scolarite",
   "name": "Students",
   "standard": 1,
   "type": "link"
@@ -42,7 +42,7 @@
   "is_query_report": 0,
   "label": "Fee Management",
   "link": "List/Fee Bill",
-  "module_name": "Scolarite",
+  "module_name": "Referentiels",
   "name": "Fee Management",
   "standard": 1,
   "type": "link"
@@ -90,7 +90,7 @@
   "is_query_report": 0,
   "label": "Settings",
   "link": "Form/School Settings",
-  "module_name": "Referentiels",
+  "module_name": "Vie Scolaire",
   "name": "Settings",
   "standard": 1,
   "type": "link"
@@ -102,7 +102,7 @@
   "is_query_report": 0,
   "label": "Dashboard",
   "link": "dashboard-view/Education Dashboard",
-  "module_name": "EasyGo Education",
+  "module_name": "Administration Communications",
   "name": "Dashboard",
   "standard": 1,
   "type": "link"
