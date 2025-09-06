@@ -84,18 +84,6 @@
   "type": "link"
  },
  {
-  "color": "#6c757d",
-  "doctype": "Desktop Icon",
-  "icon": "fa fa-cogs",
-  "is_query_report": 0,
-  "label": "Settings",
-  "link": "Form/School Settings",
-  "module_name": "Vie Scolaire",
-  "name": "Settings",
-  "standard": 1,
-  "type": "link"
- },
- {
   "color": "#e83e8c",
   "doctype": "Desktop Icon",
   "icon": "fa fa-tachometer-alt",
