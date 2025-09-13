@@ -1,0 +1,68 @@
+[
+ {
+  "name": "Scolarite",
+  "title": "Scolarité",
+  "icon": "education",
+  "indicator_color": "blue",
+  "is_standard": 1,
+  "module": "Scolarite",
+  "doctype": "Workspace",
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Gestion des Étudiants\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Guardian\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Program\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Group\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Évaluations\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment Result\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Grading Scale\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Report Card\", \"col\": 3}}]",
+  "public": 1
+ },
+ {
+  "name": "Vie Scolaire",
+  "title": "Vie Scolaire",
+  "icon": "calendar",
+  "indicator_color": "green",
+  "is_standard": 1,
+  "module": "Vie Scolaire",
+  "doctype": "Workspace",
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Présence et Discipline\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Attendance\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Attendance Justification\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Disciplinary Action\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Intervention Session\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Activités\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Extracurricular Activity\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Activity Schedule\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Activity Enrollment\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Santé\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Health Record\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Medical Visit\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vaccination Record\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Accident Report\", \"col\": 3}}]",
+  "public": 1
+ },
+ {
+  "name": "Finances RH",
+  "title": "Finances & RH",
+  "icon": "money",
+  "indicator_color": "orange",
+  "is_standard": 1,
+  "module": "Finances RH",
+  "doctype": "Workspace",
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Ressources Humaines\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Employee\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Instructor\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Staff Assignment\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Leave Application\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Paie\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salary Structure\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salary Slip\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payroll Entry\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Budget\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Budget\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Expense Claim\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Financial Report\", \"col\": 3}}]",
+  "public": 1
+ },
+ {
+  "name": "Administration Communications",
+  "title": "Administration & Communications",
+  "icon": "message",
+  "indicator_color": "purple",
+  "is_standard": 1,
+  "module": "Administration Communications",
+  "doctype": "Workspace",
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Communications\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Communication\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Message\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Message Thread\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Notification Rule\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Correspondance\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Correspondence\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Rectorate Correspondence\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Document Template\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Consentements\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Parent Consent\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Meeting Request\", \"col\": 3}}]",
+  "public": 1
+ },
+ {
+  "name": "Gestion Etablissement",
+  "title": "Gestion Établissement",
+  "icon": "building",
+  "indicator_color": "red",
+  "is_standard": 1,
+  "module": "Gestion Etablissement",
+  "doctype": "Workspace",
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Infrastructure\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Room\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Equipment\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Maintenance Request\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Purchase Request\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Restauration\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Canteen Menu\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Canteen Menu Item\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Meal Plan\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Transport\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Transport Route\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Transport Registration\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Vehicle\", \"col\": 3}}]",
+  "public": 1
+ },
+ {
+  "name": "Referentiels",
+  "title": "Référentiels",
+  "icon": "list",
+  "indicator_color": "cyan",
+  "is_standard": 1,
+  "module": "Referentiels",
+  "doctype": "Workspace",
+  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Frais Scolaires\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Structure\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Bill\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Category\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Entry\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Structure Académique\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Academic Year\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Academic Term\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Class\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Subject\", \"col\": 3}}, {\"type\": \"header\", \"data\": {\"text\": \"Configuration\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Settings\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Finance Settings\", \"col\": 3}}]",
+  "public": 1
+ }
+]
