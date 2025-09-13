@@ -2,6 +2,7 @@
  {
   "name": "Scolarite",
   "title": "Scolarité",
+  "label": "Scolarité",
   "icon": "education",
   "indicator_color": "blue",
   "is_standard": 1,
@@ -13,6 +14,7 @@
  {
   "name": "Vie Scolaire",
   "title": "Vie Scolaire",
+  "label": "Vie Scolaire",
   "icon": "calendar",
   "indicator_color": "green",
   "is_standard": 1,
@@ -24,6 +26,7 @@
  {
   "name": "Finances RH",
   "title": "Finances & RH",
+  "label": "Finances & RH",
   "icon": "money",
   "indicator_color": "orange",
   "is_standard": 1,
@@ -35,6 +38,7 @@
  {
   "name": "Administration Communications",
   "title": "Administration & Communications",
+  "label": "Administration & Communications",
   "icon": "message",
   "indicator_color": "purple",
   "is_standard": 1,
@@ -46,6 +50,7 @@
  {
   "name": "Gestion Etablissement",
   "title": "Gestion Établissement",
+  "label": "Gestion Établissement",
   "icon": "building",
   "indicator_color": "red",
   "is_standard": 1,
@@ -57,6 +62,7 @@
  {
   "name": "Referentiels",
   "title": "Référentiels",
+  "label": "Référentiels",
   "icon": "list",
   "indicator_color": "cyan",
   "is_standard": 1,
