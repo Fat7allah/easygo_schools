@@ -1,0 +1,68 @@
+[
+ {
+  "name": "Scolarité",
+  "module_name": "Scolarite",
+  "label": "Scolarité",
+  "link": "List/Student",
+  "type": "link",
+  "icon": "fa fa-graduation-cap",
+  "color": "#3498db",
+  "standard": 1,
+  "doctype": "Desktop Icon"
+ },
+ {
+  "name": "Vie Scolaire",
+  "module_name": "Vie Scolaire",
+  "label": "Vie Scolaire",
+  "link": "List/Student Attendance",
+  "type": "link",
+  "icon": "fa fa-calendar-check",
+  "color": "#27ae60",
+  "standard": 1,
+  "doctype": "Desktop Icon"
+ },
+ {
+  "name": "Finances & RH",
+  "module_name": "Finances RH",
+  "label": "Finances & RH",
+  "link": "List/Employee",
+  "type": "link",
+  "icon": "fa fa-money-bill",
+  "color": "#f39c12",
+  "standard": 1,
+  "doctype": "Desktop Icon"
+ },
+ {
+  "name": "Administration & Communications",
+  "module_name": "Administration Communications",
+  "label": "Administration & Communications",
+  "link": "List/School Communication",
+  "type": "link",
+  "icon": "fa fa-comments",
+  "color": "#9b59b6",
+  "standard": 1,
+  "doctype": "Desktop Icon"
+ },
+ {
+  "name": "Gestion Établissement",
+  "module_name": "Gestion Etablissement",
+  "label": "Gestion Établissement",
+  "link": "List/Room",
+  "type": "link",
+  "icon": "fa fa-building",
+  "color": "#e74c3c",
+  "standard": 1,
+  "doctype": "Desktop Icon"
+ },
+ {
+  "name": "Référentiels",
+  "module_name": "Referentiels",
+  "label": "Référentiels",
+  "link": "List/Academic Year",
+  "type": "link",
+  "icon": "fa fa-list-ul",
+  "color": "#1abc9c",
+  "standard": 1,
+  "doctype": "Desktop Icon"
+ }
+]

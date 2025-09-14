@@ -258,16 +258,14 @@ fixtures = [
                     "Accountant",
                     "HR Manager",
                     "Maintenance",
-                    "Transport",
-                    "Canteen",
-                    "Director",
-                ],
+                ]
             ]
-        ],
+        ]
     },
     "Letter Head",
     "Web Form",
-    "Workspace",
+    "Property Setter",
+    "Desktop Icon"
 ]
 
 # Website
