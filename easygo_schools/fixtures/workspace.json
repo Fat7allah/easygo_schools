@@ -1,0 +1,68 @@
+[
+ {
+  "name": "Scolarite",
+  "title": "Scolarité",
+  "icon": "education",
+  "indicator_color": "blue",
+  "is_standard": 1,
+  "module": "Scolarite",
+  "doctype": "Workspace",
+  "content": "[]",
+  "public": 1
+ },
+ {
+  "name": "Vie Scolaire",
+  "title": "Vie Scolaire", 
+  "icon": "calendar",
+  "indicator_color": "green",
+  "is_standard": 1,
+  "module": "Vie Scolaire",
+  "doctype": "Workspace",
+  "content": "[]",
+  "public": 1
+ },
+ {
+  "name": "Finances RH",
+  "title": "Finances & RH",
+  "icon": "money",
+  "indicator_color": "orange", 
+  "is_standard": 1,
+  "module": "Finances RH",
+  "doctype": "Workspace",
+  "content": "[]",
+  "public": 1
+ },
+ {
+  "name": "Administration Communications",
+  "title": "Administration & Communications",
+  "icon": "message",
+  "indicator_color": "purple",
+  "is_standard": 1,
+  "module": "Administration Communications", 
+  "doctype": "Workspace",
+  "content": "[]",
+  "public": 1
+ },
+ {
+  "name": "Gestion Etablissement",
+  "title": "Gestion Établissement",
+  "icon": "building",
+  "indicator_color": "red",
+  "is_standard": 1,
+  "module": "Gestion Etablissement",
+  "doctype": "Workspace", 
+  "content": "[]",
+  "public": 1
+ },
+ {
+  "name": "Referentiels",
+  "title": "Référentiels",
+  "icon": "list",
+  "indicator_color": "cyan",
+  "is_standard": 1,
+  "module": "Referentiels",
+  "doctype": "Workspace",
+  "content": "[]",
+  "public": 1
+ }
+]
