@@ -264,8 +264,7 @@ fixtures = [
     },
     "Letter Head",
     "Web Form",
-    "Property Setter",
-    "Workspace"
+    "Property Setter"
 ]
 
 # Website
