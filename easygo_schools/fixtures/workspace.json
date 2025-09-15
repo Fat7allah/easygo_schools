@@ -462,7 +462,7 @@
         "label": "Finances & RH",
         "module": "Finances RH",
         "icon": "money",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Ressources Humaines\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Employee\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Instructor\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Staff Assignment\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Leave Application\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Finances\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Budget\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Expense Claim\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Financial Report\", \"col\": 4}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Ressources Humaines\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Employee\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Contract\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Leave Application\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Leave Type\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"HR Attendance\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Paie & Salaires\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salary Structure\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salary Slip\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salary Component\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payroll Cycle\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Frais Scolaires\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Structure\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Bill\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Type\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Entry\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Installment Plan\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Receipt Print\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Budget & Comptabilité\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Budget\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Expense Entry\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Account\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Ledger\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Cost Center\", \"col\": 3}}]",
         "links": [
             {
                 "hidden": 0,
@@ -477,19 +477,9 @@
             {
                 "hidden": 0,
                 "is_query_report": 0,
-                "label": "Instructor",
+                "label": "Contract",
                 "link_count": 0,
-                "link_to": "Instructor",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Staff Assignment",
-                "link_count": 0,
-                "link_to": "Staff Assignment",
+                "link_to": "Contract",
                 "link_type": "DocType",
                 "onboard": 0,
                 "type": "Link"
@@ -507,6 +497,126 @@
             {
                 "hidden": 0,
                 "is_query_report": 0,
+                "label": "Leave Type",
+                "link_count": 0,
+                "link_to": "Leave Type",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "HR Attendance",
+                "link_count": 0,
+                "link_to": "HR Attendance",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Salary Structure",
+                "link_count": 0,
+                "link_to": "Salary Structure",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Salary Slip",
+                "link_count": 0,
+                "link_to": "Salary Slip",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Salary Component",
+                "link_count": 0,
+                "link_to": "Salary Component",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Payroll Cycle",
+                "link_count": 0,
+                "link_to": "Payroll Cycle",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Fee Structure",
+                "link_count": 0,
+                "link_to": "Fee Structure",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Fee Bill",
+                "link_count": 0,
+                "link_to": "Fee Bill",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Fee Type",
+                "link_count": 0,
+                "link_to": "Fee Type",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Payment Entry",
+                "link_count": 0,
+                "link_to": "Payment Entry",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Installment Plan",
+                "link_count": 0,
+                "link_to": "Installment Plan",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Receipt Print",
+                "link_count": 0,
+                "link_to": "Receipt Print",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
                 "label": "Budget",
                 "link_count": 0,
                 "link_to": "Budget",
@@ -517,9 +627,9 @@
             {
                 "hidden": 0,
                 "is_query_report": 0,
-                "label": "Expense Claim",
+                "label": "Expense Entry",
                 "link_count": 0,
-                "link_to": "Expense Claim",
+                "link_to": "Expense Entry",
                 "link_type": "DocType",
                 "onboard": 0,
                 "type": "Link"
@@ -527,9 +637,29 @@
             {
                 "hidden": 0,
                 "is_query_report": 0,
-                "label": "Financial Report",
+                "label": "School Account",
                 "link_count": 0,
-                "link_to": "Financial Report",
+                "link_to": "School Account",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "School Ledger",
+                "link_count": 0,
+                "link_to": "School Ledger",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "School Cost Center",
+                "link_count": 0,
+                "link_to": "School Cost Center",
                 "link_type": "DocType",
                 "onboard": 0,
                 "type": "Link"
@@ -551,7 +681,7 @@
         "label": "Administration & Communications",
         "module": "Administration Communications",
         "icon": "envelope",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Communications\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Communication\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Message\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Message Thread\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Notification Rule\", \"col\": 3}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Communications\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Communication\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Message\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Message Thread\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Communication Log\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Correspondance\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Correspondence\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Rectorate Correspondence\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Document Template\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Notification Template\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Consentements & Réunions\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Parent Consent\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Meeting Request\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Notification Rule\", \"col\": 4}}]",
         "links": [
             {
                 "hidden": 0,
@@ -586,6 +716,76 @@
             {
                 "hidden": 0,
                 "is_query_report": 0,
+                "label": "Communication Log",
+                "link_count": 0,
+                "link_to": "Communication Log",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Correspondence",
+                "link_count": 0,
+                "link_to": "Correspondence",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Rectorate Correspondence",
+                "link_count": 0,
+                "link_to": "Rectorate Correspondence",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Document Template",
+                "link_count": 0,
+                "link_to": "Document Template",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Notification Template",
+                "link_count": 0,
+                "link_to": "Notification Template",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Parent Consent",
+                "link_count": 0,
+                "link_to": "Parent Consent",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Meeting Request",
+                "link_count": 0,
+                "link_to": "Meeting Request",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
                 "label": "Notification Rule",
                 "link_count": 0,
                 "link_to": "Notification Rule",
@@ -610,7 +810,7 @@
         "label": "Gestion Établissement",
         "module": "Gestion Etablissement",
         "icon": "building",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Infrastructure\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Room\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Equipment\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Maintenance Request\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Purchase Request\", \"col\": 3}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Infrastructure & Équipements\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Room\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Equipment\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Asset\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Maintenance Request\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Work Order\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Achats & Approvisionnement\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Purchase Request\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Purchase Order\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Stock Item\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Stock Entry\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Stock Ledger\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Restauration\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Canteen Menu\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Canteen Menu Item\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Meal Order\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Transport Scolaire\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Transport Route\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Transport Stop\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Transport Student\", \"col\": 4}}]",
         "links": [
             {
                 "hidden": 0,
@@ -635,6 +835,16 @@
             {
                 "hidden": 0,
                 "is_query_report": 0,
+                "label": "School Asset",
+                "link_count": 0,
+                "link_to": "School Asset",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
                 "label": "Maintenance Request",
                 "link_count": 0,
                 "link_to": "Maintenance Request",
@@ -645,9 +855,119 @@
             {
                 "hidden": 0,
                 "is_query_report": 0,
+                "label": "Work Order",
+                "link_count": 0,
+                "link_to": "Work Order",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
                 "label": "Purchase Request",
                 "link_count": 0,
                 "link_to": "Purchase Request",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Purchase Order",
+                "link_count": 0,
+                "link_to": "Purchase Order",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Stock Item",
+                "link_count": 0,
+                "link_to": "Stock Item",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Stock Entry",
+                "link_count": 0,
+                "link_to": "Stock Entry",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Stock Ledger",
+                "link_count": 0,
+                "link_to": "Stock Ledger",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Canteen Menu",
+                "link_count": 0,
+                "link_to": "Canteen Menu",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Canteen Menu Item",
+                "link_count": 0,
+                "link_to": "Canteen Menu Item",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Meal Order",
+                "link_count": 0,
+                "link_to": "Meal Order",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Transport Route",
+                "link_count": 0,
+                "link_to": "Transport Route",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Transport Stop",
+                "link_count": 0,
+                "link_to": "Transport Stop",
+                "link_type": "DocType",
+                "onboard": 0,
+                "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Transport Student",
+                "link_count": 0,
+                "link_to": "Transport Student",
                 "link_type": "DocType",
                 "onboard": 0,
                 "type": "Link"
@@ -669,7 +989,7 @@
         "label": "Référentiels",
         "module": "Referentiels",
         "icon": "list",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Structure Académique\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Academic Year\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Academic Term\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Subject\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Grade Level\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Frais Scolaires\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Structure\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Bill\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Category\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Entry\", \"col\": 3}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Structure Académique\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Academic Year\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Academic Term\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Subject\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Program\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Class\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Group\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Frais & Paiements\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Structure\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Bill\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Type\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Entry\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Installment Plan\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Données de Référence\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Reference Table\", \"col\": 6}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Reference Data Item\", \"col\": 6}}]",
         "links": [
             {
                 "hidden": 0,
