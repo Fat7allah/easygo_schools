@@ -14,8 +14,18 @@
         "label": "Scolarité",
         "module": "Scolarite",
         "icon": "education",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Gestion des Étudiants\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Guardian\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Group\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Enrollment\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Évaluations & Examens\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment Plan\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment Result\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Exam\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Grade Scale\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Planification & Cours\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Course Schedule\", \"col\": 6}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Lesson Plan\", \"col\": 6}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Gestion des Étudiants\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Gestion des Étudiants\", \"col\": 12}}]",
         "links": [
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Gestion des Étudiants",
+                "link_count": 0,
+                "link_to": "",
+                "link_type": "",
+                "onboard": 0,
+                "type": "Card Break"
+            },
             {
                 "hidden": 0,
                 "is_query_report": 0,
@@ -133,8 +143,18 @@
         "label": "Vie Scolaire",
         "module": "Vie Scolaire",
         "icon": "users",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Présence & Assiduité\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Attendance\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Discipline & Intervention\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Disciplinary Action\", \"col\": 12}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Présence & Assiduité\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Présence & Assiduité\", \"col\": 12}}]",
         "links": [
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Présence & Assiduité",
+                "link_count": 0,
+                "link_to": "",
+                "link_type": "",
+                "onboard": 0,
+                "type": "Card Break"
+            },
             {
                 "hidden": 0,
                 "is_query_report": 0,
@@ -292,8 +312,18 @@
         "label": "Finances & RH",
         "module": "Finances RH",
         "icon": "money",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Ressources Humaines\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Employee\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Paie & Salaires\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salary Slip\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Frais Scolaires\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Structure\", \"col\": 6}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Bill\", \"col\": 6}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Ressources Humaines\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Ressources Humaines\", \"col\": 6}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Frais Scolaires\", \"col\": 6}}]",
         "links": [
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Ressources Humaines",
+                "link_count": 0,
+                "link_to": "",
+                "link_type": "",
+                "onboard": 0,
+                "type": "Card Break"
+            },
             {
                 "hidden": 0,
                 "is_query_report": 0,
@@ -303,6 +333,16 @@
                 "link_type": "DocType",
                 "onboard": 0,
                 "type": "Link"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Frais Scolaires",
+                "link_count": 0,
+                "link_to": "",
+                "link_type": "",
+                "onboard": 0,
+                "type": "Card Break"
             },
             {
                 "hidden": 0,

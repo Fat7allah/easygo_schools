@@ -265,7 +265,6 @@ fixtures = [
     "Letter Head",
     "Web Form",
     "Property Setter",
-    "Workspace Shortcut",
     "Workspace"
 ]
 
