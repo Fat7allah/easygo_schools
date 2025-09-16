@@ -14,7 +14,7 @@
         "label": "Scolarité",
         "module": "Scolarite",
         "icon": "education",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Guardian\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Group\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment Plan\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment Result\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Course Schedule\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Gestion des Étudiants\", \"col\": 6}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Évaluations & Examens\", \"col\": 6}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Guardian\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Group\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment Plan\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment Result\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Course Schedule\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Gestion des Étudiants\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Évaluations & Examens\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Planification & Cours\", \"col\": 4}}]",
         "links": [
             {
                 "hidden": 0,
@@ -90,6 +90,16 @@
                 "hidden": 0,
                 "is_query_report": 0,
                 "label": "Évaluations & Examens",
+                "link_count": 0,
+                "link_to": "",
+                "link_type": "",
+                "onboard": 0,
+                "type": "Card Break"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Planification & Cours",
                 "link_count": 0,
                 "link_to": "",
                 "link_type": "",
@@ -213,7 +223,7 @@
         "label": "Vie Scolaire",
         "module": "Vie Scolaire",
         "icon": "users",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Attendance\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Disciplinary Action\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Health Record\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Activity Schedule\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Extracurricular Activity\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Medical Visit\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Présence & Assiduité\", \"col\": 6}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Discipline & Intervention\", \"col\": 6}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Attendance\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Disciplinary Action\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Health Record\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Activity Schedule\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Extracurricular Activity\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Medical Visit\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Présence & Assiduité\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Discipline & Intervention\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Santé & Médical\", \"col\": 4}}]",
         "links": [
             {
                 "hidden": 0,
@@ -289,6 +299,16 @@
                 "hidden": 0,
                 "is_query_report": 0,
                 "label": "Discipline & Intervention",
+                "link_count": 0,
+                "link_to": "",
+                "link_type": "",
+                "onboard": 0,
+                "type": "Card Break"
+            },
+            {
+                "hidden": 0,
+                "is_query_report": 0,
+                "label": "Santé & Médical",
                 "link_count": 0,
                 "link_to": "",
                 "link_type": "",
@@ -452,7 +472,7 @@
         "label": "Finances & RH",
         "module": "Finances RH",
         "icon": "money",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Employee\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salary Slip\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Structure\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Bill\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Entry\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Budget\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Ressources Humaines\", \"col\": 6}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Frais Scolaires\", \"col\": 6}}]",
+        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Employee\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salary Slip\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Structure\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Bill\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Entry\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Budget\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Ressources Humaines\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Frais Scolaires\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Budget & Comptabilité\", \"col\": 4}}]",
         "links": [
             {
                 "hidden": 0,
