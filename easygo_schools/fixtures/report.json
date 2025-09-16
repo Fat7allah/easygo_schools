@@ -1,0 +1,125 @@
+[
+    {
+        "name": "Student List Report",
+        "doctype": "Report",
+        "ref_doctype": "Student",
+        "report_name": "Student List Report",
+        "report_type": "Script Report",
+        "is_standard": "Yes",
+        "module": "Scolarite",
+        "disabled": 0,
+        "query": "SELECT \n    s.name as 'Student ID',\n    s.student_name as 'Student Name',\n    s.student_email_id as 'Email',\n    s.student_mobile_number as 'Mobile',\n    sg.student_group_name as 'Class',\n    s.date_of_birth as 'Date of Birth',\n    s.gender as 'Gender'\nFROM `tabStudent` s\nLEFT JOIN `tabStudent Group Student` sgs ON sgs.student = s.name\nLEFT JOIN `tabStudent Group` sg ON sg.name = sgs.parent\nORDER BY s.student_name",
+        "columns": [
+            {"fieldname": "student_id", "label": "Student ID", "fieldtype": "Link", "options": "Student", "width": 120},
+            {"fieldname": "student_name", "label": "Student Name", "fieldtype": "Data", "width": 200},
+            {"fieldname": "email", "label": "Email", "fieldtype": "Data", "width": 180},
+            {"fieldname": "mobile", "label": "Mobile", "fieldtype": "Data", "width": 120},
+            {"fieldname": "class", "label": "Class", "fieldtype": "Data", "width": 100},
+            {"fieldname": "date_of_birth", "label": "Date of Birth", "fieldtype": "Date", "width": 100},
+            {"fieldname": "gender", "label": "Gender", "fieldtype": "Data", "width": 80}
+        ]
+    },
+    {
+        "name": "Attendance Summary Report",
+        "doctype": "Report",
+        "ref_doctype": "Student Attendance",
+        "report_name": "Attendance Summary Report",
+        "report_type": "Script Report",
+        "is_standard": "Yes",
+        "module": "Vie Scolaire",
+        "disabled": 0,
+        "query": "SELECT \n    s.student_name as 'Student Name',\n    sg.student_group_name as 'Class',\n    COUNT(CASE WHEN sa.status = 'Present' THEN 1 END) as 'Present Days',\n    COUNT(CASE WHEN sa.status = 'Absent' THEN 1 END) as 'Absent Days',\n    COUNT(*) as 'Total Days',\n    ROUND((COUNT(CASE WHEN sa.status = 'Present' THEN 1 END) / COUNT(*)) * 100, 2) as 'Attendance %'\nFROM `tabStudent Attendance` sa\nJOIN `tabStudent` s ON s.name = sa.student\nLEFT JOIN `tabStudent Group Student` sgs ON sgs.student = s.name\nLEFT JOIN `tabStudent Group` sg ON sg.name = sgs.parent\nGROUP BY sa.student\nORDER BY s.student_name",
+        "columns": [
+            {"fieldname": "student_name", "label": "Student Name", "fieldtype": "Data", "width": 200},
+            {"fieldname": "class", "label": "Class", "fieldtype": "Data", "width": 100},
+            {"fieldname": "present_days", "label": "Present Days", "fieldtype": "Int", "width": 100},
+            {"fieldname": "absent_days", "label": "Absent Days", "fieldtype": "Int", "width": 100},
+            {"fieldname": "total_days", "label": "Total Days", "fieldtype": "Int", "width": 100},
+            {"fieldname": "attendance_percent", "label": "Attendance %", "fieldtype": "Percent", "width": 120}
+        ]
+    },
+    {
+        "name": "Fee Collection Report",
+        "doctype": "Report",
+        "ref_doctype": "Fee Bill",
+        "report_name": "Fee Collection Report",
+        "report_type": "Script Report",
+        "is_standard": "Yes",
+        "module": "Finances RH",
+        "disabled": 0,
+        "query": "SELECT \n    fb.name as 'Fee Bill ID',\n    s.student_name as 'Student Name',\n    sg.student_group_name as 'Class',\n    fb.total_amount as 'Total Amount',\n    fb.paid_amount as 'Paid Amount',\n    (fb.total_amount - fb.paid_amount) as 'Outstanding Amount',\n    fb.status as 'Status',\n    fb.due_date as 'Due Date'\nFROM `tabFee Bill` fb\nJOIN `tabStudent` s ON s.name = fb.student\nLEFT JOIN `tabStudent Group Student` sgs ON sgs.student = s.name\nLEFT JOIN `tabStudent Group` sg ON sg.name = sgs.parent\nORDER BY fb.due_date DESC",
+        "columns": [
+            {"fieldname": "fee_bill_id", "label": "Fee Bill ID", "fieldtype": "Link", "options": "Fee Bill", "width": 120},
+            {"fieldname": "student_name", "label": "Student Name", "fieldtype": "Data", "width": 200},
+            {"fieldname": "class", "label": "Class", "fieldtype": "Data", "width": 100},
+            {"fieldname": "total_amount", "label": "Total Amount", "fieldtype": "Currency", "width": 120},
+            {"fieldname": "paid_amount", "label": "Paid Amount", "fieldtype": "Currency", "width": 120},
+            {"fieldname": "outstanding_amount", "label": "Outstanding", "fieldtype": "Currency", "width": 120},
+            {"fieldname": "status", "label": "Status", "fieldtype": "Data", "width": 100},
+            {"fieldname": "due_date", "label": "Due Date", "fieldtype": "Date", "width": 100}
+        ]
+    },
+    {
+        "name": "Assessment Results Report",
+        "doctype": "Report",
+        "ref_doctype": "Assessment Result",
+        "report_name": "Assessment Results Report",
+        "report_type": "Script Report",
+        "is_standard": "Yes",
+        "module": "Scolarite",
+        "disabled": 0,
+        "query": "SELECT \n    ar.name as 'Result ID',\n    s.student_name as 'Student Name',\n    sg.student_group_name as 'Class',\n    ap.assessment_name as 'Assessment',\n    ar.total_score as 'Total Score',\n    ar.maximum_score as 'Maximum Score',\n    ROUND((ar.total_score / ar.maximum_score) * 100, 2) as 'Percentage',\n    ar.grade as 'Grade'\nFROM `tabAssessment Result` ar\nJOIN `tabStudent` s ON s.name = ar.student\nJOIN `tabAssessment Plan` ap ON ap.name = ar.assessment_plan\nLEFT JOIN `tabStudent Group Student` sgs ON sgs.student = s.name\nLEFT JOIN `tabStudent Group` sg ON sg.name = sgs.parent\nORDER BY ar.creation DESC",
+        "columns": [
+            {"fieldname": "result_id", "label": "Result ID", "fieldtype": "Link", "options": "Assessment Result", "width": 120},
+            {"fieldname": "student_name", "label": "Student Name", "fieldtype": "Data", "width": 200},
+            {"fieldname": "class", "label": "Class", "fieldtype": "Data", "width": 100},
+            {"fieldname": "assessment", "label": "Assessment", "fieldtype": "Data", "width": 150},
+            {"fieldname": "total_score", "label": "Score", "fieldtype": "Float", "width": 80},
+            {"fieldname": "maximum_score", "label": "Max Score", "fieldtype": "Float", "width": 80},
+            {"fieldname": "percentage", "label": "Percentage", "fieldtype": "Percent", "width": 100},
+            {"fieldname": "grade", "label": "Grade", "fieldtype": "Data", "width": 80}
+        ]
+    },
+    {
+        "name": "Employee Summary Report",
+        "doctype": "Report",
+        "ref_doctype": "Employee",
+        "report_name": "Employee Summary Report",
+        "report_type": "Script Report",
+        "is_standard": "Yes",
+        "module": "Finances RH",
+        "disabled": 0,
+        "query": "SELECT \n    e.name as 'Employee ID',\n    e.employee_name as 'Employee Name',\n    e.department as 'Department',\n    e.designation as 'Designation',\n    e.date_of_joining as 'Date of Joining',\n    e.status as 'Status',\n    e.cell_number as 'Mobile',\n    e.personal_email as 'Email'\nFROM `tabEmployee` e\nORDER BY e.employee_name",
+        "columns": [
+            {"fieldname": "employee_id", "label": "Employee ID", "fieldtype": "Link", "options": "Employee", "width": 120},
+            {"fieldname": "employee_name", "label": "Employee Name", "fieldtype": "Data", "width": 200},
+            {"fieldname": "department", "label": "Department", "fieldtype": "Data", "width": 120},
+            {"fieldname": "designation", "label": "Designation", "fieldtype": "Data", "width": 120},
+            {"fieldname": "date_of_joining", "label": "Joining Date", "fieldtype": "Date", "width": 100},
+            {"fieldname": "status", "label": "Status", "fieldtype": "Data", "width": 80},
+            {"fieldname": "mobile", "label": "Mobile", "fieldtype": "Data", "width": 120},
+            {"fieldname": "email", "label": "Email", "fieldtype": "Data", "width": 180}
+        ]
+    },
+    {
+        "name": "Course Schedule Report",
+        "doctype": "Report",
+        "ref_doctype": "Course Schedule",
+        "report_name": "Course Schedule Report",
+        "report_type": "Script Report",
+        "is_standard": "Yes",
+        "module": "Scolarite",
+        "disabled": 0,
+        "query": "SELECT \n    cs.name as 'Schedule ID',\n    c.course_name as 'Course',\n    sg.student_group_name as 'Class',\n    cs.instructor_name as 'Instructor',\n    cs.schedule_date as 'Date',\n    cs.from_time as 'From Time',\n    cs.to_time as 'To Time',\n    cs.room as 'Room'\nFROM `tabCourse Schedule` cs\nJOIN `tabCourse` c ON c.name = cs.course\nJOIN `tabStudent Group` sg ON sg.name = cs.student_group\nORDER BY cs.schedule_date DESC, cs.from_time",
+        "columns": [
+            {"fieldname": "schedule_id", "label": "Schedule ID", "fieldtype": "Link", "options": "Course Schedule", "width": 120},
+            {"fieldname": "course", "label": "Course", "fieldtype": "Data", "width": 150},
+            {"fieldname": "class", "label": "Class", "fieldtype": "Data", "width": 100},
+            {"fieldname": "instructor", "label": "Instructor", "fieldtype": "Data", "width": 150},
+            {"fieldname": "date", "label": "Date", "fieldtype": "Date", "width": 100},
+            {"fieldname": "from_time", "label": "From", "fieldtype": "Time", "width": 80},
+            {"fieldname": "to_time", "label": "To", "fieldtype": "Time", "width": 80},
+            {"fieldname": "room", "label": "Room", "fieldtype": "Data", "width": 100}
+        ]
+    }
+]

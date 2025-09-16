@@ -244,6 +244,9 @@ after_install = "easygo_schools.patches.v1_bootstrap.execute"
 # Export fixtures for the app
 
 fixtures = [
+    "workspace",
+    "dashboard_chart", 
+    "report",
     {
         "doctype": "Role",
         "filters": [
@@ -261,11 +264,7 @@ fixtures = [
                 ]
             ]
         ]
-    },
-    "Letter Head",
-    "Web Form",
-    "Property Setter",
-    "Workspace"
+    }
 ]
 
 # Website
