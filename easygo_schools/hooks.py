@@ -248,7 +248,7 @@ fixtures = [
     "workflow",
     "dashboard_chart", 
     "report",
-    "custom_field",
+    # "custom_field",  # Commented out - custom fields should be created via patches to avoid duplicates
     {
         "doctype": "Role",
         "filters": [
