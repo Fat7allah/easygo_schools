@@ -98,7 +98,7 @@
    "fieldtype": "Link",
    "label": "Workflow State",
    "options": "Workflow State",
-   "default": "Application Received"
+   "default": "Draft"
   },
   {
    "fieldname": "section_break_7",
