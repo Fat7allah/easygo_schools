@@ -1,17 +1,25 @@
 # 🔧 Guide de Résolution des Erreurs de Migration
 
-## ⚠️ SOLUTION RAPIDE
+## ⚠️ SOLUTION FINALE
 
-Si vous avez des erreurs lors de la migration :
+Tous les problèmes ont été corrigés ! Utilisez maintenant :
 
 ```bash
-# Solution ultra-sécurisée (recommandée) :
-chmod +x ultra_safe_migrate.sh
-./ultra_safe_migrate.sh
+# Migration finale avec toutes les corrections :
+chmod +x final_migrate.sh
+./final_migrate.sh
+```
 
-# Alternative - Migration sécurisée :
+## Solutions Précédentes (si nécessaire)
+
+```bash
+# Migration sécurisée (alternative) :
 chmod +x safe_migrate.sh
 ./safe_migrate.sh
+
+# Migration minimaliste :
+chmod +x minimal_migrate.sh
+./minimal_migrate.sh
 ```
 
 ## Erreur : Custom Field Already Exists
@@ -31,6 +39,15 @@ frappe.exceptions.MandatoryError: [Workflow, Student Admission Workflow]: workfl
 ```
 
 Cette erreur indique que le champ obligatoire `workflow_state_field` manque dans la définition des workflows (requis dans Frappe Framework 15).
+
+## Erreur : Allow Edit Field Missing
+
+### Problème Rencontré
+```
+frappe.exceptions.MandatoryError: [Workflow, Fee Payment Approval Workflow]: allow_edit, allow_edit
+```
+
+Cette erreur indique que certains états de workflow ont des champs `allow_edit` vides, ce qui est interdit dans Frappe Framework 15.
 
 ### Solutions Appliquées
 

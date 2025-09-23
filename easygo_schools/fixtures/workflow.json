@@ -90,13 +90,13 @@
       {
         "state": "Approved",
         "doc_status": "1",
-        "allow_edit": "",
+        "allow_edit": "Accounts Manager",
         "workflow_state_name": "Approved"
       },
       {
         "state": "Cancelled",
         "doc_status": "2",
-        "allow_edit": "",
+        "allow_edit": "Accounts Manager",
         "workflow_state_name": "Cancelled"
       }
     ],
@@ -156,19 +156,19 @@
       {
         "state": "Approved",
         "doc_status": "1",
-        "allow_edit": "",
+        "allow_edit": "HR Manager",
         "workflow_state_name": "Approved"
       },
       {
         "state": "Rejected",
         "doc_status": "0",
-        "allow_edit": "",
+        "allow_edit": "HR Manager",
         "workflow_state_name": "Rejected"
       },
       {
         "state": "Cancelled",
         "doc_status": "2",
-        "allow_edit": "",
+        "allow_edit": "Employee",
         "workflow_state_name": "Cancelled"
       }
     ],
@@ -228,13 +228,13 @@
       {
         "state": "Action Taken",
         "doc_status": "1",
-        "allow_edit": "",
+        "allow_edit": "School Administrator",
         "workflow_state_name": "Action Taken"
       },
       {
         "state": "Dismissed",
         "doc_status": "2",
-        "allow_edit": "",
+        "allow_edit": "School Administrator",
         "workflow_state_name": "Dismissed"
       }
     ],
@@ -287,13 +287,13 @@
       {
         "state": "Completed",
         "doc_status": "1",
-        "allow_edit": "",
+        "allow_edit": "Facility Manager",
         "workflow_state_name": "Completed"
       },
       {
         "state": "Cancelled",
         "doc_status": "2",
-        "allow_edit": "",
+        "allow_edit": "Facility Manager",
         "workflow_state_name": "Cancelled"
       }
     ],
