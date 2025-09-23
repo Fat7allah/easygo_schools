@@ -57,11 +57,25 @@
         "workflow_transition_name": "Reject Admission"
       },
       {
-        "state": "Under Review",
+        "state": "Application Received",
         "action": "Request More Info",
         "next_state": "Application Received",
         "allowed": "School Administrator",
         "workflow_transition_name": "Request More Information"
+      },
+      {
+        "state": "Approved",
+        "action": "Reconsider",
+        "next_state": "Application Received",
+        "allowed": "School Administrator",
+        "workflow_transition_name": "Reconsider Application"
+      },
+      {
+        "state": "Rejected",
+        "action": "Reconsider",
+        "next_state": "Application Received",
+        "allowed": "School Administrator",
+        "workflow_transition_name": "Reconsider Rejected Application"
       }
     ]
   },
