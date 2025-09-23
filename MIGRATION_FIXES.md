@@ -1,5 +1,15 @@
 # 🔧 Guide de Résolution des Erreurs de Migration
 
+## ⚠️ SOLUTION RAPIDE
+
+Si vous avez l'erreur de custom fields lors de la migration :
+
+```bash
+# Solution immédiate - Exécuter ce script :
+chmod +x safe_migrate.sh
+./safe_migrate.sh
+```
+
 ## Erreur : Custom Field Already Exists
 
 ### Problème Rencontré
@@ -11,18 +21,22 @@ Cette erreur survient lorsque les custom fields ont déjà été créés dans la
 
 ### Solutions Appliquées
 
-#### 1. Désactivation des Custom Fields dans les Fixtures
-Les custom fields ont été retirés des fixtures dans `hooks.py` pour éviter les conflits :
+#### 1. Désactivation des Fixtures Problématiques
+Les fixtures suivantes ont été désactivées dans `hooks.py` pour éviter les conflits :
 
 ```python
 fixtures = [
-    "workflow",
-    "dashboard_chart", 
-    "report",
-    # "custom_field",  # Désactivé pour éviter les duplications
-    ...
+    # "workflow",       # Désactivé - À créer manuellement après installation
+    # "custom_field",   # Désactivé - Géré via patch
+    "dashboard_chart",  # Actif
+    "report",          # Actif
+    # Property Setter, Web Form, Letter Head - Temporairement désactivés
 ]
 ```
+
+#### 2. Fichier custom_fields.json Neutralisé
+- Renommé en `custom_fields.json.backup`
+- Créé un fichier vide `custom_fields.json` contenant `[]`
 
 #### 2. Création d'un Patch Intelligent
 Un nouveau patch `v1_add_massar_fields.py` a été créé qui :
