@@ -244,11 +244,15 @@ after_install = "easygo_schools.patches.v1_bootstrap.execute"
 # Export fixtures for the app
 
 fixtures = [
-    # Note: Fixtures that might cause conflicts are disabled
-    # "workflow",  # Workflows should be created manually after successful installation
-    # "custom_field",  # Custom fields are handled via patches to avoid duplicates
-    "dashboard_chart", 
-    "report",
+    # Note: All fixtures temporarily disabled for clean migration
+    # Enable them one by one after successful installation
+    
+    # "dashboard_chart",  # Disabled - References non-existent DocType "Assessment Result"
+    # "report",           # Disabled temporarily
+    # "workflow",         # Disabled - Has invalid transitions
+    # "custom_field",     # Disabled - Handled via patches
+    
+    # Only keep essential roles for initial setup
     {
         "doctype": "Role",
         "filters": [
@@ -258,33 +262,11 @@ fixtures = [
                 [
                     "Student",
                     "Parent",
-                    "Teacher",
-                    "Principal",
-                    "Accountant",
-                    "HR Manager",
-                    "Maintenance",
-                    "School Administrator",
-                    "Accounts User",
-                    "Accounts Manager",
-                    "HR User",
-                    "Facility Manager"
+                    "Teacher"
                 ]
             ]
         ]
     }
-    # Temporarily disabled to avoid migration conflicts
-    # {
-    #     "doctype": "Property Setter",
-    #     "filters": []
-    # },
-    # {
-    #     "doctype": "Web Form",
-    #     "filters": []
-    # },
-    # {
-    #     "doctype": "Letter Head",
-    #     "filters": []
-    # }
 ]
 
 # Website

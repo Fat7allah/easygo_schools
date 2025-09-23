@@ -28,7 +28,7 @@
       },
       {
         "state": "Rejected",
-        "doc_status": "2",
+        "doc_status": "0",
         "allow_edit": "School Administrator",
         "workflow_state_name": "Rejected"
       }
