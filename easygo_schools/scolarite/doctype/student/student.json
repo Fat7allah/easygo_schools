@@ -20,7 +20,6 @@
   "column_break_4",
   "massar_code",
   "status",
-  "workflow_state",
   "section_break_7",
   "date_of_birth",
   "age",
@@ -92,13 +91,6 @@
    "options": "Active\nInactive\nGraduated\nTransferred\nCandidatÐµ",
    "default": "Active",
    "reqd": 1
-  },
-  {
-   "fieldname": "workflow_state",
-   "fieldtype": "Link",
-   "label": "Workflow State",
-   "options": "Workflow State",
-   "default": "Draft"
   },
   {
    "fieldname": "section_break_7",
