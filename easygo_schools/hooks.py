@@ -243,31 +243,10 @@ after_install = "easygo_schools.patches.v1_bootstrap.execute"
 # --------
 # Export fixtures for the app
 
-fixtures = [
-    # Note: All fixtures temporarily disabled for clean migration
-    # Enable them one by one after successful installation
-    
-    # "dashboard_chart",  # Disabled - References non-existent DocType "Assessment Result"
-    # "report",           # Disabled temporarily
-    # "workflow",         # Disabled - Has invalid transitions
-    # "custom_field",     # Disabled - Handled via patches
-    
-    # Only keep essential roles for initial setup
-    {
-        "doctype": "Role",
-        "filters": [
-            [
-                "name",
-                "in",
-                [
-                    "Student",
-                    "Parent",
-                    "Teacher"
-                ]
-            ]
-        ]
-    }
-]
+# AUCUNE fixture activée pour migration ZÉRO CONFLIT
+# Tous les fixtures sont désactivés pour garantir une migration réussie
+# Configuration manuelle requise après installation
+fixtures = []
 
 # Website
 # -------

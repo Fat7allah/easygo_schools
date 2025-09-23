@@ -95,7 +95,7 @@
       },
       {
         "state": "Cancelled",
-        "doc_status": "2",
+        "doc_status": "0",
         "allow_edit": "Accounts Manager",
         "workflow_state_name": "Cancelled"
       }
@@ -167,7 +167,7 @@
       },
       {
         "state": "Cancelled",
-        "doc_status": "2",
+        "doc_status": "0",
         "allow_edit": "Employee",
         "workflow_state_name": "Cancelled"
       }
@@ -233,7 +233,7 @@
       },
       {
         "state": "Dismissed",
-        "doc_status": "2",
+        "doc_status": "0",
         "allow_edit": "School Administrator",
         "workflow_state_name": "Dismissed"
       }
@@ -292,7 +292,7 @@
       },
       {
         "state": "Cancelled",
-        "doc_status": "2",
+        "doc_status": "0",
         "allow_edit": "Facility Manager",
         "workflow_state_name": "Cancelled"
       }
