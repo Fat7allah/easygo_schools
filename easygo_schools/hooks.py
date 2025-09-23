@@ -244,9 +244,11 @@ after_install = "easygo_schools.patches.v1_bootstrap.execute"
 # Export fixtures for the app
 
 fixtures = [
-    "workspace",
+    # Note: Workspaces removed intentionally - use Module Definer or Global Search instead
+    "workflow",
     "dashboard_chart", 
     "report",
+    "custom_field",
     {
         "doctype": "Role",
         "filters": [
@@ -261,9 +263,26 @@ fixtures = [
                     "Accountant",
                     "HR Manager",
                     "Maintenance",
+                    "School Administrator",
+                    "Accounts User",
+                    "Accounts Manager",
+                    "HR User",
+                    "Facility Manager"
                 ]
             ]
         ]
+    },
+    {
+        "doctype": "Property Setter",
+        "filters": []
+    },
+    {
+        "doctype": "Web Form",
+        "filters": []
+    },
+    {
+        "doctype": "Letter Head",
+        "filters": []
     }
 ]
 

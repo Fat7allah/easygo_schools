@@ -1,1176 +1,1186 @@
 [
-    {
-        "name": "Scolarité",
-        "doctype": "Workspace",
-        "extends": "",
-        "for_user": "",
-        "is_default": 0,
-        "parent_page": "",
-        "public": 1,
-        "restrict_to_domain": "",
-        "roles": [],
-        "sequence_id": 1,
-        "title": "Scolarité",
-        "label": "Scolarité",
-        "module": "Scolarite",
-        "icon": "education",
-        "content": "[{\"type\": \"chart\", \"data\": {\"chart_name\": \"Student Enrollment Trend\", \"col\": 6}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Assessment Results Distribution\", \"col\": 6}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Guardian\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Group\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment Plan\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Assessment Result\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Course Schedule\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Gestion des Étudiants\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Évaluations & Examens\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Planification & Cours\", \"col\": 4}}]",
-        "links": [
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Student",
-                "link_count": 0,
-                "link_to": "Student",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Guardian",
-                "link_count": 0,
-                "link_to": "Guardian",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Student Group",
-                "link_count": 0,
-                "link_to": "Student Group",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Assessment Plan",
-                "link_count": 0,
-                "link_to": "Assessment Plan",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Assessment Result",
-                "link_count": 0,
-                "link_to": "Assessment Result",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Course Schedule",
-                "link_count": 0,
-                "link_to": "Course Schedule",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Gestion des Étudiants",
-                "link_count": 0,
-                "link_to": "",
-                "link_type": "",
-                "onboard": 0,
-                "type": "Card Break"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Évaluations & Examens",
-                "link_count": 0,
-                "link_to": "",
-                "link_type": "",
-                "onboard": 0,
-                "type": "Card Break"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Planification & Cours",
-                "link_count": 0,
-                "link_to": "",
-                "link_type": "",
-                "onboard": 0,
-                "type": "Card Break"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Student",
-                "link_count": 0,
-                "link_to": "Student",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Guardian",
-                "link_count": 0,
-                "link_to": "Guardian",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Student Group",
-                "link_count": 0,
-                "link_to": "Student Group",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Enrollment",
-                "link_count": 0,
-                "link_to": "Enrollment",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Assessment Plan",
-                "link_count": 0,
-                "link_to": "Assessment Plan",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Assessment Result",
-                "link_count": 0,
-                "link_to": "Assessment Result",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Exam",
-                "link_count": 0,
-                "link_to": "Exam",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Grade Scale",
-                "link_count": 0,
-                "link_to": "Grade Scale",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Course Schedule",
-                "link_count": 0,
-                "link_to": "Course Schedule",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Lesson Plan",
-                "link_count": 0,
-                "link_to": "Lesson Plan",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            }
-        ]
-    },
-    {
-        "name": "Vie Scolaire",
-        "doctype": "Workspace",
-        "extends": "",
-        "for_user": "",
-        "is_default": 0,
-        "parent_page": "",
-        "public": 1,
-        "restrict_to_domain": "",
-        "roles": [],
-        "sequence_id": 2,
-        "title": "Vie Scolaire",
-        "label": "Vie Scolaire",
-        "module": "Vie Scolaire",
-        "icon": "users",
-        "content": "[{\"type\": \"chart\", \"data\": {\"chart_name\": \"Student Attendance Rate\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Attendance\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Disciplinary Action\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Health Record\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Activity Schedule\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Extracurricular Activity\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Medical Visit\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Présence & Assiduité\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Discipline & Intervention\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Santé & Médical\", \"col\": 4}}]",
-        "links": [
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Student Attendance",
-                "link_count": 0,
-                "link_to": "Student Attendance",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Disciplinary Action",
-                "link_count": 0,
-                "link_to": "Disciplinary Action",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Health Record",
-                "link_count": 0,
-                "link_to": "Health Record",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Activity Schedule",
-                "link_count": 0,
-                "link_to": "Activity Schedule",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Extracurricular Activity",
-                "link_count": 0,
-                "link_to": "Extracurricular Activity",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Medical Visit",
-                "link_count": 0,
-                "link_to": "Medical Visit",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Présence & Assiduité",
-                "link_count": 0,
-                "link_to": "",
-                "link_type": "",
-                "onboard": 0,
-                "type": "Card Break"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Discipline & Intervention",
-                "link_count": 0,
-                "link_to": "",
-                "link_type": "",
-                "onboard": 0,
-                "type": "Card Break"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Santé & Médical",
-                "link_count": 0,
-                "link_to": "",
-                "link_type": "",
-                "onboard": 0,
-                "type": "Card Break"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Student Attendance",
-                "link_count": 0,
-                "link_to": "Student Attendance",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Attendance Justification",
-                "link_count": 0,
-                "link_to": "Attendance Justification",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Support Trigger Rule",
-                "link_count": 0,
-                "link_to": "Support Trigger Rule",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Disciplinary Action",
-                "link_count": 0,
-                "link_to": "Disciplinary Action",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Intervention Session",
-                "link_count": 0,
-                "link_to": "Intervention Session",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Remedial Plan",
-                "link_count": 0,
-                "link_to": "Remedial Plan",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Accident Report",
-                "link_count": 0,
-                "link_to": "Accident Report",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Extracurricular Activity",
-                "link_count": 0,
-                "link_to": "Extracurricular Activity",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Activity Schedule",
-                "link_count": 0,
-                "link_to": "Activity Schedule",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Activity Enrollment",
-                "link_count": 0,
-                "link_to": "Activity Enrollment",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Activity Registration",
-                "link_count": 0,
-                "link_to": "Activity Registration",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Health Record",
-                "link_count": 0,
-                "link_to": "Health Record",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Medical Visit",
-                "link_count": 0,
-                "link_to": "Medical Visit",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Vaccination Record",
-                "link_count": 0,
-                "link_to": "Vaccination Record",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            }
-        ]
-    },
-    {
-        "name": "Finances & RH",
-        "doctype": "Workspace",
-        "extends": "",
-        "for_user": "",
-        "is_default": 0,
-        "parent_page": "",
-        "public": 1,
-        "restrict_to_domain": "",
-        "roles": [],
-        "sequence_id": 3,
-        "title": "Finances & RH",
-        "label": "Finances & RH",
-        "module": "Finances RH",
-        "icon": "money",
-        "content": "[{\"type\": \"chart\", \"data\": {\"chart_name\": \"Monthly Revenue Trend\", \"col\": 6}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Fee Collection Status\", \"col\": 6}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Employee\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Salary Slip\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Structure\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Bill\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Entry\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Budget\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Reports & Masters\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Ressources Humaines\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Frais Scolaires\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Budget & Comptabilité\", \"col\": 4}}]",
-        "links": [
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Employee",
-                "link_count": 0,
-                "link_to": "Employee",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Salary Slip",
-                "link_count": 0,
-                "link_to": "Salary Slip",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Fee Structure",
-                "link_count": 0,
-                "link_to": "Fee Structure",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Fee Bill",
-                "link_count": 0,
-                "link_to": "Fee Bill",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Payment Entry",
-                "link_count": 0,
-                "link_to": "Payment Entry",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Budget",
-                "link_count": 0,
-                "link_to": "Budget",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Ressources Humaines",
-                "link_count": 0,
-                "link_to": "",
-                "link_type": "",
-                "onboard": 0,
-                "type": "Card Break"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Frais Scolaires",
-                "link_count": 0,
-                "link_to": "",
-                "link_type": "",
-                "onboard": 0,
-                "type": "Card Break"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Employee",
-                "link_count": 0,
-                "link_to": "Employee",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Frais Scolaires",
-                "link_count": 0,
-                "link_to": "",
-                "link_type": "",
-                "onboard": 0,
-                "type": "Card Break"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Contract",
-                "link_count": 0,
-                "link_to": "Contract",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Leave Application",
-                "link_count": 0,
-                "link_to": "Leave Application",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Leave Type",
-                "link_count": 0,
-                "link_to": "Leave Type",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "HR Attendance",
-                "link_count": 0,
-                "link_to": "HR Attendance",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Salary Structure",
-                "link_count": 0,
-                "link_to": "Salary Structure",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Salary Slip",
-                "link_count": 0,
-                "link_to": "Salary Slip",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Salary Component",
-                "link_count": 0,
-                "link_to": "Salary Component",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Payroll Cycle",
-                "link_count": 0,
-                "link_to": "Payroll Cycle",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Fee Structure",
-                "link_count": 0,
-                "link_to": "Fee Structure",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Fee Bill",
-                "link_count": 0,
-                "link_to": "Fee Bill",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Fee Type",
-                "link_count": 0,
-                "link_to": "Fee Type",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Payment Entry",
-                "link_count": 0,
-                "link_to": "Payment Entry",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Installment Plan",
-                "link_count": 0,
-                "link_to": "Installment Plan",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Receipt Print",
-                "link_count": 0,
-                "link_to": "Receipt Print",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Budget",
-                "link_count": 0,
-                "link_to": "Budget",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Expense Entry",
-                "link_count": 0,
-                "link_to": "Expense Entry",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "School Account",
-                "link_count": 0,
-                "link_to": "School Account",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "School Ledger",
-                "link_count": 0,
-                "link_to": "School Ledger",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "School Cost Center",
-                "link_count": 0,
-                "link_to": "School Cost Center",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            }
-        ]
-    },
-    {
-        "name": "Administration & Communications",
-        "doctype": "Workspace",
-        "extends": "",
-        "for_user": "",
-        "is_default": 0,
-        "parent_page": "",
-        "public": 1,
-        "restrict_to_domain": "",
-        "roles": [],
-        "sequence_id": 4,
-        "title": "Administration & Communications",
-        "label": "Administration & Communications",
-        "module": "Administration Communications",
-        "icon": "envelope",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Communications\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Communication\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Message\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Message Thread\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Communication Log\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Correspondance\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Correspondence\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Rectorate Correspondence\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Document Template\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Notification Template\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Consentements & Réunions\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Parent Consent\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Meeting Request\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Notification Rule\", \"col\": 4}}]",
-        "links": [
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "School Communication",
-                "link_count": 0,
-                "link_to": "School Communication",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Message",
-                "link_count": 0,
-                "link_to": "Message",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Message Thread",
-                "link_count": 0,
-                "link_to": "Message Thread",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Communication Log",
-                "link_count": 0,
-                "link_to": "Communication Log",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Correspondence",
-                "link_count": 0,
-                "link_to": "Correspondence",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Rectorate Correspondence",
-                "link_count": 0,
-                "link_to": "Rectorate Correspondence",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Document Template",
-                "link_count": 0,
-                "link_to": "Document Template",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Notification Template",
-                "link_count": 0,
-                "link_to": "Notification Template",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Parent Consent",
-                "link_count": 0,
-                "link_to": "Parent Consent",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Meeting Request",
-                "link_count": 0,
-                "link_to": "Meeting Request",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Notification Rule",
-                "link_count": 0,
-                "link_to": "Notification Rule",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            }
-        ]
-    },
-    {
-        "name": "Gestion Établissement",
-        "doctype": "Workspace",
-        "extends": "",
-        "for_user": "",
-        "is_default": 0,
-        "parent_page": "",
-        "public": 1,
-        "restrict_to_domain": "",
-        "roles": [],
-        "sequence_id": 5,
-        "title": "Gestion Établissement",
-        "label": "Gestion Établissement",
-        "module": "Gestion Etablissement",
-        "icon": "building",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Infrastructure & Équipements\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Room\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Equipment\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Asset\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Maintenance Request\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Work Order\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Achats & Approvisionnement\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Purchase Request\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Purchase Order\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Stock Item\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Stock Entry\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Stock Ledger\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Restauration\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Canteen Menu\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Canteen Menu Item\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Meal Order\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Transport Scolaire\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Transport Route\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Transport Stop\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Transport Student\", \"col\": 4}}]",
-        "links": [
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Room",
-                "link_count": 0,
-                "link_to": "Room",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Equipment",
-                "link_count": 0,
-                "link_to": "Equipment",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "School Asset",
-                "link_count": 0,
-                "link_to": "School Asset",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Maintenance Request",
-                "link_count": 0,
-                "link_to": "Maintenance Request",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Work Order",
-                "link_count": 0,
-                "link_to": "Work Order",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Purchase Request",
-                "link_count": 0,
-                "link_to": "Purchase Request",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Purchase Order",
-                "link_count": 0,
-                "link_to": "Purchase Order",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Stock Item",
-                "link_count": 0,
-                "link_to": "Stock Item",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Stock Entry",
-                "link_count": 0,
-                "link_to": "Stock Entry",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Stock Ledger",
-                "link_count": 0,
-                "link_to": "Stock Ledger",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Canteen Menu",
-                "link_count": 0,
-                "link_to": "Canteen Menu",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Canteen Menu Item",
-                "link_count": 0,
-                "link_to": "Canteen Menu Item",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Meal Order",
-                "link_count": 0,
-                "link_to": "Meal Order",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Transport Route",
-                "link_count": 0,
-                "link_to": "Transport Route",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Transport Stop",
-                "link_count": 0,
-                "link_to": "Transport Stop",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Transport Student",
-                "link_count": 0,
-                "link_to": "Transport Student",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            }
-        ]
-    },
-    {
-        "name": "Référentiels",
-        "doctype": "Workspace",
-        "extends": "",
-        "for_user": "",
-        "is_default": 0,
-        "parent_page": "",
-        "public": 1,
-        "restrict_to_domain": "",
-        "roles": [],
-        "sequence_id": 6,
-        "title": "Référentiels",
-        "label": "Référentiels",
-        "module": "Referentiels",
-        "icon": "list",
-        "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Structure Académique\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Academic Year\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Academic Term\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Subject\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Program\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"School Class\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Student Group\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Frais & Paiements\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Structure\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Bill\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Fee Type\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Entry\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Installment Plan\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Données de Référence\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Reference Table\", \"col\": 6}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Reference Data Item\", \"col\": 6}}]",
-        "links": [
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Academic Year",
-                "link_count": 0,
-                "link_to": "Academic Year",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Academic Term",
-                "link_count": 0,
-                "link_to": "Academic Term",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Subject",
-                "link_count": 0,
-                "link_to": "Subject",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Grade Level",
-                "link_count": 0,
-                "link_to": "Grade Level",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Fee Structure",
-                "link_count": 0,
-                "link_to": "Fee Structure",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Fee Bill",
-                "link_count": 0,
-                "link_to": "Fee Bill",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Fee Category",
-                "link_count": 0,
-                "link_to": "Fee Category",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            },
-            {
-                "hidden": 0,
-                "is_query_report": 0,
-                "label": "Payment Entry",
-                "link_count": 0,
-                "link_to": "Payment Entry",
-                "link_type": "DocType",
-                "onboard": 0,
-                "type": "Link"
-            }
-        ]
-    }
+  {
+    "name": "Scolarite",
+    "doctype": "Workspace",
+    "label": "Scolarité",
+    "module": "Scolarite",
+    "icon": "education",
+    "is_standard": 1,
+    "public": 1,
+    "developer_mode_only": 0,
+    "restrict_to_domain": "",
+    "onboard": 0,
+    "extends": "",
+    "for_user": "",
+    "parent_page": "",
+    "sequence_id": 1,
+    "hide_custom": 0,
+    "links": [
+      {
+        "type": "Link",
+        "label": "Academic Term",
+        "link_type": "DocType",
+        "link_to": "Academic Term",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Academic Year",
+        "link_type": "DocType",
+        "link_to": "Academic Year",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Assessment",
+        "link_type": "DocType",
+        "link_to": "Assessment",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Assessment Plan",
+        "link_type": "DocType",
+        "link_to": "Assessment Plan",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Class Subject Teacher",
+        "link_type": "DocType",
+        "link_to": "Class Subject Teacher",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Course Schedule",
+        "link_type": "DocType",
+        "link_to": "Course Schedule",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Exam",
+        "link_type": "DocType",
+        "link_to": "Exam",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Grade",
+        "link_type": "DocType",
+        "link_to": "Grade",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Grading Scale",
+        "link_type": "DocType",
+        "link_to": "Grading Scale",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Guardian",
+        "link_type": "DocType",
+        "link_to": "Guardian",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Homework",
+        "link_type": "DocType",
+        "link_to": "Homework",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Homework Attachment",
+        "link_type": "DocType",
+        "link_to": "Homework Attachment",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Homework Submission",
+        "link_type": "DocType",
+        "link_to": "Homework Submission",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Learning Sequence",
+        "link_type": "DocType",
+        "link_to": "Learning Sequence",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Learning Sequence Lesson",
+        "link_type": "DocType",
+        "link_to": "Learning Sequence Lesson",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Lesson Log",
+        "link_type": "DocType",
+        "link_to": "Lesson Log",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Lesson Plan",
+        "link_type": "DocType",
+        "link_to": "Lesson Plan",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Orientation Choice",
+        "link_type": "DocType",
+        "link_to": "Orientation Choice",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Orientation Meeting",
+        "link_type": "DocType",
+        "link_to": "Orientation Meeting",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Orientation Plan",
+        "link_type": "DocType",
+        "link_to": "Orientation Plan",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Placement Test",
+        "link_type": "DocType",
+        "link_to": "Placement Test",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Placement Test Attachment",
+        "link_type": "DocType",
+        "link_to": "Placement Test Attachment",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Placement Test Result",
+        "link_type": "DocType",
+        "link_to": "Placement Test Result",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Program",
+        "link_type": "DocType",
+        "link_to": "Program",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Report Card",
+        "link_type": "DocType",
+        "link_to": "Report Card",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Report Card Subject",
+        "link_type": "DocType",
+        "link_to": "Report Card Subject",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Resource",
+        "link_type": "DocType",
+        "link_to": "Resource",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "School Class",
+        "link_type": "DocType",
+        "link_to": "School Class",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Student",
+        "link_type": "DocType",
+        "link_to": "Student",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Student Academic History",
+        "link_type": "DocType",
+        "link_to": "Student Academic History",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Student Follow Up",
+        "link_type": "DocType",
+        "link_to": "Student Follow Up",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Student Group",
+        "link_type": "DocType",
+        "link_to": "Student Group",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Student Group Member",
+        "link_type": "DocType",
+        "link_to": "Student Group Member",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Student Transfer",
+        "link_type": "DocType",
+        "link_to": "Student Transfer",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Subject",
+        "link_type": "DocType",
+        "link_to": "Subject",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      }
+    ]
+  },
+  {
+    "name": "Vie_Scolaire",
+    "doctype": "Workspace",
+    "label": "Vie Scolaire",
+    "module": "Vie Scolaire",
+    "icon": "calendar",
+    "is_standard": 1,
+    "public": 1,
+    "developer_mode_only": 0,
+    "restrict_to_domain": "",
+    "onboard": 0,
+    "extends": "",
+    "for_user": "",
+    "parent_page": "",
+    "sequence_id": 2,
+    "hide_custom": 0,
+    "links": [
+      {
+        "type": "Link",
+        "label": "Accident Report",
+        "link_type": "DocType",
+        "link_to": "Accident Report",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Accident Report Attachment",
+        "link_type": "DocType",
+        "link_to": "Accident Report Attachment",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Activity Enrollment",
+        "link_type": "DocType",
+        "link_to": "Activity Enrollment",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Activity Registration",
+        "link_type": "DocType",
+        "link_to": "Activity Registration",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Activity Schedule",
+        "link_type": "DocType",
+        "link_to": "Activity Schedule",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Attendance Justification",
+        "link_type": "DocType",
+        "link_to": "Attendance Justification",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Disciplinary Action",
+        "link_type": "DocType",
+        "link_to": "Disciplinary Action",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Extracurricular Activity",
+        "link_type": "DocType",
+        "link_to": "Extracurricular Activity",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Health Record",
+        "link_type": "DocType",
+        "link_to": "Health Record",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Intervention Session",
+        "link_type": "DocType",
+        "link_to": "Intervention Session",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Medical Visit",
+        "link_type": "DocType",
+        "link_to": "Medical Visit",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Remedial Plan",
+        "link_type": "DocType",
+        "link_to": "Remedial Plan",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Student Attendance",
+        "link_type": "DocType",
+        "link_to": "Student Attendance",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Support Trigger Rule",
+        "link_type": "DocType",
+        "link_to": "Support Trigger Rule",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Vaccination Record",
+        "link_type": "DocType",
+        "link_to": "Vaccination Record",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      }
+    ]
+  },
+  {
+    "name": "Finances_RH",
+    "doctype": "Workspace",
+    "label": "Finances & RH",
+    "module": "Finances RH",
+    "icon": "accounting",
+    "is_standard": 1,
+    "public": 1,
+    "developer_mode_only": 0,
+    "restrict_to_domain": "",
+    "onboard": 0,
+    "extends": "",
+    "for_user": "",
+    "parent_page": "",
+    "sequence_id": 3,
+    "hide_custom": 0,
+    "links": [
+      {
+        "type": "Link",
+        "label": "Budget",
+        "link_type": "DocType",
+        "link_to": "Budget",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Budget Line",
+        "link_type": "DocType",
+        "link_to": "Budget Line",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Contract",
+        "link_type": "DocType",
+        "link_to": "Contract",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Employee",
+        "link_type": "DocType",
+        "link_to": "Employee",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Expense Entry",
+        "link_type": "DocType",
+        "link_to": "Expense Entry",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Fee Bill",
+        "link_type": "DocType",
+        "link_to": "Fee Bill",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Fee Installment",
+        "link_type": "DocType",
+        "link_to": "Fee Installment",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Fee Item",
+        "link_type": "DocType",
+        "link_to": "Fee Item",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Fee Structure",
+        "link_type": "DocType",
+        "link_to": "Fee Structure",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Fee Type",
+        "link_type": "DocType",
+        "link_to": "Fee Type",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Hr Attendance",
+        "link_type": "DocType",
+        "link_to": "Hr Attendance",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Installment Plan",
+        "link_type": "DocType",
+        "link_to": "Installment Plan",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Leave Application",
+        "link_type": "DocType",
+        "link_to": "Leave Application",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Leave Type",
+        "link_type": "DocType",
+        "link_to": "Leave Type",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Payment Entry",
+        "link_type": "DocType",
+        "link_to": "Payment Entry",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Payroll Cycle",
+        "link_type": "DocType",
+        "link_to": "Payroll Cycle",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Receipt Print",
+        "link_type": "DocType",
+        "link_to": "Receipt Print",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Salary Component",
+        "link_type": "DocType",
+        "link_to": "Salary Component",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Salary Slip",
+        "link_type": "DocType",
+        "link_to": "Salary Slip",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Salary Structure",
+        "link_type": "DocType",
+        "link_to": "Salary Structure",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "School Account",
+        "link_type": "DocType",
+        "link_to": "School Account",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "School Cost Center",
+        "link_type": "DocType",
+        "link_to": "School Cost Center",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "School Ledger",
+        "link_type": "DocType",
+        "link_to": "School Ledger",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      }
+    ]
+  },
+  {
+    "name": "Administration_Communications",
+    "doctype": "Workspace",
+    "label": "Administration & Communications",
+    "module": "Administration Communications",
+    "icon": "chat",
+    "is_standard": 1,
+    "public": 1,
+    "developer_mode_only": 0,
+    "restrict_to_domain": "",
+    "onboard": 0,
+    "extends": "",
+    "for_user": "",
+    "parent_page": "",
+    "sequence_id": 4,
+    "hide_custom": 0,
+    "links": [
+      {
+        "type": "Link",
+        "label": "Communication Log",
+        "link_type": "DocType",
+        "link_to": "Communication Log",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Consent Detail",
+        "link_type": "DocType",
+        "link_to": "Consent Detail",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Correspondence",
+        "link_type": "DocType",
+        "link_to": "Correspondence",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Document Template",
+        "link_type": "DocType",
+        "link_to": "Document Template",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Meeting Request",
+        "link_type": "DocType",
+        "link_to": "Meeting Request",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Message",
+        "link_type": "DocType",
+        "link_to": "Message",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Message Attachment",
+        "link_type": "DocType",
+        "link_to": "Message Attachment",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Message Participant",
+        "link_type": "DocType",
+        "link_to": "Message Participant",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Message Read Receipt",
+        "link_type": "DocType",
+        "link_to": "Message Read Receipt",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Message Thread",
+        "link_type": "DocType",
+        "link_to": "Message Thread",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Message Thread Participant",
+        "link_type": "DocType",
+        "link_to": "Message Thread Participant",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Notification Rule",
+        "link_type": "DocType",
+        "link_to": "Notification Rule",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Notification Template",
+        "link_type": "DocType",
+        "link_to": "Notification Template",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Parent Consent",
+        "link_type": "DocType",
+        "link_to": "Parent Consent",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Rectorate Correspondence",
+        "link_type": "DocType",
+        "link_to": "Rectorate Correspondence",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "School Communication",
+        "link_type": "DocType",
+        "link_to": "School Communication",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      }
+    ]
+  },
+  {
+    "name": "Gestion_Etablissement",
+    "doctype": "Workspace",
+    "label": "Gestion Établissement",
+    "module": "Gestion Etablissement",
+    "icon": "organization",
+    "is_standard": 1,
+    "public": 1,
+    "developer_mode_only": 0,
+    "restrict_to_domain": "",
+    "onboard": 0,
+    "extends": "",
+    "for_user": "",
+    "parent_page": "",
+    "sequence_id": 5,
+    "hide_custom": 0,
+    "links": [
+      {
+        "type": "Link",
+        "label": "Canteen Menu",
+        "link_type": "DocType",
+        "link_to": "Canteen Menu",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Canteen Menu Item",
+        "link_type": "DocType",
+        "link_to": "Canteen Menu Item",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Equipment",
+        "link_type": "DocType",
+        "link_to": "Equipment",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Maintenance Request",
+        "link_type": "DocType",
+        "link_to": "Maintenance Request",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Meal Order",
+        "link_type": "DocType",
+        "link_to": "Meal Order",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Purchase Order",
+        "link_type": "DocType",
+        "link_to": "Purchase Order",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Purchase Request",
+        "link_type": "DocType",
+        "link_to": "Purchase Request",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Room",
+        "link_type": "DocType",
+        "link_to": "Room",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "School Asset",
+        "link_type": "DocType",
+        "link_to": "School Asset",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Stock Entry",
+        "link_type": "DocType",
+        "link_to": "Stock Entry",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Stock Item",
+        "link_type": "DocType",
+        "link_to": "Stock Item",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Stock Ledger",
+        "link_type": "DocType",
+        "link_to": "Stock Ledger",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Transport Route",
+        "link_type": "DocType",
+        "link_to": "Transport Route",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Transport Stop",
+        "link_type": "DocType",
+        "link_to": "Transport Stop",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Transport Student",
+        "link_type": "DocType",
+        "link_to": "Transport Student",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Work Order",
+        "link_type": "DocType",
+        "link_to": "Work Order",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      }
+    ]
+  },
+  {
+    "name": "Referentiels",
+    "doctype": "Workspace",
+    "label": "Référentiels",
+    "module": "Referentiels",
+    "icon": "database",
+    "is_standard": 1,
+    "public": 1,
+    "developer_mode_only": 0,
+    "restrict_to_domain": "",
+    "onboard": 0,
+    "extends": "",
+    "for_user": "",
+    "parent_page": "",
+    "sequence_id": 6,
+    "hide_custom": 0,
+    "links": [
+      {
+        "type": "Link",
+        "label": "Reference Data Item",
+        "link_type": "DocType",
+        "link_to": "Reference Data Item",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      },
+      {
+        "type": "Link",
+        "label": "Reference Table",
+        "link_type": "DocType",
+        "link_to": "Reference Table",
+        "onboard": 0,
+        "hidden": 0,
+        "is_query_report": 0,
+        "link_count": 0
+      }
+    ]
+  }
 ]

@@ -1,0 +1,319 @@
+[
+  {
+    "name": "Student Admission Workflow",
+    "doctype": "Workflow",
+    "document_type": "Student",
+    "is_active": 1,
+    "override_status": 0,
+    "send_email_alert": 1,
+    "workflow_name": "Student Admission Workflow",
+    "states": [
+      {
+        "state": "Application Received",
+        "doc_status": "0",
+        "allow_edit": "School Administrator",
+        "workflow_state_name": "Application Received"
+      },
+      {
+        "state": "Under Review",
+        "doc_status": "0",
+        "allow_edit": "School Administrator",
+        "workflow_state_name": "Under Review"
+      },
+      {
+        "state": "Approved",
+        "doc_status": "1",
+        "allow_edit": "School Administrator",
+        "workflow_state_name": "Approved"
+      },
+      {
+        "state": "Rejected",
+        "doc_status": "2",
+        "allow_edit": "School Administrator",
+        "workflow_state_name": "Rejected"
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Application Received",
+        "action": "Review",
+        "next_state": "Under Review",
+        "allowed": "School Administrator",
+        "workflow_transition_name": "Review Application"
+      },
+      {
+        "state": "Under Review",
+        "action": "Approve",
+        "next_state": "Approved",
+        "allowed": "School Administrator",
+        "workflow_transition_name": "Approve Admission"
+      },
+      {
+        "state": "Under Review",
+        "action": "Reject",
+        "next_state": "Rejected",
+        "allowed": "School Administrator",
+        "workflow_transition_name": "Reject Admission"
+      },
+      {
+        "state": "Under Review",
+        "action": "Request More Info",
+        "next_state": "Application Received",
+        "allowed": "School Administrator",
+        "workflow_transition_name": "Request More Information"
+      }
+    ]
+  },
+  {
+    "name": "Fee Payment Approval Workflow",
+    "doctype": "Workflow",
+    "document_type": "Payment Entry",
+    "is_active": 1,
+    "override_status": 0,
+    "send_email_alert": 1,
+    "workflow_name": "Fee Payment Approval Workflow",
+    "states": [
+      {
+        "state": "Draft",
+        "doc_status": "0",
+        "allow_edit": "Accounts User",
+        "workflow_state_name": "Draft"
+      },
+      {
+        "state": "Pending Approval",
+        "doc_status": "0",
+        "allow_edit": "Accounts Manager",
+        "workflow_state_name": "Pending Approval"
+      },
+      {
+        "state": "Approved",
+        "doc_status": "1",
+        "allow_edit": "",
+        "workflow_state_name": "Approved"
+      },
+      {
+        "state": "Cancelled",
+        "doc_status": "2",
+        "allow_edit": "",
+        "workflow_state_name": "Cancelled"
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Draft",
+        "action": "Submit for Approval",
+        "next_state": "Pending Approval",
+        "allowed": "Accounts User",
+        "workflow_transition_name": "Submit Payment"
+      },
+      {
+        "state": "Pending Approval",
+        "action": "Approve",
+        "next_state": "Approved",
+        "allowed": "Accounts Manager",
+        "workflow_transition_name": "Approve Payment"
+      },
+      {
+        "state": "Pending Approval",
+        "action": "Reject",
+        "next_state": "Draft",
+        "allowed": "Accounts Manager",
+        "workflow_transition_name": "Reject Payment"
+      },
+      {
+        "state": "Approved",
+        "action": "Cancel",
+        "next_state": "Cancelled",
+        "allowed": "Accounts Manager",
+        "workflow_transition_name": "Cancel Payment"
+      }
+    ]
+  },
+  {
+    "name": "Leave Application Workflow",
+    "doctype": "Workflow",
+    "document_type": "Leave Application",
+    "is_active": 1,
+    "override_status": 0,
+    "send_email_alert": 1,
+    "workflow_name": "Leave Application Workflow",
+    "states": [
+      {
+        "state": "Open",
+        "doc_status": "0",
+        "allow_edit": "Employee",
+        "workflow_state_name": "Open"
+      },
+      {
+        "state": "Applied",
+        "doc_status": "0",
+        "allow_edit": "HR User",
+        "workflow_state_name": "Applied"
+      },
+      {
+        "state": "Approved",
+        "doc_status": "1",
+        "allow_edit": "",
+        "workflow_state_name": "Approved"
+      },
+      {
+        "state": "Rejected",
+        "doc_status": "0",
+        "allow_edit": "",
+        "workflow_state_name": "Rejected"
+      },
+      {
+        "state": "Cancelled",
+        "doc_status": "2",
+        "allow_edit": "",
+        "workflow_state_name": "Cancelled"
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Open",
+        "action": "Apply",
+        "next_state": "Applied",
+        "allowed": "Employee",
+        "workflow_transition_name": "Submit Leave Application"
+      },
+      {
+        "state": "Applied",
+        "action": "Approve",
+        "next_state": "Approved",
+        "allowed": "HR Manager",
+        "workflow_transition_name": "Approve Leave"
+      },
+      {
+        "state": "Applied",
+        "action": "Reject",
+        "next_state": "Rejected",
+        "allowed": "HR Manager",
+        "workflow_transition_name": "Reject Leave"
+      },
+      {
+        "state": "Open",
+        "action": "Cancel",
+        "next_state": "Cancelled",
+        "allowed": "Employee",
+        "workflow_transition_name": "Cancel Application"
+      }
+    ]
+  },
+  {
+    "name": "Disciplinary Action Workflow",
+    "doctype": "Workflow",
+    "document_type": "Disciplinary Action",
+    "is_active": 1,
+    "override_status": 0,
+    "send_email_alert": 1,
+    "workflow_name": "Disciplinary Action Workflow",
+    "states": [
+      {
+        "state": "Reported",
+        "doc_status": "0",
+        "allow_edit": "Teacher",
+        "workflow_state_name": "Reported"
+      },
+      {
+        "state": "Under Investigation",
+        "doc_status": "0",
+        "allow_edit": "School Administrator",
+        "workflow_state_name": "Under Investigation"
+      },
+      {
+        "state": "Action Taken",
+        "doc_status": "1",
+        "allow_edit": "",
+        "workflow_state_name": "Action Taken"
+      },
+      {
+        "state": "Dismissed",
+        "doc_status": "2",
+        "allow_edit": "",
+        "workflow_state_name": "Dismissed"
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Reported",
+        "action": "Investigate",
+        "next_state": "Under Investigation",
+        "allowed": "School Administrator",
+        "workflow_transition_name": "Start Investigation"
+      },
+      {
+        "state": "Under Investigation",
+        "action": "Take Action",
+        "next_state": "Action Taken",
+        "allowed": "School Administrator",
+        "workflow_transition_name": "Apply Disciplinary Action"
+      },
+      {
+        "state": "Under Investigation",
+        "action": "Dismiss",
+        "next_state": "Dismissed",
+        "allowed": "School Administrator",
+        "workflow_transition_name": "Dismiss Case"
+      }
+    ]
+  },
+  {
+    "name": "Maintenance Request Workflow",
+    "doctype": "Workflow",
+    "document_type": "Maintenance Request",
+    "is_active": 1,
+    "override_status": 0,
+    "send_email_alert": 1,
+    "workflow_name": "Maintenance Request Workflow",
+    "states": [
+      {
+        "state": "Requested",
+        "doc_status": "0",
+        "allow_edit": "All",
+        "workflow_state_name": "Requested"
+      },
+      {
+        "state": "In Progress",
+        "doc_status": "0",
+        "allow_edit": "Facility Manager",
+        "workflow_state_name": "In Progress"
+      },
+      {
+        "state": "Completed",
+        "doc_status": "1",
+        "allow_edit": "",
+        "workflow_state_name": "Completed"
+      },
+      {
+        "state": "Cancelled",
+        "doc_status": "2",
+        "allow_edit": "",
+        "workflow_state_name": "Cancelled"
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Requested",
+        "action": "Start Work",
+        "next_state": "In Progress",
+        "allowed": "Facility Manager",
+        "workflow_transition_name": "Start Maintenance"
+      },
+      {
+        "state": "In Progress",
+        "action": "Complete",
+        "next_state": "Completed",
+        "allowed": "Facility Manager",
+        "workflow_transition_name": "Complete Maintenance"
+      },
+      {
+        "state": "Requested",
+        "action": "Cancel",
+        "next_state": "Cancelled",
+        "allowed": "Facility Manager",
+        "workflow_transition_name": "Cancel Request"
+      }
+    ]
+  }
+]
