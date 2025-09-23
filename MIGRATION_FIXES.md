@@ -2,10 +2,14 @@
 
 ## ⚠️ SOLUTION RAPIDE
 
-Si vous avez l'erreur de custom fields lors de la migration :
+Si vous avez des erreurs lors de la migration :
 
 ```bash
-# Solution immédiate - Exécuter ce script :
+# Solution ultra-sécurisée (recommandée) :
+chmod +x ultra_safe_migrate.sh
+./ultra_safe_migrate.sh
+
+# Alternative - Migration sécurisée :
 chmod +x safe_migrate.sh
 ./safe_migrate.sh
 ```
@@ -18,6 +22,15 @@ frappe.exceptions.ValidationError: A field with the name massar_code already exi
 ```
 
 Cette erreur survient lorsque les custom fields ont déjà été créés dans la base de données lors d'une migration précédente.
+
+## Erreur : Workflow State Field Missing
+
+### Problème Rencontré
+```
+frappe.exceptions.MandatoryError: [Workflow, Student Admission Workflow]: workflow_state_field
+```
+
+Cette erreur indique que le champ obligatoire `workflow_state_field` manque dans la définition des workflows (requis dans Frappe Framework 15).
 
 ### Solutions Appliquées
 
