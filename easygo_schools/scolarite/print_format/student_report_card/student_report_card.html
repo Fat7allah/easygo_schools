@@ -1,0 +1,57 @@
+'''
+<div class="report-card">
+    <div class="header">
+        <div class="logo">
+            <img src="{{ doc.school_logo }}" alt="School Logo" width="100px">
+        </div>
+        <div class="school-info">
+            <h1>{{ doc.school_name }}</h1>
+            <p>{{ doc.school_address }}</p>
+        </div>
+    </div>
+
+    <h2>Bulletin de Notes - {{ doc.academic_year }}</h2>
+
+    <div class="student-info">
+        <p><strong>Nom de l'élève:</strong> {{ doc.student_name }}</p>
+        <p><strong>Classe:</strong> {{ doc.student_group }}</p>
+        <p><strong>Niveau:</strong> {{ doc.level }}</p>
+    </div>
+
+    <table class="grades-table">
+        <thead>
+            <tr>
+                <th>Matière</th>
+                <th>Note</th>
+                <th>Appréciation</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for grade in doc.grades %}
+            <tr>
+                <td>{{ grade.subject }}</td>
+                <td>{{ grade.grade }}</td>
+                <td>{{ grade.comment }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="summary">
+        <p><strong>Moyenne Générale:</strong> {{ doc.final_grade }}</p>
+        <p><strong>Appréciation Générale:</strong> {{ doc.final_comment }}</p>
+    </div>
+
+    <div class="footer">
+        <p>Fait à {{ doc.city }}, le {{ doc.generation_date }}</p>
+        <div class="signatures">
+            <div class="signature-box">
+                <p>Signature du Directeur</p>
+            </div>
+            <div class="signature-box">
+                <p>Signature du Tuteur</p>
+            </div>
+        </div>
+    </div>
+</div>
+'''

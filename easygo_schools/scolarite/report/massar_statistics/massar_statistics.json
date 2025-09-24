@@ -1,0 +1,24 @@
+{
+ "report_name": "MASSAR Statistics",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "module": "Scolarite",
+ "report_script": "massar_statistics.py",
+ "report_chart": "bar",
+ "add_total_row": 0,
+ "filters": [
+  {
+   "fieldname": "academic_year",
+   "label": "Academic Year",
+   "fieldtype": "Link",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "level",
+   "label": "Level",
+   "fieldtype": "Link",
+   "options": "Level"
+  }
+ ]
+}

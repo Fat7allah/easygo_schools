@@ -1,0 +1,9 @@
+{
+ "doc_type": "Report Card",
+ "module": "Scolarite",
+ "standard": "Yes",
+ "custom_format": 1,
+ "print_format_type": "Jinja",
+ "html": "student_report_card.html",
+ "css": "student_report_card.css"
+}

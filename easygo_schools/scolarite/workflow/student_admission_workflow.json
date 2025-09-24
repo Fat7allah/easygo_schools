@@ -1,0 +1,51 @@
+{
+ "workflow_name": "Student Admission",
+ "doctype": "Student Applicant",
+ "states": [
+  {
+   "state": "Pending",
+   "allow_edit": "All",
+   "update_field": "status",
+   "doc_status": "0"
+  },
+  {
+   "state": "Approved",
+   "allow_edit": "School Administrator",
+   "update_field": "status",
+   "doc_status": "1"
+  },
+  {
+   "state": "Rejected",
+   "allow_edit": "School Administrator",
+   "update_field": "status",
+   "doc_status": "2"
+  },
+  {
+   "state": "Enrolled",
+   "allow_edit": "School Administrator",
+   "update_field": "status",
+   "doc_status": "1"
+  }
+ ],
+ "transitions": [
+  {
+   "state": "Pending",
+   "action": "Approve",
+   "next_state": "Approved",
+   "allowed": "School Administrator"
+  },
+  {
+   "state": "Pending",
+   "action": "Reject",
+   "next_state": "Rejected",
+   "allowed": "School Administrator"
+  },
+  {
+   "state": "Approved",
+   "action": "Enroll",
+   "next_state": "Enrolled",
+   "allowed": "School Administrator",
+   "action_handler": "easygo_schools.scolarite.doctype.student_applicant.student_applicant.enroll_student"
+  }
+ ]
+}
